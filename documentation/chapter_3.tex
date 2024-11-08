@@ -1,0 +1,57 @@
+%   Filename    : chapter_4.tex 
+\section*{Chapter 3}
+\section{Research Methodology}
+This chapter lists and discusses the specific steps and activities that will be performed  to accomplish the project. 
+
+\subsection{Research Activities}
+
+\subsubsection{Data Collection and Ontology Expansion}
+In collaboration with literature experts from the Center for West Visayan Studies, and the UPV Division of Humanities, the researchers will collect Panayanon myths, legends, and folktales from reliable resource persons and other sources, including written records, research papers, and digital archives. Then, the researchers will closely read and examine the story to look for relevant story elements and their relationships. From their findings, they will expand \citeA{dimzon2015}'s ontology with entities such as settings, objects, and events, and their relationships with other entities to accommodate relevant story elements. The researchers will then populate the ontology with story elements from their analysis on the stories.  Protégé will be utilized for ontology expansion for its extensive support in OWL files and SPARQL querying, reasoning and consistency checking features, as well as collaboration features. Throughout this whole process, the researchers will present and consult with literature experts from the UPV Division of Humanities on the created ontology to validate the findings and ensure consistency with conventions and practices in the field of literature. 
+
+This step is crucial in enhancing the current ontology by adding detailed elements of Panayanon myths, legends, and folktales. Thus, there will be a strong knowledge base for the chatbot to query from, ensuring support for accurate, contextual answers for the semantic queries from the users. The expected outcome is a detailed ontology that includes structured information on Panayanon myths, legends, and folktales. This step is scheduled to start in December 2024 and must be accomplished by the end of March 2025, with a total duration of four (4) months.
+
+\subsubsection{Chatbot Design and Development}
+In this step, the researchers will develop a chatbot that can handle English queries from users, query the ontology to search for relevant data, and present the information to the user in comprehensible English sentences. Specifically, the researchers will use Python to employ natural language processing (NLP) techniques to convert English queries into SPARQL. PAROT \cite{OCHIENG2021114712} will also be utilized to support queries containing compound sentences, negation, scalar adjectives and numbered lists. The SPARQL queries will then be sent to an Apache Jena server where the expanded OWL file will be hosted. Finally, the query results will be formatted into English. With each iteration of the chatbot, the researchers will perform tests to verify chatbot query accuracy and response relevance, assess user interaction with the chatbot, and measure response times and optimize as needed.
+
+With this chatbot, users will be able to interact with the ontology in natural language. This is in pursuit of data querying, which is \citeA{manansala2007}'s third and final pillar of ontology frameworks. The expected output is a chatbot that can semantically understand complex user questions, and answer them with accurate information from the ontology in a natural language format. This step is scheduled to start in January 2024 and must be accomplished by the end of May 2025, with a total duration of five (5) months.
+
+\subsubsection{Documentation}
+The researchers will document relevant results and information throughout the project. It shall cover  data, methodology, results, and analysis. Applying software engineering principles, the researchers will also create diagrams such as data flow diagrams, use case diagrams, and sequence diagrams. Google Docs will be used for its simplicity and familiarity with the researchers, and Overleaf will be utilized for final formatting. For diagrams, computer assisted software engineering (CASE) tools will be utilized.
+
+This step ensures that all information has been transparently communicated for future reference to be used by other researchers and interested parties. The expected output is complete project documents, including technical details, and a final project report. This step is scheduled to start in December 2024 and must be accomplished by the end of May 2025, with a total duration of five (6) months.
+
+\subsection{Calendar of Activities}
+
+Table \ref{tab:timetableactivities} shows a Gantt chart of the activities.  Each bullet represents approximately
+one week worth of activity.
+
+%
+%  the following commands will be used for filling up the bullets in the Gantt chart
+%
+\newcommand{\weekone}{\textbullet}
+\newcommand{\weektwo}{\textbullet \textbullet}
+\newcommand{\weekthree}{\textbullet \textbullet \textbullet}
+\newcommand{\weekfour}{\textbullet \textbullet \textbullet \textbullet}
+
+%
+%  alternative to bullet is a star 
+%
+\begin{comment}
+   \newcommand{\weekone}{$\star$}
+   \newcommand{\weektwo}{$\star \star$}
+   \newcommand{\weekthree}{$\star \star \star$}
+   \newcommand{\weekfour}{$\star \star \star \star$ }
+\end{comment}
+
+\begin{table}[ht]   %t means place on top, replace with b if you want to place at the bottom
+\centering
+\caption{Timetable of Activities} \vspace{0.25em}
+\begin{tabular}{|p{2in}|c|c|c|c|c|c|c|c|} \hline
+\centering Activities (2025)            & Dec & Jan   & Feb & Mar & Apr & May \\ \hline
+Data Collection and Ontology Expansion  &  ~~~\weekfour & \weekfour & \weekfour & \weekfour &  &  \\ \hline
+Chatbot Design and Development          & & \weekfour & \weekfour & \weekfour & \weekfour & \weekthree \\ \hline
+Documentation                           & ~~~\weekfour  & \weekfour & \weekfour & \weekfour & \weekfour & \weekfour \\ \hline
+\end{tabular}
+\label{tab:timetableactivities}
+\end{table}
+
