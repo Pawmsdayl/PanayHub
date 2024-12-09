@@ -20,5 +20,37 @@ The construction of the ontology will be done through Protege,  an open-source k
 
 \subsubsection{SPARQL for Ontology Querying}
 SPARQL 1.1 is a set of specifications that provide languages and protocols to query and manipulate RDF graph content on the Web or in an RDF store. The standard SPARQL Query Results are written in an XML Format, and in three other alternative formats: JSON, CSV, and TSV \cite{picalausa2011real}. SPARQL 1.1 is the query language the Protege uses to retrieve, and manipulate ontological data.
-\subsubsection{PAROT for Natural Language Conversion}
-PAROT is a dependency based framework used for converting natural language (NL) queries of the user into SPARQL, the query language for databases making use of ontologies \cite{ochieng2020parot}. PAROT was created to address the shortcomings of existing NL to SPARQL tools like AquaLog, CASIA@12, Querix, AutoSPARQL, K-Extractor, and SPARK in handling queries that contained the following conditions: opposing scalar adjectives, negation, numbered lists, and compound sentences. According to \citeA{ochieng2020parot}, these NL to SPARQL tools drastically decrease in their precision and recall values when encountering any of the four conditions stipulated. PAROT is able to handle compound, negation, numbered list, and scalar adjective based questions. According to \citeA{ochieng2020parot}, it is highly successful in converting NL to SPARQL, outperforming the gAnswer system when it comes to answering complex questions with the QALD9 dataset. The study will be using PAROT to convert natural language statements of the end user to SPARQL queries for retrieving data from the study's ontology.
+
+\subsubsection{ApacheJena for Ontology Storage}
+
+According to the \citeA{apache-community-development-project-no-date}, ApacheJena is able to provide a complete framework for building Semantic Web and Linked Data applications in Java. ApacheJena is also equipped with the following capabilities: parsers for Turtle, N-triples, and Resource Description Framework (RDF), and Extensible Markup Language(XML); an API for programming with Java; a complete implementation of the SPARQL query language for ontological querying; a rule-based inference engine for RDF Schema (RDFS) amd OWL entailments; a Triple Database (TDB) which is a non-SQL persistent triples store; a Semantic Database (SDB) which is a persistent triples store built upon a relational store, and Fuseki, an RDF server that uses web protocols. The Apache Software Foundation claims that ApacheJena complies with the relevant recommendations for RDF and related technologies from the World Wide web Consortium (W3C). 
+
+In a study conducted by \citeA{chokshi2022using}, they were able to construct a Job Search Ontology on Protégé, integrated the ApacheJena Fuseki Server with the ontology, and executed SPARQL queries on the ApacheJena Fuseki Server without using the Protégé tool. This study demonstrated that it is possible to construct a SPARQL endpoint with Apache Jena. ApacheJena will be mainly used for storing data about the study’s ontology.  An Apache Fuseki Server will publish the study’s ontology as a SPARQL endpoint, making it available for querying and data sharing over the internet. 
+
+\subsection{Natural Language Question to SPARQL Translation}
+
+\subsubsection{Natural Language Question (NLQ) Preprocessing}
+
+spaCy is an open-source library for advanced natural language processing (NLP) in Python. spaCy is designed to handle preprocessing tasks with high efficiency and speed. spaCy’s features and functionalities include: tokenization, lemmatization, part-of-speech (POS) tagging, and named entity recognition (Nawaz,
+2023; SpaCy Documentation, n.d.). In the study, spaCy will be used to preprocess the NLQ through tokenization, and lemmatization. 
+
+\subsubsection{Entity and Relationship Extraction with Semantic Parsing}
+
+According to \citeA{nawaz-2023}, spaCy is capable of named entity recognition (NER) and dependency parsing. In the study, spaCy’s NER and dependency parsing will be used to extract entities like folk tale titles, names of researchers, character names, and even the relationships between entities. These will  be passed to the SPARQL query constructor to create a SPARQL query and retrieve information from the study’s ontology. 
+
+\subsubsection{Semantic Parsing with SBERT}
+
+Sentence Transformers or SBERT,  is a Python module used for accessing, using, and training text and image embedding models. It can be used to compute embeddings using Sentence Transformer models or to calculate similarity scores using Cross-Encoder models. SBERT’s features and functionalities include: semantic search, semantic textual similarity, and paraphrase mining. The Semantic Textual Similarity (STS) application aims to  produce embeddings for all texts involved and calculate the similarities between them. The text pairs with the highest similarity score are considered to be the most semantically similar (SentenceTransformers Documentation, n.d.). In the study, STS will be used to embed phrases in the NLQ and compare them with the embeddings of the ontology’s object and data property labels. STS will also be used to help resolve ambiguous queries where multiple relationships can potentially be extracted from the query. 
+
+
+\subsubsection{Query Construction/Generation}
+RDFLib is a pure Python package made for working with RDF. RDFLib’s features and functions include: parsers and serializers for RDF/XML, N3, NTriples, N-Quads, Turtle, TriX, JSON-LD, HexTuples, RDFa and Microdata; Store implementations like memory stores, and remote SPARQL endpoints; Graph interface either to a single graph or to multiple named graphs; and SPARQL 1.1 implementation \cite{unknown-author-no-date-rdflib}. In the study, RDFLib will be used to dynamically generate SPARQL queries together with the extracted entities, and relationships of the NLQ. 
+
+\subsection{Chatbot Development}
+\subsubsection{RASA Framework}
+
+Rasa Open Source is a Python framework that enables teams to build chatbots, voice assistants, and other automated conversation systems by connecting to messaging channels and third party systems through a set of APIs \cite{unknown-author-2024-rasa}. 
+
+In a study conducted by \citeA{mishra2022natural}, they  created a closed domain ontology for a hostel system usingProtégé, which was then referenced by an AI-powered chatbot through RASA that was able to formalize natural language queries into SPARQL to query knowledge bases. More specifically, in the study they were able to design a natural language query formalization pipeline that had intent recognition to determine the type of the user’s natural language query, entity extraction, and query generation to translate the query’s intent and extracted entities into a SPARQL query.  The study by \citeA{mishra2022natural} has shown that it’s possible to incorporate a NLQ to SPARQL pipeline within the chatbot. In the study, RASA open source will be used to construct the chat-bot. 
+
+
