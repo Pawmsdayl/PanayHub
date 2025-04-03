@@ -39,3 +39,12 @@ nlu:
     - researcher?
     - recorder?
     - who researcher?  
+
+- intent: ask_for_genres
+  examples: |
+    - What are the genres of [Ang Mameleu](story_title)?
+    - What type of story is [Si Juan Kag Si Maria](story_title)?
+    - genre?
+    - what genre?
+    - What kind of story is [Si Dapaw-Dangaw](story_title)?
+    - [Ngaa May Adlaw, Bulan Kag Mga Bitoon](story_title) belongs to what genre?

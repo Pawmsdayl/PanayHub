@@ -4,11 +4,13 @@ intents:
   - ask_for_themes
   - ask_for_characters
   - ask_for_researcher
+  - ask_for_genres
 
 actions:
   - action_get_story_themes
   - action_get_story_characters
   - action_get_researcher
+  - action_get_story_genres
 
 entities:
   - story_title

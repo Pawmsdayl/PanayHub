@@ -54,7 +54,7 @@ class ActionGetStoryCharacters(Action):
         if characters:
             dispatcher.utter_message(f"The characters in '{title_match}' are: {', '.join(characters)}.")
         else:
-            dispatcher.utter_message(f"I couldn't find characters for '{story_title}'.")
+            dispatcher.utter_message(f"I couldn't find characters for '{title_match}'.")
 
         return []
     
@@ -108,8 +108,61 @@ class ActionGetResearcher(Action):
         if researcher:
             dispatcher.utter_message(f"The researchers or recorders of '{title_match}' are: {', '.join(researcher)}.")
         else:
-            dispatcher.utter_message(f"I couldn't find any reseacher/recorder for '{story_title}'.")
+            dispatcher.utter_message(f"I couldn't find any reseacher/recorder for '{title_match}'.")
         
         SlotSet("researcher", researcher)
 
         return []
+
+class ActionGetStoryGenres(Action):
+    def name(self) -> Text:
+        return "action_get_story_genres"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker, 
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        story_title = tracker.get_slot("story_title")
+        if not story_title:
+            dispatcher.utter_message("I couldn't find the story title. Can you specify the title again?")
+            return []
+
+        uri = "bolt://localhost:7687/neo4j"
+        username = "neo4j"
+        password = "password"
+        driver = GraphDatabase.driver(uri, auth=(username, password), encrypted=False)
+
+        title_query = "MATCH (s) RETURN s.ns0__title AS title"
+        with driver.session() as session:
+            result = session.run(title_query)
+            available_titles = [record["title"] for record in result if record["title"]]
+
+        if not available_titles:
+            dispatcher.utter_message("I couldn't find any available story titles.")
+            return []
+
+        title_match = min(available_titles, key=lambda t: Levenshtein.distance(story_title, t))
+
+        print(title_match)  
+
+        query = """
+        MATCH (story)-[:rdf__type]->(genre)
+        WHERE story.ns0__title = $title
+        RETURN replace(split(genre.uri, "#")[1], "_", " ") AS genre_name
+        LIMIT 10
+        """
+
+        genres = []
+        with driver.session() as session:
+            result = session.run(query, title=title_match)
+            genres = [record["genre_name"] for record in result if record["genre_name"] != "NamedIndividual"]
+
+        driver.close()
+
+        if genres:
+            dispatcher.utter_message(f"The genres of'{title_match}' is/are: {', '.join(genres)}.")
+        else:
+            dispatcher.utter_message(f"I couldn't find genres for '{title_match}'.")
+
+        return []
+    
