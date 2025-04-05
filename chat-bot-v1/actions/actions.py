@@ -4,7 +4,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from fuzzywuzzy import process
-import Levenshtein  # Import Levenshtein distance
+import Levenshtein
 
 class ActionGetStoryCharacters(Action):
     def name(self) -> Text:
@@ -164,5 +164,43 @@ class ActionGetStoryGenres(Action):
         else:
             dispatcher.utter_message(f"I couldn't find genres for '{title_match}'.")
 
+        return []
+
+class ActionGetRandomStories(Action):
+    def name(self) -> Text:
+        return "action_get_random_stories"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker, 
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        story_count = int(tracker.get_slot("story_count"))
+        if  int(story_count) <= 0:
+            dispatcher.utter_message("Please use positive integers when specifying the number of stories.")
+
+        uri = "bolt://localhost:7687/neo4j"
+        username = "neo4j"
+        password = "password"
+        driver = GraphDatabase.driver(uri, auth=(username, password), encrypted=False)
+
+        query = """
+        MATCH (node)
+        WHERE(node.ns0__title) IS NOT NULL
+        RETURN node.ns0__title as title_name
+        ORDER BY rand()
+        LIMIT $story_count
+        """
+        
+        titles = []
+        with driver.session() as session:
+            result = session.run(query, story_count=story_count)
+            titles = [record["title_name"] for record in result]
+
+        driver.close()
+
+        if titles:
+            dispatcher.utter_message(f"Here are some stories from the database: {', '.join(titles)}.")
+        else:
+            dispatcher.utter_message(f"I couldn't find any titles from the database.")
         return []
     

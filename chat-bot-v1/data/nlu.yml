@@ -2,6 +2,12 @@ version: "3.1"
 
 nlu:
 
+- synonym: "1"
+  examples: |
+    - a
+    - A
+    - one
+
 - intent: ask_for_characters
   examples: |
     - Who are the characters of the [Ang Ido Nga Nagbata](story_title)? 
@@ -48,3 +54,12 @@ nlu:
     - what genre?
     - What kind of story is [Si Dapaw-Dangaw](story_title)?
     - [Ngaa May Adlaw, Bulan Kag Mga Bitoon](story_title) belongs to what genre?
+
+- intent: ask_for_random_stories
+  examples: |
+    - give me a[story_count] random story
+    - give me a[story_count] story
+    - Give me [2](story_count) stories
+    - Give me [3](story_count) random stories
+    - What are some[story_count] random stories you can give?
+    - What are some[story_count] stories you can give?
