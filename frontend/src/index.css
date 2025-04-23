@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  --body-font-color: #2D3251;
+  --body-font-highlight: #FE5014;
   font-family: Inter, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -25,8 +27,8 @@ a:hover {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  /*font-size: 3.2em;*/
+  /*line-height: 1.1;*/
 }
 
 
