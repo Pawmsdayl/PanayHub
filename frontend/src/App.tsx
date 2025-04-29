@@ -35,7 +35,6 @@ function App() {
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/chatbot" element={<ChatbotPage/>}/>
       </Routes>
-      <Footer/>
     </>
   );
 }

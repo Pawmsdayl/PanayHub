@@ -1,8 +1,13 @@
 @import "tailwindcss";
-
+@theme{
+   --color-regal-blue:#243c5a;
+}
 :root {
   --body-font-color: #2D3251;
   --body-font-highlight: #FE5014;
+  --chatbot-bg-color: #0B0C14;
+  --chatbot-light-color: #2d3251;
+  --chatbot-chat-section-bg-color:#0C0D15;
   font-family: Inter, sans-serif;
   line-height: 1.5;
   font-weight: 400;
