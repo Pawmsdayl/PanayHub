@@ -1,3 +1,6 @@
+import IslandPin from "./components/IslandPin.tsx";
+import PanayIsland from "./components/PanayIsland.tsx";
+
 function LandingPage(){
   return (
     <div className="w-full min-h-screen ">
@@ -17,8 +20,8 @@ function LandingPage(){
           <div
             className={`absolute top-150 -left-40 w-150 h-150 bg-orange-500 rounded-full -mix-blend-multiply filter blur-3xl opacity-50`}/>
 
-          <div className={`relative grid grid-cols-2 h-150`}>
-            <img src="src/assets/panay-island.png" alt={`panay island`}/>
+          <div className={`relative grid grid-cols-2 h-150 place-items-center`}>
+            <PanayIsland></PanayIsland>
             <div className={`flex flex-col justify-center items-center`}>
               <h1 className={`text-(--body-font-color)  text-8xl font-serif`}>Panay Folk</h1>
               <h1 className={`text-(--body-font-color) text-8xl font-serif`}>Narratives in</h1>
