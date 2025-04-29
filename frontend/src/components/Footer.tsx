@@ -3,7 +3,7 @@ function Footer(){
 
   return(
     <div className={`w-full bg-(--body-font-color) h-72`}>
-      <div className={`grid grid-cols-3 place-items-center outline-2 outline-yellow-500 h-full`}>
+      <div className={`grid grid-cols-3 place-items-center h-full`}>
         <div className={`text-(--body-font-highlight) font-serif text-7xl`}>Contact Us.</div>
 
         <div className={`flex flex-col`}>

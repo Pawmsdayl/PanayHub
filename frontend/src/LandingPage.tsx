@@ -1,9 +1,8 @@
-import IslandPin from "./components/IslandPin.tsx";
 import PanayIsland from "./components/PanayIsland.tsx";
 
 function LandingPage(){
   return (
-    <div className="w-full min-h-screen ">
+    <div className="w-full min-h-screen bg-white ">
       <div className={`flex flex-col min-h-screen`}>
         <div className={`relative min-w-full max-w-lg overflow-hidden`}>
           <div
