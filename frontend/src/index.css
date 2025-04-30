@@ -1,13 +1,14 @@
 @import "tailwindcss";
-@theme{
-   --color-regal-blue:#243c5a;
+@theme {
+  --color-regal-blue:#243c5a;
+  --color-chatbot-bubble: #22262B;
+  --color-chatbot-chat:#0C0D15;
 }
 :root {
   --body-font-color: #2D3251;
   --body-font-highlight: #FE5014;
   --chatbot-bg-color: #0B0C14;
   --chatbot-light-color: #2d3251;
-  --chatbot-chat-section-bg-color:#0C0D15;
   font-family: Inter, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -37,15 +38,15 @@ h1 {
 }
 
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+/*@media (prefers-color-scheme: light) {*/
+/*  :root {*/
+/*    color: #213547;*/
+/*    background-color: #ffffff;*/
+/*  }*/
+/*  a:hover {*/
+/*    color: #747bff;*/
+/*  }*/
+/*  button {*/
+/*    background-color: #f9f9f9;*/
+/*  }*/
+/*}*/

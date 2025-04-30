@@ -29,13 +29,13 @@ import Footer from "./components/Footer.tsx";
 function App() {
 
   return (
-    <>
+    <div className={`flex flex-col min-h-screen`}>
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/chatbot" element={<ChatbotPage/>}/>
       </Routes>
-    </>
+    </div>
   );
 }
 
