@@ -8,8 +8,8 @@ function Chatbox(){
 
   const [messages , setMessages] = useState([]);
 
-  function handleSendMessage(message){
-    setMessages([...messages, message]);
+  function handleSendMessage(message, sender){
+    setMessages([...messages, {message,sender}]);
   }
 
 
@@ -32,9 +32,10 @@ function Chatbox(){
     // </div>
 
     <div className={`bg-chatbot-chat rounded-4xl h-full w-full flex flex-col border-2 border-yellow-900 p-5 gap-3`}>
-      <div className={`overflow-y-scroll flex flex-col gap-3 `}>
+      <div className={`overflow-y-scroll flex flex-col gap-3 border-2 border-blue-200`}>
         <UserChatBubble message={"hello"}></UserChatBubble>
-        <BotResponse></BotResponse>
+        <BotResponse message={"hi there!"}></BotResponse>
+        {messages.map((obj) => obj.sender === "user" ? <UserChatBubble message={obj.message}/> : <BotResponse message={obj.message}/>)}
       </div>
       <InputBar handleSendMessage={handleSendMessage}></InputBar>
     </div>
