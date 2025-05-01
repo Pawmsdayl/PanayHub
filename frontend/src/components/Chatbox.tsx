@@ -8,31 +8,38 @@ function Chatbox(){
 
   const [messages , setMessages] = useState([]);
 
-  function handleSendMessage(message, sender){
-    setMessages([...messages, {message,sender}]);
+  async function handleSendMessage(message){
+    // setMessages([...messages, {message,sender}]);
+    // console.log(messages);
+    const userMessage = {sender: "user", message: message};
+    setMessages(prevMessages => [...prevMessages, userMessage]);
+
+    try {
+      const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: message,
+        }),
+      });
+
+      const data = await response.json();
+      console.log('Success:', data);
+      const apiResponse = {sender: "bot", message: data.message + "yo"};
+      setMessages(prevMessages => [...prevMessages, apiResponse]);
+
+    } catch (error) {
+      console.error('Error:', error);
+    }
   }
 
 
   return (
-    // <div className={`bg-chatbot-chat flex flex-col w-full h-full rounded-4xl overflow-y-hidden p-4 `}>
-    // <div className={`bg-yellow-900 w-full h-full rounded-4xl overflow-y-hidden`}>
-    //   <div className={`flex flex-col w-full h-full`}>
-    //     <div className={`flex w-full h-full`}>
-    //       <div className={`content-div overflow-y-scroll  flex flex-col gap-5 p-10`}>
-    //         <h1 className={`text-3xl text-center`}>What knowledge do you seek?</h1>
-    //         <UserChatBubble></UserChatBubble>
-    //         <BotResponse></BotResponse>
-    //         {/*<div className={`fixed text-white bottom-0`}>HI</div>*/}
-    //         {/*<Input></Input>*/}
-    //       </div>
-    //     </div>
-    //     {/*<Input></Input>*/}
-    //     <InputBar></InputBar>
-    //   </div>
-    // </div>
 
-    <div className={`bg-chatbot-chat rounded-4xl h-full w-full flex flex-col border-2 border-yellow-900 p-5 gap-3`}>
-      <div className={`overflow-y-scroll flex flex-col gap-3 border-2 border-blue-200`}>
+    <div className={`bg-chatbot-chat rounded-4xl h-full w-full grid grid-cols-1 p-5 gap-3`}>
+      <div className={`overflow-y-auto h-full flex flex-col gap-3 p-5`}>
         <UserChatBubble message={"hello"}></UserChatBubble>
         <BotResponse message={"hi there!"}></BotResponse>
         {messages.map((obj) => obj.sender === "user" ? <UserChatBubble message={obj.message}/> : <BotResponse message={obj.message}/>)}
