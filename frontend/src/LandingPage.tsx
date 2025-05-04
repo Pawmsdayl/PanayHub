@@ -19,7 +19,7 @@ function LandingPage(){
           <div
             className={`absolute top-150 -left-40 w-150 h-150 bg-orange-500 rounded-full -mix-blend-multiply filter blur-3xl opacity-50`}/>
 
-          <div className={`relative grid grid-cols-2 h-150 place-items-center`}>
+          <div className={`relative grid grid-cols-2 h-150 place-items-center mb-10`}>
             <PanayIsland></PanayIsland>
             <div className={`flex flex-col justify-center items-center`}>
               <h1 className={`text-(--body-font-color)  text-8xl font-serif`}>Panay Folk</h1>
@@ -64,8 +64,6 @@ function LandingPage(){
             <div>image</div>
           </div>
         </div>
-
-
       </div>
     </div>
   );
