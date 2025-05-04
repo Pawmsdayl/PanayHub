@@ -30,8 +30,8 @@ function LandingPage(){
             </div>
           </div>
           <div className={`relative w-full flex items-center justify-center`}>
-            <h1 className={`text-(--body-font-color) text-6xl font-serif italic`}>Some <span
-              className={`text-(--body-font-highlight)`}>random ass</span> title.</h1>
+            <h1 className={`text-(--body-font-color) text-6xl font-serif italic`}>Introducing our smart <span
+              className={`text-(--body-font-highlight)`}>chat bot.</span></h1>
           </div>
           <div className={`relative grid grid-cols-2 grid-rows-2 h-96 place-items-center`}>
             <div className={`flex place-items-center flex-col`}>
