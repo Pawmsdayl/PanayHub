@@ -7,7 +7,7 @@ function PanayIsland () {
       <IslandPin imagePath="src/assets/monster.png" className={`row-start-1 col-start-1 col-span-2`}></IslandPin>
       <IslandPin imagePath="src/assets/antique.png" className={`row-start-3 col-start-2 col-span-2 mr-10`}></IslandPin>
       <IslandPin imagePath="src/assets/upv.png" className={`row-start-4 col-start-3 row-span-2 self-end mb-10`}></IslandPin>
-      <IslandPin imagePath="src/assets/monster.png" className={`row-start-4 col-start-4 row-span-2 mb-5`}></IslandPin>
+      <IslandPin imagePath="src/assets/cwvs.png" className={`row-start-4 col-start-4 row-span-2 mb-5`}></IslandPin>
       <IslandPin imagePath="src/assets/monster.png" className={`row-start-2 col-start-5 row-span-2 mb-10`}></IslandPin>
       <div className={`flex items-center justify-center bg-white size-40 rounded-full col-start-3 row-start-2 row-span-3 col-span-2 m`}>
         <img className={`size-20`} src={"src/assets/panayhub-logo.png"} alt={`inner image`}/>
