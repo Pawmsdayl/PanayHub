@@ -1,6 +1,5 @@
 import UserChatBubble from "@/components/UserChatBubble.tsx";
 import BotResponse from "@/components/BotResponse.tsx";
-import {Input} from "@/components/Input.tsx";
 import InputBar from "@/components/InputBar.tsx";
 import {useState} from "react";
 
@@ -33,16 +32,25 @@ function Chatbox(){
     }
   }
 
-
   return (
 
     <div className={`bg-chatbot-chat rounded-4xl h-full w-full grid grid-cols-1 p-5 gap-3`}>
+      // render a div if there are no messages
+      {messages.length === 0 &&
+          <div className={`flex flex-col justify-center gap-5`}>
+              <h1
+                  className={`text-center w-full text-4xl bg-gradient-to-r from-[#FFFFFF] to-[#80BCFD] bg-clip-text text-transparent`}
+              >
+                What knowledge do you seek?
+              </h1>
+              <InputBar handleSendMessage={handleSendMessage}></InputBar>
+          </div>
+      }
+
       <div className={`overflow-y-auto h-full flex flex-col gap-3 p-5`}>
-        <UserChatBubble message={"hello"}></UserChatBubble>
-        <BotResponse message={"hi there!"}></BotResponse>
         {messages.map((obj) => obj.sender === "user" ? <UserChatBubble message={obj.message}/> : <BotResponse message={obj.message}/>)}
       </div>
-      <InputBar handleSendMessage={handleSendMessage}></InputBar>
+      {messages.length!==0 && <InputBar handleSendMessage={handleSendMessage}></InputBar>}
     </div>
   );
 
