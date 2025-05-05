@@ -9,8 +9,6 @@ function Chatbox(){
   const [messages , setMessages] = useState([]);
 
   async function handleSendMessage(message){
-    // setMessages([...messages, {message,sender}]);
-    // console.log(messages);
     const userMessage = {sender: "user", message: message};
     setMessages(prevMessages => [...prevMessages, userMessage]);
 
