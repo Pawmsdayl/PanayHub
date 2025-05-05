@@ -7,6 +7,7 @@
   --color-chatbot-light: #2d3251;
   --color-nav-hover: rgba(98, 158, 253, 0.3);
   --color-body-font: #2D3251;
+    --shadow-input-bar: 0px -1px 31px 0px rgba(13, 0, 255, 0.3);
 }
 :root {
   --body-font-color: #2D3251;

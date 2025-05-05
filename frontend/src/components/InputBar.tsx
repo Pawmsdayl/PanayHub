@@ -18,7 +18,7 @@ function InputBar({handleSendMessage}: {handleSendMessage: (message: string) => 
   }
 
   return(
-    <div className={`flex relative self-end h-15 w-full bg-chatbot-bg shadow-[0px_-1px_30.6px_0px_#0D00FF] rounded-full`}>
+    <div className={`flex relative self-end h-15 w-full bg-chatbot-bg shadow-input-bar rounded-full`}>
       <input className={`w-full text-white p-5 placeholder-[#96C7FD] outline-none`}
              value={value}
              type={`text`}
