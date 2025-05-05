@@ -11,13 +11,14 @@ function IslandPin ({className, imagePath}: {className:string, imagePath: string
     // </div>
 
 
-    <div className={`${className} hover:scale-125  ease-out duration-300 group`}>
-      <div className={`grid grid-rows-1 grid-cols-1 place-items-center h-fit`}>
-        <img className={`row-span-full row-start-1 col-start-1`} src="src/assets/pin%201.png" alt={`pin`}/>
-        <div className={`row-start-1 col-start-1 flex content-center justify-center mb-5 w-full `}>
-          <img className={`object-scale-down`} src={imagePath} alt={`inner image`}/>
-        </div>
-      </div>
+    <div className={`${className} group`}>
+      <img className={`scale-75 group-hover:scale-100 group-hover:z-100 ease-out duration-300`} alt={`pin`} src={imagePath} />
+      {/*<div className={`grid grid-rows-1 grid-cols-1 place-items-center h-fit`}>*/}
+      {/*  <img className={`row-span-full row-start-1 col-start-1`} src="src/assets/pin%201.png" alt={`pin`}/>*/}
+      {/*  <div className={`row-start-1 col-start-1 flex content-center justify-center mb-5 w-full `}>*/}
+      {/*    <img className={`object-scale-down`} src={imagePath} alt={`inner image`}/>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </div>
   );
 }
