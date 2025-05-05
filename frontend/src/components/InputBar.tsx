@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {AutosizeTextarea} from "@/components/AutosizeTextArea.tsx";
 
 
 function InputBar({handleSendMessage}: {handleSendMessage: (message: string) => void}){
@@ -19,12 +20,12 @@ function InputBar({handleSendMessage}: {handleSendMessage: (message: string) => 
 
   return(
     <div className={`flex relative self-end h-15 w-full bg-chatbot-bg shadow-input-bar rounded-full`}>
-      <input className={`w-full text-white p-5 placeholder-[#96C7FD] outline-none`}
+      <textarea className={`w-full h-20 resize-none text-white p-5 placeholder-[#96C7FD] outline-none`}
              value={value}
-             type={`text`}
              placeholder={`Ask anything...`}
-             onChange={handleChange}>
-      </input>
+             onInput={handleChange}>
+      </textarea>
+      {/*<AutosizeTextarea/>*/}
       <button className={`top-1 right-1 size-12 absolute text-black bg-white rounded-full cursor-pointer font-bold`}
               type={`button`}
               aria-label={`Send message`}
