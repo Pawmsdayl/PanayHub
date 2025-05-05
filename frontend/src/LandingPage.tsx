@@ -1,5 +1,5 @@
 import PanayIsland from "./components/PanayIsland.tsx";
-
+import Footer from "@/components/Footer.tsx";
 function LandingPage(){
   return (
     <div className="w-full min-h-screen bg-white ">
@@ -36,20 +36,16 @@ function LandingPage(){
           <div className={`relative grid grid-cols-2 grid-rows-2 h-96 place-items-center`}>
             <div className={`flex place-items-center flex-col`}>
               <img src="src/assets/user%201.png" alt={`user`}/>
-              <h2 className={`text-(--body-font-color) font-bold`}>Woah, another title</h2>
-              <p className={`text-(--body-font-color)`}>Is that a video on the right? Oh, cool. Paste a pre-recorded
-                video
-                of a user navigating through the website.</p>
+              <h2 className={`text-(--body-font-color) font-bold`}>Ask Questions</h2>
+              <p className={`text-(--body-font-color)`}>Ask questions from our chat bot about topics of interesting regarding Panayanon folk narratives.</p>
             </div>
             <div>
               <div className={`text-black place-items-center`}>image</div>
             </div>
             <div className={`flex place-items-center flex-col`}>
               <img src="src/assets/laptop-computer%201.png" alt={`user`}/>
-              <h2 className={`text-(--body-font-color) font-bold`}>Woah, another title</h2>
-              <p className={`text-(--body-font-color)`}>Is that a video on the right? Oh, cool. Paste a pre-recorded
-                video
-                of a user navigating through the website.</p>
+              <h2 className={`text-(--body-font-color) font-bold`}>Get answers</h2>
+              <p className={`text-(--body-font-color)`}>Receive answers from the chat bot regarding your query.</p>
             </div>
             <div>
               <div className={`text-black place-items-center`}>image</div>
@@ -63,6 +59,7 @@ function LandingPage(){
             </div>
             <div>image</div>
           </div>
+          <Footer/>
         </div>
       </div>
     </div>
