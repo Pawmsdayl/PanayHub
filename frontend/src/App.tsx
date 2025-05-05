@@ -5,26 +5,6 @@ import ChatbotPage from "./pages/ChatbotPage.tsx";
 import {
   Route, Routes
 } from "react-router-dom";
-import Footer from "./components/Footer.tsx";
-
-//
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Navbar/>
-//     children: [
-//       {
-//         path:"/",
-//         element: <LandingPage/>
-//       },
-//       {
-//         path: "/chatbot",
-//         element: <ChatbotPage/>
-//       }
-//     ]
-//
-//   }
-// ]);
 
 function App() {
 
