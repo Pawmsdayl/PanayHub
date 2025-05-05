@@ -5,6 +5,8 @@
   --color-chatbot-chat:#0C0D15;
   --color-chatbot-bg: #0B0C14;
   --color-chatbot-light: #2d3251;
+  --color-nav-hover: rgba(98, 158, 253, 0.3);
+  --color-body-font: #2D3251;
 }
 :root {
   --body-font-color: #2D3251;
@@ -16,7 +18,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  /*color: rgba(255, 255, 255, 0.87);*/
   background-color: #242424;
 
   font-synthesis: none;
@@ -25,21 +27,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@layer components{
+  .nav-button {
+    @apply text-body-font visited:text-inherit hover:bg-nav-hover rounded-full py-1 px-4 ease-out duration-300
+  }
 }
 
-h1 {
-  /*font-size: 3.2em;*/
-  /*line-height: 1.1;*/
+.active{
+  position: relative;
+    @apply py-1 px-4
 }
-
-
+.active::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-body-font);
+}
 /*@media (prefers-color-scheme: light) {*/
 /*  :root {*/
 /*    color: #213547;*/
