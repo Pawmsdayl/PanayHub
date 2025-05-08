@@ -35,7 +35,7 @@ function Chatbox(){
   return (
 
     <div className={`bg-chatbot-chat rounded-4xl h-full w-full grid grid-cols-1 p-5 gap-3`}>
-      // render a div if there are no messages
+      {/*// render a div if there are no messages*/}
       {messages.length === 0 &&
           <div className={`flex flex-col justify-center gap-5`}>
               <h1

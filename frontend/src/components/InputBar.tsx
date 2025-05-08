@@ -5,8 +5,15 @@ import AutoResizingTextarea, {AutosizeTextarea} from "@/components/AutosizeTextA
 function InputBar({handleSendMessage}: {handleSendMessage: (message: string) => void}){
   const [value, setValue] = useState("");
 
-  function handleChange(event: React.ChangeEvent<HTMLInputElement>){
+  function handleChange(event: React.ChangeEvent<HTMLTextAreaElement>){
+    changeHeight(event);
     setValue(event.target.value);
+  }
+
+  function changeHeight(event: React.ChangeEvent<HTMLTextAreaElement>){
+    const textarea = event.target;
+    textarea.style.height = "auto";
+    textarea.style.height = `${textarea.scrollHeight}px`;
   }
 
   function handleClick(){
@@ -19,20 +26,29 @@ function InputBar({handleSendMessage}: {handleSendMessage: (message: string) => 
   }
 
   return(
-    <div className={`flex relative self-end h-15 w-full bg-chatbot-bg shadow-input-bar rounded-full`}>
-      <AutoResizingTextarea className={`w-full h-20 resize-none text-white p-5 placeholder-[#96C7FD] outline-none`}
-             value={value}
-             placeholder={`Ask anything...`}
-             // onInput={handleChange}
+    <div className={`self-end max-h-100 w-full bg-chatbot-bg shadow-input-bar rounded-[80px]`}>
+      <div className={`flex items-center justify-center pl-10 py-5 pr-5`}>
+      <textarea
+        style={{
+          maxHeight: "200px",
+        }}
+        className={`w-full flex items-center justify-center h-10 overflow-y-auto resize-none text-white placeholder-[#96C7FD] outline-none`}
+        value={value}
+        placeholder={`Ask anything...`}
+        onChange={handleChange}
+
       >
-      </AutoResizingTextarea>
-      {/*<AutosizeTextarea/>*/}
-      <button className={`top-1 right-1 size-12 absolute text-black bg-white rounded-full cursor-pointer font-bold`}
-              type={`button`}
-              aria-label={`Send message`}
-              onClick={handleClick}>
-        {`>`}
-      </button>
+      </textarea>
+        {/*<AutosizeTextarea/>*/}
+        <div className={`flex h-full `}>
+          <button className={`size-15 self-end text-2xl text-black bg-white rounded-full cursor-pointer font-bold`}
+                  type={`button`}
+                  aria-label={`Send message`}
+                  onClick={handleClick}>
+            {`>`}
+          </button>
+        </div>
+      </div>
     </div>
   );
 
