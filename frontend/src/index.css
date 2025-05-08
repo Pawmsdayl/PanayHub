@@ -9,6 +9,10 @@
   --color-body-font: #2D3251;
     --color-notes-bg: #131313;
     --shadow-input-bar: 0px -1px 31px 0px rgba(13, 0, 255, 0.3);
+    --color-font-highlight: #FE5014;
+    --color-font-contact-highlight:#FCAB40;
+    --color-contact-dark: rgba(0,0,0, 0.5);
+  --color-contact-light: #BBC7FA;
 }
 :root {
   --body-font-color: #2D3251;
