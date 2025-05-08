@@ -18,6 +18,7 @@ function LandingPage(){
             className={`absolute top-150 left-40 w-150 h-150 bg-yellow-400 rounded-full -mix-blend-multiply filter  blur-3xl  opacity-30`}/>
           <div
             className={`absolute top-150 -left-40 w-150 h-150 bg-orange-500 rounded-full -mix-blend-multiply filter blur-3xl opacity-50`}/>
+          <img className={`absolute right-0`} src="src/assets/blob4.png" alt={`blob`}/>
 
           <div className={`relative grid grid-cols-2 h-150 place-items-center mb-10`}>
             <PanayIsland></PanayIsland>
