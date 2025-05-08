@@ -24,7 +24,7 @@ function LandingPage(){
             <div className={`flex flex-col justify-center items-center`}>
               <h1 className={`text-(--body-font-color)  text-8xl font-serif`}>Panay Folk</h1>
               <h1 className={`text-(--body-font-color) text-8xl font-serif`}>Narratives in</h1>
-              <h1 className={`text-(--body-font-highlight)  text-8xl font-bold font-serif`}>One Hub.</h1>
+              <h1 className={`gradient-text-highlight text-8xl font-bold font-serif`}>One Hub.</h1>
               <p className={`text-(--body-font-color)`}>Looking for Panay Folk Narratives has been made easier.</p>
               <p className={`text-(--body-font-color)`}>PanayHub is the starting point to your research journey.</p>
             </div>

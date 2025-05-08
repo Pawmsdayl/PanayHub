@@ -9,8 +9,8 @@
   --color-body-font: #2D3251;
     --color-notes-bg: #131313;
     --shadow-input-bar: 0px -1px 31px 0px rgba(13, 0, 255, 0.3);
-    --color-font-highlight: #FE5014;
-    --color-font-contact-highlight:#FCAB40;
+    --color-orange-highlight-dark: #FE5014;
+    --color-orange-highlight-light:#FCAB40;
     --color-contact-dark: rgba(0,0,0, 0.5);
   --color-contact-light: #BBC7FA;
 }
@@ -36,6 +36,10 @@
 @layer components{
   .nav-button {
     @apply text-body-font visited:text-inherit hover:bg-nav-hover rounded-full py-1 px-4 ease-out duration-300
+  }
+
+  .gradient-text-highlight{
+    @apply bg-gradient-to-r from-[#FF7700] to-[#FF0000] bg-clip-text text-transparent
   }
 }
 
