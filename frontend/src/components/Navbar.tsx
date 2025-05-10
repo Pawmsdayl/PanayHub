@@ -22,7 +22,7 @@ function Navbar(){
                   <NavLink
                     to="/"
                     end
-                    className={({ isActive, isPending }) =>
+                    className={({isActive, isPending}) =>
                       isPending ? "pending" : isActive ? "active" : "" +
                         `nav-button`
                     }
@@ -34,7 +34,7 @@ function Navbar(){
                 <li>
                   <NavLink
                     to="/chatbot"
-                    className={({ isActive, isPending }) =>
+                    className={({isActive, isPending}) =>
                       isPending ? "pending" : isActive ? "active" : "" +
                         `nav-button`
                     }
@@ -46,12 +46,23 @@ function Navbar(){
                 <li>
                   <NavLink
                     to="/contact"
-                    className={({ isActive, isPending }) =>
+                    className={({isActive, isPending}) =>
                       isPending ? "pending" : isActive ? "active" : "" +
                         `nav-button`
                     }
                   >
                     Contact Us
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/dashboard"
+                    className={({isActive, isPending}) =>
+                      isPending ? "pending" : isActive ? "active" : "" +
+                        `nav-button`
+                    }
+                  >
+                    Dashboard
                   </NavLink>
                 </li>
               </ul>

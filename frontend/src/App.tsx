@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar.tsx";
 import LandingPage from "./LandingPage.tsx";
 import ChatbotPage from "./pages/ChatbotPage.tsx";
 import Contact from "./pages/Contact.tsx";
+import Dashboard from "./pages/Dashboard.tsx";
 import {
   Route, Routes
 } from "react-router-dom";
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/chatbot" element={<ChatbotPage/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
       </Routes>
     </div>
   );
