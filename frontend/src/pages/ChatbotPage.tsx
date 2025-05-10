@@ -8,7 +8,7 @@ function ChatbotPage() {
        <div className={`flex w-full h-full gap-3  place-content-center p-10`}>
          <div className={`text-white bg-chatbot-light h-full w-full rounded-full text-center content-center`}>hello</div>
          <Chatbox></Chatbox>
-           <div className={`text-white bg-chatbot-light rounded-[56px] flex flex-col gap-2 h-full w-full text-center content-center p-5`}>
+         <div className={`text-white bg-chatbot-light rounded-[56px] flex flex-col gap-2 h-full w-full text-center content-center p-5`}>
            <div className={`flex gap-3`}>
              <button className={`hover:cursor-pointer`}>
               <FaEdit className={`size-5`}/>

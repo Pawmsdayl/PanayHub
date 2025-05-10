@@ -60,8 +60,8 @@ function LandingPage(){
             </div>
             <div>image</div>
           </div>
-          <Footer/>
         </div>
+        <Footer/>
       </div>
     </div>
   );
