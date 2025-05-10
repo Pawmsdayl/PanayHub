@@ -13,6 +13,7 @@
     --color-orange-highlight-light:#FCAB40;
     --color-contact-dark: rgba(0,0,0, 0.5);
   --color-contact-light: #BBC7FA;
+  --color-dashboard-blue-light: #cce4ff;
 }
 :root {
   --body-font-color: #2D3251;
