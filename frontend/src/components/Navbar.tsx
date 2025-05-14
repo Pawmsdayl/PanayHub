@@ -18,7 +18,7 @@ function Navbar(){
             </div>
             <div className={``}>
               <ul className={`flex gap-9 items-center font-bold text-(--body-font-color)`}>
-                <li>
+                <li className={`visited:text-inherit hover:bg-nav-hover rounded-full py-1 px-4 ease-out duration-300`}>
                   <NavLink
                     to="/"
                     end
@@ -31,7 +31,7 @@ function Navbar(){
                   </NavLink>
 
                 </li>
-                <li>
+                <li className={`visited:text-inherit hover:bg-nav-hover rounded-full py-1 px-4 ease-out duration-300`}>
                   <NavLink
                     to="/chatbot"
                     className={({isActive, isPending}) =>
@@ -43,7 +43,8 @@ function Navbar(){
                   </NavLink>
 
                 </li>
-                <li>
+
+                <li className={`visited:text-inherit hover:bg-nav-hover rounded-full py-1 px-4 ease-out duration-300`}>
                   <NavLink
                     to="/contact"
                     className={({isActive, isPending}) =>
@@ -54,7 +55,8 @@ function Navbar(){
                     Contact Us
                   </NavLink>
                 </li>
-                <li>
+                <li
+                  className={`visited:text-inherit hover:bg-nav-hover rounded-full py-1 px-4 ease-out duration-300`}>
                   <NavLink
                     to="/dashboard"
                     className={({isActive, isPending}) =>
@@ -71,7 +73,7 @@ function Navbar(){
         </header>
       </nav>
     </div>
-  );
+);
 }
 
 export default Navbar;

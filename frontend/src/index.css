@@ -36,7 +36,7 @@
 
 @layer components{
   .nav-button {
-    @apply text-body-font visited:text-inherit hover:bg-nav-hover rounded-full py-1 px-4 ease-out duration-300
+    @apply text-body-font visited:text-inherit rounded-full
   }
 
   .gradient-text-highlight{
@@ -46,7 +46,6 @@
 
 .active{
   position: relative;
-    @apply py-1 px-4
 }
 .active::before{
     content: '';
