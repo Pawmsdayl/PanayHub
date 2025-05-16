@@ -3,11 +3,16 @@ import BotResponse from "@/components/BotResponse.tsx";
 import InputBar from "@/components/InputBar.tsx";
 import {useState} from "react";
 
+interface Message {
+  sender: string;
+  message: string;
+}
+
 function Chatbox(){
 
-  const [messages , setMessages] = useState([]);
+  const [messages , setMessages] = useState<Message[]>([]);
 
-  async function handleSendMessage(message){
+  async function handleSendMessage(message: string){
     const userMessage = {sender: "user", message: message};
     setMessages(prevMessages => [...prevMessages, userMessage]);
 
@@ -23,7 +28,6 @@ function Chatbox(){
       });
 
       const data = await response.json();
-      console.log('Success:', data);
       const apiResponse = {sender: "bot", message: data.message + "yo"};
       setMessages(prevMessages => [...prevMessages, apiResponse]);
 
@@ -48,7 +52,9 @@ function Chatbox(){
       }
 
       <div className={`overflow-y-auto h-full flex flex-col gap-3 p-5`}>
-        {messages.map((obj) => obj.sender === "user" ? <UserChatBubble message={obj.message}/> : <BotResponse message={obj.message}/>)}
+        {messages.map((obj) => obj.sender === "user" ?
+          <UserChatBubble message={obj.message}/> :
+          <BotResponse message={obj.message}/>)}
       </div>
       {messages.length!==0 && <InputBar handleSendMessage={handleSendMessage}></InputBar>}
     </div>

@@ -1,7 +1,10 @@
 import Footer from "@/components/Footer.tsx";
+import 'heatmap.js';
+import Heatmap from "@/components/Heatmap.tsx";
 
 
 function Dashboard() {
+
   return (
     <div className={`min-h-screen bg-white`}>
       <div className={`p-10`}>
@@ -20,8 +23,8 @@ function Dashboard() {
                 </li>
               </ul>
             </div>
-            <div>
-              heatmap
+            <div id={`heatmap-div h-full`}>
+              <Heatmap/>
             </div>
             <div>
               charts

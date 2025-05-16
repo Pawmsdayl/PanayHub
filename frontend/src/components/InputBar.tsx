@@ -1,5 +1,4 @@
 import {useState} from "react";
-import AutoResizingTextarea, {AutosizeTextarea} from "@/components/AutosizeTextArea.tsx";
 
 
 function InputBar({handleSendMessage}: {handleSendMessage: (message: string) => void}){
