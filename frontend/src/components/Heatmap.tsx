@@ -2,7 +2,6 @@ import * as React from "react";
 import {MapContainer, Marker, Popup, TileLayer, useMap} from "react-leaflet";
 import HeatmapLayer from "react-leaflet-heat-layer";
 import "leaflet/dist/leaflet.css";
-import {useEffect} from "react";
 
 const addressPoints = [
   [11.2035, 122.5145, 0.7],
@@ -11,7 +10,7 @@ const addressPoints = [
 const Heatmap: React.FC = () => {
   return (
 
-      <MapContainer dragging={false} zoomControl={false} className={`size-[900px]`} center={[11.2035, 122.5145]} zoom={9.4} scrollWheelZoom={false}>
+      <MapContainer dragging={false} zoomControl={false} className={`size-[600px] rounded-lg`} center={[11.2035, 122.5145]} zoom={9.4} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

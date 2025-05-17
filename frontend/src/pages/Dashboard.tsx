@@ -1,6 +1,9 @@
 import Footer from "@/components/Footer.tsx";
 import 'heatmap.js';
 import Heatmap from "@/components/Heatmap.tsx";
+import FilterDropdown from "@/components/FilterDropdown.tsx";
+import DashboardFilters from "@/components/DashboardFilters.tsx";
+import StoryList from "@/components/StoryList.tsx";
 
 
 function Dashboard() {
@@ -16,14 +19,8 @@ function Dashboard() {
 
         <section>
           <div className={`grid grid-cols-3 place-items-center gap-4`}>
+            <DashboardFilters/>
             <div>
-              <ul>
-                <li>
-                  PRovince
-                </li>
-              </ul>
-            </div>
-            <div id={`heatmap-div h-full`}>
               <Heatmap/>
             </div>
             <div>
@@ -32,21 +29,7 @@ function Dashboard() {
           </div>
         </section>
         <section className={`w-full  flex justify-center items-center`}>
-          <div className={`bg-chatbot-light rounded-xl w-[934px] h-[509px]`}>
-            <div className={`p-10`}>
-              <div className={`flex w-full border gap-2 font-bold justify-around text-dashboard-blue-light text-2xl`}>
-                <h2>
-                  Title
-                </h2>
-                <h2>
-                  Researcher
-                </h2>
-                <h2>
-                  Library
-                </h2>
-              </div>
-            </div>
-          </div>
+          <StoryList/>
         </section>
       </div>
       <Footer/>
