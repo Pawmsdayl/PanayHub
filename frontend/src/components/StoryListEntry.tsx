@@ -7,7 +7,7 @@ export interface StoryListEntryProps {
 function StoryListEntry({storyListEntry, index}: {storyListEntry: StoryListEntryProps, index: number}) {
   return (
     <div className={`${index % 2 === 0 ? "bg-storylist-blue-light" : "bg-storylist-peach"}`}>
-      <div className={`flex justify-around`}>
+      <div className={`grid grid-cols-3 col-span-3`}>
         <p>
           {storyListEntry.title}
         </p>

@@ -24,7 +24,7 @@ function StoryList() {
   return (
     <div className={`bg-chatbot-light rounded-xl w-[934px] h-[509px]`}>
       <div className={`p-4`}>
-        <div className={`flex w-full p-4 gap-2 font-bold justify-around text-dashboard-blue-light text-2xl`}>
+        <div className={`grid grid-cols-3 w-full p-4 gap-2 font-bold text-center border`}>
           <h2>
             Title
           </h2>
@@ -34,18 +34,19 @@ function StoryList() {
           <h2>
             Library
           </h2>
+          <div className={`col-span-3 col-start-1 text-center`}>
+            <ul>
+              {storyListEntries.map((storyListEntry, index) => (
+                <li key={index + storyListEntry.title}>
+                  <StoryListEntry storyListEntry={storyListEntry} index={index}/>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
       <div className={`p-4`}>
-        <div className={``}>
-          <ul>
-            {storyListEntries.map((storyListEntry, index) => (
-              <li key={index + storyListEntry.title}>
-                <StoryListEntry storyListEntry={storyListEntry} index={index}/>
-              </li>
-            ))}
-          </ul>
-        </div>
+
       </div>
     </div>
   );
