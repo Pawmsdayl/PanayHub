@@ -1,0 +1,43 @@
+import asyncio
+import pandas as pd
+from rasa.core.agent import Agent
+from rasa.shared.utils.io import json_to_string
+
+class Model:
+
+    def __init__(self, model_path: str) -> None:
+        self.agent = Agent.load(model_path)
+        print("NLU model loaded")
+
+    def message(self, message: str) -> dict:
+        message = message.strip()
+        result = asyncio.run(self.agent.parse_message(message))
+        return result
+
+def evaluate_model(csv_file: str, model: Model) -> float:
+    # Read the CSV file
+    df = pd.read_csv(csv_file)
+    correct = 0
+
+    # Evaluate each sentence
+    for index, row in df.iterrows():
+        text = row['sentence']
+        expected_intent = row['intent']
+        result = model.message(text)
+        predicted_intent = result["intent"]["name"]
+
+        print(f"Sentence: {text}")
+        print(f"Predicted Intent: {predicted_intent}, Actual Intent: {expected_intent}")
+
+        if predicted_intent == expected_intent:
+            correct += 1
+
+    accuracy = correct / len(df)
+    return accuracy
+
+mdl = Model(r'C:\Users\ACER\Desktop\hackathon\PanayHub\chat-bot-v1\models\20250404-123109-timid-brush.tar.gz')
+
+csv_file = r'C:\Users\ACER\Desktop\hackathon\PanayHub\chat-bot-v1\test.csv'
+accuracy = evaluate_model(csv_file, mdl)
+
+print(f"Accuracy: {accuracy * 100:.2f}%")

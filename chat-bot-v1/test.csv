@@ -1,0 +1,9 @@
+sentence,intent
+"Hello, can you tell me about the characters?","ask_for_characters"
+"Who is the researcher of the story?","ask_for_researcher"
+"Can you list the genres for this story?","ask_for_genres"
+"I want to know about the themes in this story.","ask_for_themes"
+"Give me random story suggestions.","ask_for_random_stories"
+"Hello, I want to know who the characters are.","ask_for_characters"
+"Who conducted the research for this?","ask_for_researcher"
+"DADASDASDASDASDASDASDASD","ask_for_characters"
