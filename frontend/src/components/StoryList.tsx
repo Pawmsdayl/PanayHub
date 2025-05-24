@@ -1,4 +1,4 @@
-import StoryListEntry, {StoryListEntryProps} from "@/components/StoryListEntry.tsx";
+import StoryListEntry from "@/components/StoryListEntry.tsx";
 import {useContext} from "react";
 import {StoriesContext} from "@/pages/Dashboard.tsx";
 

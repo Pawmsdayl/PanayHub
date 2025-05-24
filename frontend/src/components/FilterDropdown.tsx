@@ -32,9 +32,9 @@ function FilterDropdown(
             <p className={`text-body-font`}>
               {filterName}
               <br/>
-              <p className={`text-sm`}>
+              <span className={`text-sm`}>
                 {value}
-              </p>
+              </span>
             </p>
             <div className={`size-[31px]`}>
               <FaCircleChevronUp className={`text-white w-full h-full`}/>

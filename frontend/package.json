@@ -22,6 +22,7 @@
     "lucide-react": "^0.503.0",
     "mapbox-gl": "^3.12.0",
     "mapbox-gl-leaflet": "^0.0.16",
+    "neo4j-driver": "^5.28.1",
     "react": "^19.0.0-rc.1",
     "react-dom": "^19.0.0-rc.1",
     "react-icons": "^5.5.0",

@@ -1,6 +1,4 @@
 import FilterDropdown from "@/components/FilterDropdown.tsx";
-import {useContext, useState} from "react";
-import {UserContext} from "@/pages/Dashboard.tsx";
 
 function DashboardFilters({}:{}) {
   const filterNamesList: string[] = [

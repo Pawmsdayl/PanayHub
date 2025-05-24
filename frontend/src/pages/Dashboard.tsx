@@ -3,7 +3,7 @@ import 'heatmap.js';
 import Heatmap from "@/components/Heatmap.tsx";
 import DashboardFilters from "@/components/DashboardFilters.tsx";
 import StoryList from "@/components/StoryList.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {createContext, useContext} from "react";
 import {StoryListEntryProps} from "@/components/StoryListEntry.tsx";
 
@@ -35,6 +35,39 @@ function Dashboard() {
     }
   ]);
 
+
+    const queryNeo4j = async () => {
+      const url = "https://85be2d53.databases.neo4j.io/db/neo4j/query/v2"; // or your server URL
+      const credentials = "bmVvNGo6eFFNUktCYjJJeGMtUFJhTVU4RUlZYjNUendtcjlYVFdzbUQ4cXRGYjh5cw=="
+// Base64 encode
+      const cypherQuery = {
+        "statement": "MATCH (n:ns0__AnimalTales) RETURN n LIMIT 25;"
+      };
+
+      try {
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Basic ${credentials}`,
+          },
+          body: JSON.stringify(cypherQuery),
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error ${response.status}`);
+        }
+
+        const result = await response.json();
+        console.log("Query Result:", result);
+        // setData(result);
+      } catch (err) {
+        // setError(err.message);
+      }
+    };
+
+
+
   const providerValue: ProviderValue = {
     setProvinceFilter,
   };
@@ -46,6 +79,7 @@ function Dashboard() {
             Dashboard
             {provinceFilter}
           </h1>
+          <button onClick={queryNeo4j}>Run Query</button>
         </section>
 
         <section className={`my-10`}>
