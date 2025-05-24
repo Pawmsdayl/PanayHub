@@ -4,7 +4,7 @@ import HeatmapLayer from "react-leaflet-heat-layer";
 import "leaflet/dist/leaflet.css";
 
 const addressPoints = [
-  [11.2035, 122.5145, 0.7],
+  [11.2035, 122.5145, 1],
 ];
 
 const Heatmap: React.FC = () => {

@@ -17,6 +17,8 @@
   --color-filter-blue-light: #6A99CF;
   --color-storylist-blue-light: #C5E0FF;
   --color-storylist-peach: #FFE0B8;
+  --color-filter-gray: #A29BA0;
+  --color-filter-blue-dark: #0c1927;
 }
 :root {
   --body-font-color: #2D3251;

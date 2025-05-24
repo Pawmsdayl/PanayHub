@@ -1,19 +1,52 @@
 import FilterDropdown from "@/components/FilterDropdown.tsx";
+import {useContext, useState} from "react";
+import {UserContext} from "@/pages/Dashboard.tsx";
 
-function DashboardFilters() {
+function DashboardFilters({}:{}) {
   const filterNamesList: string[] = [
     "Province", "City/Municipality", "Barangay", "Narrative Type", "Narrative Subtype",
     "Researcher","Storyteller", "Library Location"
   ];
 
+
   return (
-    <div className={`w-full`}>
+    <div className={`w-[300px] overflow-y-auto h-[600px]`}>
       <ul className={`flex flex-col flex-wrap justify-center items-center gap-4`}>
-        {filterNamesList.map((filterName, index) => (
-          <li key={index + filterName}>
-            <FilterDropdown filterName={filterName} />
-          </li>
-        ))}
+        <li>
+          <FilterDropdown filterName={"Province"} filterList={filterNamesList}/>
+        </li>
+
+        <li>
+          <FilterDropdown filterName={"City/Municipality"} filterList={filterNamesList}/>
+        </li>
+
+        <li>
+          <FilterDropdown filterName={"Barangay"} filterList={filterNamesList}/>
+        </li>
+        <li>
+          <FilterDropdown filterName={"Narrative Type"} filterList={filterNamesList}/>
+        </li>
+        <li>
+          <FilterDropdown filterName={"Narrative Subtype"} filterList={filterNamesList}/>
+        </li>
+        <li>
+          <FilterDropdown filterName={"Researcher"} filterList={filterNamesList}/>
+        </li>
+        <li>
+          <FilterDropdown filterName={"Storyteller"} filterList={filterNamesList}/>
+        </li>
+        <li>
+          <FilterDropdown filterName={"Library Location"} filterList={filterNamesList}/>
+        </li>
+        {/*{filterNamesList.map((filterName, index) => (*/}
+        {/*  <li key={index + filterName}>*/}
+        {/*    <FilterDropdown*/}
+        {/*      filterName={filterName}*/}
+        {/*      filterList={filterNamesList}*/}
+
+        {/*    />*/}
+        {/*  </li>*/}
+        {/*))}*/}
       </ul>
     </div>
   );
