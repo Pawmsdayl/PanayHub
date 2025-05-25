@@ -1,6 +1,6 @@
-import {useContext, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {FaCircleChevronUp} from "react-icons/fa6";
-import {ActionType, UserChoiceDispatch} from "@/contexts/UserChoiceContext.ts";
+import {ActionType, UserChoiceContext, UserChoiceDispatch} from "@/contexts/UserChoiceContext.ts";
 
 function FilterDropdown(
   {
@@ -12,9 +12,8 @@ function FilterDropdown(
     filterList: string[]|null,
   })
 {
-  // const context = useContext(UserContext);
-  // context?.setProvinceFilter("test");
   const dispatch = useContext(UserChoiceDispatch);
+  const userChoiceContext = useContext(UserChoiceContext);
 
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -23,6 +22,14 @@ function FilterDropdown(
     setIsDropdownOpen(prev => !prev);
   }
 
+  useEffect(() => {
+    const {
+      narrativeType
+    } = userChoiceContext;
+    if("Narrative Subtype" === filterName && narrativeType === null) {
+      setValue(null);
+    }
+  }, [filterName, userChoiceContext]);
   return (
     <div className={`flex flex-col`}>
       <button
@@ -48,7 +55,7 @@ function FilterDropdown(
         <div className={`bg-filter-gray w-[243px] overflow-x-hidden overflow-y-auto border`}>
           <ul>
             {filterList?.map((filter, index) => (
-              <li key={index + filter} className={`text-body-font ${filter === value? `bg-filter-blue-dark text-white`: `bg-filter-blue-light`} hover:bg-filter-blue-light duration-300 ease-out`}>
+              <li key={index + filter} className={`text-body-font ${filter === value? `bg-orange-highlight-dark text-white`: `bg-filter-blue-light`} hover:bg-filter-blue-dark hover:text-white duration-300 ease-out`}>
                 <button className={`hover:cursor-pointer w-full`}
                 onClick={() => {
                   let type;
@@ -63,7 +70,7 @@ function FilterDropdown(
                       type = ActionType.researcher;
                       break;
                     default:
-                      type = "Storyteller"
+                      type = ActionType.storyteller;
                       break;
                   }
                   if (value === filter) {

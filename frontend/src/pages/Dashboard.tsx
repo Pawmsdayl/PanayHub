@@ -3,13 +3,13 @@ import 'heatmap.js';
 import Heatmap from "@/components/Heatmap.tsx";
 import DashboardFilters from "@/components/DashboardFilters.tsx";
 import StoryList from "@/components/StoryList.tsx";
-import {useReducer, useState} from "react";
+import {useEffect, useReducer, useState} from "react";
 import {StoryListEntryProps} from "@/components/StoryListEntry.tsx";
 import {StoriesContext} from "@/contexts/StoriesContext.ts";
 import {reducer, UserChoiceContext, UserChoiceDispatch} from "@/contexts/UserChoiceContext.ts";
-import {ResearchersContext} from "@/contexts/ResearchersContext.ts";
 import {StorytellersContext} from "@/contexts/StorytellersContext.ts";
-import {createQuery, withNarrativeType} from "@/functions/Queries.ts";
+import {queryNeo4j, storytellersOnly} from "@/functions/Queries.ts";
+import {addSpacesBeforeCapitals, cleanUris} from "@/utils.ts";
 
 function Dashboard() {
   const [userChoiceState, userChoiceDispatch] = useReducer(reducer, {
@@ -19,9 +19,7 @@ function Dashboard() {
     storyteller: null
   })
 
-  const [researchersList, setResearchersList] = useState<string[]>([
-    "Asd", "Asd", "Ad,", "Asd"
-  ]);
+
   const [storytellersList, setStorytellersList] = useState<string[]>([
     "Asd", "Asd", "Ad,", "Asd"
   ]);
@@ -38,44 +36,21 @@ function Dashboard() {
     }
   ]);
 
+  useEffect(() => {
+     storytellersOnly().then(r =>{
+       const cleanNames:string[] = [];
+       const cleanUri = cleanUris(r.data.values)
+       cleanUri.forEach((uri) => {
+         cleanNames.push(addSpacesBeforeCapitals(uri));
+       });
+       cleanNames.sort((a, b) => a.localeCompare(b));
+       setStorytellersList(cleanNames);
+     });
+  }, []);
 
-    const queryNeo4j = async () => {
-      const url = "https://85be2d53.databases.neo4j.io/db/neo4j/query/v2"; // or your server URL
-      const credentials = "bmVvNGo6eFFNUktCYjJJeGMtUFJhTVU4RUlZYjNUendtcjlYVFdzbUQ4cXRGYjh5cw=="
-// Base64 encode
-
-
-      const statement = createQuery(userChoiceState);
-      const cypherQuery = {
-        // "statement": "MATCH (n:ns0__AnimalTales) RETURN n LIMIT 25;"
-        "statement": statement
-      };
-
-      console.log(statement);
-
-      try {
-        const response = await fetch(url, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Basic ${credentials}`,
-          },
-          body: JSON.stringify(cypherQuery),
-        });
-
-        if (!response.ok) {
-          throw new Error(`HTTP error ${response.status}`);
-        }
-
-        const result = await response.json();
-        console.log("Query Result:", result);
-        // setData(result);
-      } catch (err) {
-        // setError(err.message);
-      }
-    };
-
-
+  const handleOnClick = async () => {
+    await queryNeo4j(userChoiceState);
+  }
 
   return (
     <div className={`min-h-screen bg-white`}>
@@ -91,11 +66,9 @@ function Dashboard() {
             <div className={`flex flex-col`}>
               <UserChoiceContext.Provider value={userChoiceState}>
                 <UserChoiceDispatch.Provider value={userChoiceDispatch}>
-                  <ResearchersContext.Provider value={{researchers: researchersList}}>
-                    <StorytellersContext.Provider value={{storytellers: storytellersList}}>
-                      <DashboardFilters/>
-                    </StorytellersContext.Provider>
-                  </ResearchersContext.Provider>
+                  <StorytellersContext.Provider value={{storytellers: storytellersList}}>
+                    <DashboardFilters/>
+                  </StorytellersContext.Provider>
                 </UserChoiceDispatch.Provider>
               </UserChoiceContext.Provider>
               <button
@@ -106,7 +79,7 @@ function Dashboard() {
                     userChoiceState.storyteller === null
                 }
                 className={`bg-chatbot-light text-white p-2 rounded-lg hover:cursor-pointer duration-300 transition-ease-out hover:bg-black`}
-                onClick={queryNeo4j}>
+                onClick={handleOnClick}>
                 Run Query
               </button>
             </div>

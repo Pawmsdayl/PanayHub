@@ -25,8 +25,31 @@ RETURN r.uri
 MATCH (n)-[ns0__hasKeyInformant]->(ki:Resource)
 WHERE ki.uri ENDS
 WITH '#FedericoCaballero'
+RETURN n.ns0__title, n.ns0__provenance
 
 ~~~ Given a Researcher, add this before the query:
 MATCH (n)-[ns0__hasResearcherOrRecorder]->(r:Resource)
 WHERE r.uri ENDS
 WITH '#EliodoraLDimzon'
+RETURN n.ns0__title, n.ns0__provenance
+
+
+~ List of Researchers, given no other filter
+MATCH (r:ns0__ResearcherOrRecorder)
+RETURN r.uri
+
+~ List of StoryTellers, given no other filter
+MATCH (ki:ns0__KeyInformant)
+RETURN ki.uri
+
+~ List of StoryTellers, given a Researcher
+MATCH (n:Resource)-[ns0__hasKeyInformant]->(ki:ns0__KeyInformant)
+WHERE ki.uri ENDS WITH '#FedericoCaballero'
+MATCH (n:Resource)-[ns0__hasResearcherOrRecorder]->(r:ns0__ResearcherOrRecorder)
+RETURN DISTINCT r.uri
+
+~ List of Researchers, given a StoryTeller
+MATCH (n:Resource)-[ns0__hasKeyInformant]->(ki:ns0__KeyInformant)
+MATCH (n:Resource)-[ns0__hasResearcherOrRecorder]->(r:ns0__ResearcherOrRecorder)
+WHERE r.uri ENDS WITH '#EliodoraLDimzon'
+RETURN DISTINCT ki.uri

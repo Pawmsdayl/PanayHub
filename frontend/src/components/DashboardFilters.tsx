@@ -1,15 +1,13 @@
 import FilterDropdown from "@/components/FilterDropdown.tsx";
 import {useContext} from "react";
 import {UserChoiceContext} from "@/contexts/UserChoiceContext.ts";
-import {ResearchersContext} from "@/contexts/ResearchersContext.ts";
 import {StorytellersContext} from "@/contexts/StorytellersContext.ts";
 
-function DashboardFilters({}:{}) {
+function DashboardFilters() {
   const userChoiceContext = useContext(UserChoiceContext);
-  const researchersContext = useContext(ResearchersContext);
   const storytellersContext = useContext(StorytellersContext);
   enum NarrativeTypes {
-    folkTales = "Folk Tales",
+    folkTales = "Folktales",
     legends = "Legends",
     myths = "Myths"
   }
@@ -17,13 +15,12 @@ function DashboardFilters({}:{}) {
     narrativeType
   } = userChoiceContext;
 
-  const {
-    researchers
-  } = researchersContext;
 
   const {
     storytellers
   } = storytellersContext;
+
+  console.log(storytellers);
 
   const narrativeTypesList: string[] = [
     "Folktales",
@@ -62,7 +59,7 @@ function DashboardFilters({}:{}) {
   ];
 
   let subtypesList;
-
+  console.log(narrativeType);
   switch (narrativeType){
     case NarrativeTypes.folkTales:
       subtypesList = folktalesSubtypesList;
@@ -77,8 +74,17 @@ function DashboardFilters({}:{}) {
       subtypesList = null;
   }
 
+  const researchersList = [
+    "Alicia P Magos",
+    "Bel Sobrevega",
+    "Eliodora L Dimzon",
+    "F. Landa Jocano",
+    "Maximo Ramos",
+    "Randy Madrid"
+  ];
+
   return (
-    <div className={`w-[300px] overflow-y-auto h-[600px]`}>
+    <div className={`w-[300px] overflow-y-auto h-[550px]`}>
       <ul className={`flex flex-col flex-wrap justify-center items-center gap-4`}>
         <li>
           <FilterDropdown filterName={"Narrative Type"} filterList={narrativeTypesList}/>
@@ -87,7 +93,7 @@ function DashboardFilters({}:{}) {
           <FilterDropdown filterName={"Narrative Subtype"} filterList={subtypesList}/>
         </li>
         <li>
-          <FilterDropdown filterName={"Researcher"} filterList={researchers}/>
+          <FilterDropdown filterName={"Researcher"} filterList={researchersList}/>
         </li>
         <li>
           <FilterDropdown filterName={"Storyteller"} filterList={storytellers}/>

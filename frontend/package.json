@@ -16,6 +16,7 @@
     "@types/leaflet.heat": "^0.2.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^16.5.0",
     "heatmap.js": "^2.0.5",
     "leaflet": "^1.9.4",
     "leaflet.heat": "^0.2.0",
@@ -29,7 +30,8 @@
     "react-leaflet": "^5.0.0-rc.2",
     "react-leaflet-heat-layer": "^1.1.1",
     "react-router-dom": "^7.5.3",
-    "tailwind-merge": "^3.2.0"
+    "tailwind-merge": "^3.2.0",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
