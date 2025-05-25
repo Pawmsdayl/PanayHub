@@ -2,8 +2,7 @@ import FilterDropdown from "@/components/FilterDropdown.tsx";
 
 function DashboardFilters({}:{}) {
   const filterNamesList: string[] = [
-    "Province", "City/Municipality", "Barangay", "Narrative Type", "Narrative Subtype",
-    "Researcher","Storyteller", "Library Location"
+    "Narrative Type", "Narrative Subtype", "Researcher","Storyteller"
   ];
 
 

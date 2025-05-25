@@ -14,14 +14,10 @@ export const UserContext = createContext<ProviderValue|null>(null);
 export const StoriesContext = createContext<StoryListEntryProps[]|null>(null)
 
 function Dashboard() {
-  const [provinceFilter, setProvinceFilter] = useState<string | null>(null);
-  const [cityFilter, setCityFilter] = useState<string | null>(null);
-  const [barangayFilter, setBarangayFilter] = useState<string | null>(null);
   const [narrativeTypeFilter, setNarrativeTypeFilter] = useState<string | null>(null);
   const [narrativeSubtypeFilter, setNarrativeSubtypeFilter] = useState<string | null>(null);
   const [researcherFilter, setResearcherFilter] = useState<string | null>(null);
   const [storytellerFilter, setStorytellerFilter] = useState<string | null>(null);
-  const [libraryLocationFilter, setLibraryLocationFilter] = useState<string | null>(null);
   const [storyListEntries, setStoryListEntries] = useState<StoryListEntryProps[]>([
     {
       title: "Title 1",
