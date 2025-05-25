@@ -9,7 +9,7 @@ function FilterDropdown(
   }:
   {
     filterName: string,
-    filterList: string[],
+    filterList: string[]|null,
   })
 {
   // const context = useContext(UserContext);
@@ -45,9 +45,9 @@ function FilterDropdown(
         </div>
       </button>
       {isDropdownOpen && (
-        <div className={`bg-filter-gray h-[100px] overflow-y-auto border`}>
+        <div className={`bg-filter-gray w-[243px] overflow-x-hidden overflow-y-auto border`}>
           <ul>
-            {filterList.map((filter, index) => (
+            {filterList?.map((filter, index) => (
               <li key={index + filter} className={`text-body-font ${filter === value? `bg-filter-blue-dark text-white`: `bg-filter-blue-light`} hover:bg-filter-blue-light duration-300 ease-out`}>
                 <button className={`hover:cursor-pointer w-full`}
                 onClick={() => {
@@ -66,7 +66,6 @@ function FilterDropdown(
                       type = "Storyteller"
                       break;
                   }
-
                   if (value === filter) {
                     setValue(null);
                     if (dispatch) {
@@ -87,7 +86,9 @@ function FilterDropdown(
                   }
                 }}
                 >
-                  {filter}
+                  <p className={`overflow-x-hidden`}>
+                    {filter}
+                  </p>
                 </button>
               </li>
             ))}

@@ -8,13 +8,8 @@ import {StoryListEntryProps} from "@/components/StoryListEntry.tsx";
 // import {FiltersProvider} from "@/contexts/FiltersContext.tsx";
 import {StoriesContext} from "@/contexts/StoriesContext.ts";
 import {reducer, UserChoiceContext, UserChoiceDispatch} from "@/contexts/UserChoiceContext.ts";
-
-interface ProviderValue {
-  setProvinceFilter: (province: string | null) => void;
-}
-
-
-
+import {ResearchersContext} from "@/contexts/ResearchersContext.ts";
+import {StorytellersContext} from "@/contexts/StorytellersContext.ts";
 
 function Dashboard() {
   const [userChoiceState, userChoiceDispatch] = useReducer(reducer, {
@@ -23,6 +18,9 @@ function Dashboard() {
     researcher: null,
     storyteller: null
   })
+
+  const [researchersList, setResearchersList] = useState<string[]>([]);
+  const [storytellersList, setStorytellersList] = useState<string[]>([]);
   const [storyListEntries, setStoryListEntries] = useState<StoryListEntryProps[]>([
     {
       title: "Title 1",
@@ -68,22 +66,13 @@ function Dashboard() {
     };
 
 
-  //
-  const providerValue: ProviderValue = {
-    setProvinceFilter: () =>{},
-  };
+
   return (
     <div className={`min-h-screen bg-white`}>
       <div className={`p-10`}>
         <section>
           <h1 className={`font-serif font-bold text-7xl gradient-text-highlight`}>
             Dashboard
-            {/*{provinceFilter}*/}
-            {userChoiceState.narrativeType}
-            {userChoiceState.narrativeSubtype}
-            {userChoiceState.researcher}
-            {userChoiceState.storyteller}
-
           </h1>
           <button onClick={queryNeo4j}>Run Query</button>
         </section>
@@ -92,11 +81,13 @@ function Dashboard() {
           <div className={`grid grid-cols-3 place-items-center gap-4`}>
             <UserChoiceContext.Provider value={userChoiceState}>
               <UserChoiceDispatch.Provider value={userChoiceDispatch}>
-                <DashboardFilters/>
+                <ResearchersContext.Provider value={{researchers:researchersList}}>
+                  <StorytellersContext.Provider value={{storytellers:storytellersList}}>
+                    <DashboardFilters/>
+                  </StorytellersContext.Provider>
+                </ResearchersContext.Provider>
               </UserChoiceDispatch.Provider>
             </UserChoiceContext.Provider>
-            {/*<FiltersProvider>*/}
-            {/*</FiltersProvider>*/}
             <div>
               <Heatmap/>
             </div>
@@ -106,9 +97,6 @@ function Dashboard() {
           </div>
         </section>
         <section className={`w-full  flex justify-center items-center`}>
-          {/*<StoriesContext.Provider value={storyListEntries}>*/}
-          {/*  <StoryList/>*/}
-          {/*</StoriesContext.Provider>*/}
           <StoriesContext.Provider value={storyListEntries}>
             <StoryList/>
           </StoriesContext.Provider>

@@ -1,24 +1,96 @@
 import FilterDropdown from "@/components/FilterDropdown.tsx";
+import {useContext} from "react";
+import {UserChoiceContext} from "@/contexts/UserChoiceContext.ts";
+import {ResearchersContext} from "@/contexts/ResearchersContext.ts";
+import {StorytellersContext} from "@/contexts/StorytellersContext.ts";
 
 function DashboardFilters({}:{}) {
-  const filterNamesList: string[] = [
-    "Narrative Type", "Narrative Subtype", "Researcher","Storyteller"
+  const userChoiceContext = useContext(UserChoiceContext);
+  const researchersContext = useContext(ResearchersContext);
+  const storytellersContext = useContext(StorytellersContext);
+  enum NarrativeTypes {
+    folkTales = "Folk Tales",
+    legends = "Legends",
+    myths = "Myths"
+  }
+  const {
+    narrativeType
+  } = userChoiceContext;
+
+  const {
+    researchers
+  } = researchersContext;
+
+  const {
+    storytellers
+  } = storytellersContext;
+
+  const narrativeTypesList: string[] = [
+    "Folk Tales",
+    "Legends",
+    "Myths"
   ];
+
+  const folktalesSubtypesList: string[] = [
+    "Animal Tales",
+    "Didactic Tales",
+    "Fables",
+    "Jocular Tales",
+    "Marchen or Tales of Magic",
+    "Miscellaneous Tales",
+    "Novelistic Tales",
+  ];
+  const legendsSubtypesList: string[] = [
+    "How Places and Things Got Their Names",
+    "Origin of Animals",
+    "Origin of Plants",
+    "Heroic Legends",
+    "Legends on Supernatural Beings",
+    "Miscellaneous Legends",
+    "Religious Legends",
+  ];
+  const mythsSubtypesList: string[] = [
+    "Creation Myths",
+    "Death Myths",
+    "Miscellaneous Myths",
+    "Mythological Stories",
+    "Mythology and Deities",
+    "Myths on Human Nature",
+    "Myths on Natural Phenomena",
+    "Myths on Pestilence",
+    "Myths on Supernatural Creatures"
+  ];
+
+  let subtypesList;
+
+  switch (narrativeType){
+    case NarrativeTypes.folkTales:
+      subtypesList = folktalesSubtypesList;
+      break;
+    case NarrativeTypes.legends:
+      subtypesList = legendsSubtypesList;
+      break;
+    case NarrativeTypes.myths:
+      subtypesList = mythsSubtypesList;
+      break;
+    default:
+      subtypesList = null;
+  }
 
   return (
     <div className={`w-[300px] overflow-y-auto h-[600px]`}>
       <ul className={`flex flex-col flex-wrap justify-center items-center gap-4`}>
         <li>
-          <FilterDropdown filterName={"Narrative Type"} filterList={filterNamesList}/>
+          <FilterDropdown filterName={"Narrative Type"} filterList={narrativeTypesList}/>
         </li>
         <li>
-          <FilterDropdown filterName={"Narrative Subtype"} filterList={filterNamesList}/>
+          <FilterDropdown filterName={"Narrative Subtype"} filterList={subtypesList}/>
         </li>
         <li>
-          <FilterDropdown filterName={"Researcher"} filterList={filterNamesList}/>
+          <FilterDropdown filterName={"Researcher"} filterList={researchers}/>
         </li>
         <li>
-          <FilterDropdown filterName={"Storyteller"} filterList={filterNamesList}/>
+          <FilterDropdown filterName={"Storyteller"} filterList={storytellers}/>
         </li>
       </ul>
     </div>
