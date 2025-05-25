@@ -1,0 +1,32 @@
+~~~ Given a Category ONLY
+MATCH (n)-[rdf__type]->(sc:owl__Class)-[rdfs__subClassOf]->(c:owl__Class)
+WHERE c.uri ENDS WITH '#Myths'
+RETURN n.ns0__title, n.ns0__provenance
+
+MATCH (ki:ns0__KeyInformant)-[:ns0__isKeyInformantOf]->(n:Resource)-[:rdf__type]->(sc:owl__Class)-[:rdfs__subClassOf]->(c:owl__Class)
+WHERE c.uri ENDS WITH '#Myths'  
+RETURN ki.uri
+
+MATCH (r:ns0__ResearcherOrRecorder)-[:ns0__conductedResearchOrRecorded]->(n:Resource)-[:rdf__type]->(sc:owl__Class)-[:rdfs__subClassOf]->(c:owl__Class)
+WHERE c.uri ENDS WITH '#Myths'
+RETURN r.uri
+
+~~~ Given a Subcategory
+MATCH (ki:ns0__KeyInformant)-[:ns0__isKeyInformantOf]->(n:ns0__AnimalTales)
+RETURN ki.uri
+
+MATCH (n:ns0__AnimalTales) 
+RETURN n.ns0__title, n.ns0__provenance
+
+MATCH (r:ns0__ResearcherOrRecorder)-[:ns0__conductedResearchOrRecorded]->(n:ns0__AnimalTales)
+RETURN r.uri
+
+~~~ Given a Researcher, add this before the query:
+MATCH (n)-[ns0__hasKeyInformant]->(ki:Resource)
+WHERE ki.uri ENDS
+WITH '#FedericoCaballero'
+
+~~~ Given a StoryTeller, add this before the query:
+MATCH (n)-[ns0__hasResearcherOrRecorder]->(r:Resource)
+WHERE r.uri ENDS
+WITH '#EliodoraLDimzon'
