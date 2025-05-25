@@ -5,11 +5,11 @@ import DashboardFilters from "@/components/DashboardFilters.tsx";
 import StoryList from "@/components/StoryList.tsx";
 import {useReducer, useState} from "react";
 import {StoryListEntryProps} from "@/components/StoryListEntry.tsx";
-// import {FiltersProvider} from "@/contexts/FiltersContext.tsx";
 import {StoriesContext} from "@/contexts/StoriesContext.ts";
 import {reducer, UserChoiceContext, UserChoiceDispatch} from "@/contexts/UserChoiceContext.ts";
 import {ResearchersContext} from "@/contexts/ResearchersContext.ts";
 import {StorytellersContext} from "@/contexts/StorytellersContext.ts";
+import {createQuery, withNarrativeType} from "@/functions/Queries.ts";
 
 function Dashboard() {
   const [userChoiceState, userChoiceDispatch] = useReducer(reducer, {
@@ -43,9 +43,15 @@ function Dashboard() {
       const url = "https://85be2d53.databases.neo4j.io/db/neo4j/query/v2"; // or your server URL
       const credentials = "bmVvNGo6eFFNUktCYjJJeGMtUFJhTVU4RUlZYjNUendtcjlYVFdzbUQ4cXRGYjh5cw=="
 // Base64 encode
+
+
+      const statement = createQuery(userChoiceState);
       const cypherQuery = {
-        "statement": "MATCH (n:ns0__AnimalTales) RETURN n LIMIT 25;"
+        // "statement": "MATCH (n:ns0__AnimalTales) RETURN n LIMIT 25;"
+        "statement": statement
       };
+
+      console.log(statement);
 
       try {
         const response = await fetch(url, {
@@ -93,6 +99,12 @@ function Dashboard() {
                 </UserChoiceDispatch.Provider>
               </UserChoiceContext.Provider>
               <button
+                disabled={
+                    userChoiceState.narrativeType === null  &&
+                      userChoiceState.narrativeSubtype === null &&
+                      userChoiceState.researcher === null &&
+                    userChoiceState.storyteller === null
+                }
                 className={`bg-chatbot-light text-white p-2 rounded-lg hover:cursor-pointer duration-300 transition-ease-out hover:bg-black`}
                 onClick={queryNeo4j}>
                 Run Query

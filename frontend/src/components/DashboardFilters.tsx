@@ -26,7 +26,7 @@ function DashboardFilters({}:{}) {
   } = storytellersContext;
 
   const narrativeTypesList: string[] = [
-    "Folk Tales",
+    "Folktales",
     "Legends",
     "Myths"
   ];
