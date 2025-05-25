@@ -30,6 +30,7 @@
     "react-leaflet": "^5.0.0-rc.2",
     "react-leaflet-heat-layer": "^1.1.1",
     "react-router-dom": "^7.5.3",
+    "recharts": "^2.15.3",
     "tailwind-merge": "^3.2.0",
     "ts-node": "^10.9.2"
   },

@@ -10,6 +10,8 @@ import {reducer, UserChoiceContext, UserChoiceDispatch} from "@/contexts/UserCho
 import {StorytellersContext} from "@/contexts/StorytellersContext.ts";
 import {queryNeo4j, storytellersOnly} from "@/functions/Queries.ts";
 import {addSpacesBeforeCapitals, cleanUris, createStoryListEntries} from "@/utils.ts";
+import {Chart} from "@/components/Chart.tsx";
+import {ChartDiv} from "@/components/ChartDiv.tsx";
 
 function Dashboard() {
   const [userChoiceState, userChoiceDispatch] = useReducer(reducer, {
@@ -22,7 +24,7 @@ function Dashboard() {
 
   const [storytellersList, setStorytellersList] = useState<string[]>([]);
   const [storyListEntries, setStoryListEntries] = useState<StoryListEntryProps[]>([]);
-
+  const [provenances, setProvenances] = useState<string[]>([]);
 
   useEffect(() => {
     if (storytellersList.length === 0) {
@@ -53,9 +55,12 @@ function Dashboard() {
 
   const handleOnClick = async () => {
     const response = await queryNeo4j(userChoiceState);
-    const arr = createStoryListEntries(response);
+    const {storyListEntries: arr,
+      provenances: provs
+    } = createStoryListEntries(response);
     console.log(arr);
     setStoryListEntries(arr);
+    setProvenances(provs);
   }
 
   return (
@@ -93,7 +98,9 @@ function Dashboard() {
               <Heatmap/>
             </div>
             <div>
-              charts
+             <ChartDiv provenances={provenances} storyList={storyListEntries}>
+               <p></p>
+             </ChartDiv>
             </div>
           </div>
         </section>

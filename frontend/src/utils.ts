@@ -105,8 +105,12 @@ export function removeSpaces(text: string): string {
 
 }
 
-export function createStoryListEntries(response: UriResponse): StoryListEntryProps[]{
+export function createStoryListEntries(response: UriResponse):{
+  provenances: string[],
+  storyListEntries: StoryListEntryProps[]
+}{
   const storyListEntries: StoryListEntryProps[] = [];
+  const provenances: string[] = [];
   const stringArray: string[][] = response.data.values;
   stringArray.forEach((objectStringArray) => {
     const storyListEntry: StoryListEntryProps = {
@@ -115,6 +119,7 @@ export function createStoryListEntries(response: UriResponse): StoryListEntryPro
       storyteller: addSpacesBeforeCapitals(objectStringArray[2]),
       researcher: addSpacesBeforeCapitals(objectStringArray[3])
     };
+    provenances.push(objectStringArray[1]);
     storyListEntries.push(storyListEntry);
   });
   // const storyListEntry: StoryListEntryProps = {
@@ -124,8 +129,10 @@ export function createStoryListEntries(response: UriResponse): StoryListEntryPro
   //   researcher: addSpacesBeforeCapitals(objectStringArray[3])
   // };
 
-  return storyListEntries;
-
+  return {
+    storyListEntries,
+    provenances
+  };
 }
 
   // const cleanedUris: string[] = [];

@@ -106,14 +106,14 @@ export function createQuery(userChoices:UserChoiceState): string {
     storyteller
   } = userChoices
   console.log(userChoices);
-  let query = storyteller? withStoryteller(removeSpaces(storyteller)): "MATCH (ki:ns0__KeyInformant)-[:ns0__isKeyInformantOf]->(n)";
-  query += researcher? withResearcher(researchersDictionary[researcher]): "MATCH (r:ns0__ResearcherOrRecorder)-[:ns0__conductedResearchOrRecorded]->(n)";
+  let query = storyteller? withStoryteller(removeSpaces(storyteller)): "MATCH (ki:ns0__KeyInformant)-[:ns0__isKeyInformantOf]->(n)\n";
+  query += researcher? withResearcher(researchersDictionary[researcher]): "MATCH (r:ns0__ResearcherOrRecorder)-[:ns0__conductedResearchOrRecorded]->(n)\n";
   if (narrativeSubtype) {
     query += withNarrativeSubtype(narrativeSubtypesDictionary[narrativeSubtype]);
     query += `RETURN n.ns0__title, n.ns0__provenance, split(ki.uri, '#')[1] as key_informant, split(r.uri, '#')[1] as researcher`;
     return query
   }
-  query += narrativeType? withNarrativeType(narrativeType): "MATCH (n)";
+  query += narrativeType? withNarrativeType(narrativeType): "MATCH (n)\n";
   query += `RETURN n.ns0__title, n.ns0__provenance, split(ki.uri, '#')[1] as key_informant, split(r.uri, '#')[1] as researcher`;
   return query;
 }
