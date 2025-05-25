@@ -3,21 +3,26 @@ import 'heatmap.js';
 import Heatmap from "@/components/Heatmap.tsx";
 import DashboardFilters from "@/components/DashboardFilters.tsx";
 import StoryList from "@/components/StoryList.tsx";
-import {useEffect, useState} from "react";
-import {createContext, useContext} from "react";
+import {useReducer, useState} from "react";
 import {StoryListEntryProps} from "@/components/StoryListEntry.tsx";
+// import {FiltersProvider} from "@/contexts/FiltersContext.tsx";
+import {StoriesContext} from "@/contexts/StoriesContext.ts";
+import {reducer, UserChoiceContext, UserChoiceDispatch} from "@/contexts/UserChoiceContext.ts";
 
 interface ProviderValue {
   setProvinceFilter: (province: string | null) => void;
 }
-export const UserContext = createContext<ProviderValue|null>(null);
-export const StoriesContext = createContext<StoryListEntryProps[]|null>(null)
+
+
+
 
 function Dashboard() {
-  const [narrativeTypeFilter, setNarrativeTypeFilter] = useState<string | null>(null);
-  const [narrativeSubtypeFilter, setNarrativeSubtypeFilter] = useState<string | null>(null);
-  const [researcherFilter, setResearcherFilter] = useState<string | null>(null);
-  const [storytellerFilter, setStorytellerFilter] = useState<string | null>(null);
+  const [userChoiceState, userChoiceDispatch] = useReducer(reducer, {
+    narrativeType: null,
+    narrativeSubtype: null,
+    researcher: null,
+    storyteller: null
+  })
   const [storyListEntries, setStoryListEntries] = useState<StoryListEntryProps[]>([
     {
       title: "Title 1",
@@ -63,9 +68,9 @@ function Dashboard() {
     };
 
 
-
+  //
   const providerValue: ProviderValue = {
-    setProvinceFilter,
+    setProvinceFilter: () =>{},
   };
   return (
     <div className={`min-h-screen bg-white`}>
@@ -73,16 +78,25 @@ function Dashboard() {
         <section>
           <h1 className={`font-serif font-bold text-7xl gradient-text-highlight`}>
             Dashboard
-            {provinceFilter}
+            {/*{provinceFilter}*/}
+            {userChoiceState.narrativeType}
+            {userChoiceState.narrativeSubtype}
+            {userChoiceState.researcher}
+            {userChoiceState.storyteller}
+
           </h1>
           <button onClick={queryNeo4j}>Run Query</button>
         </section>
 
         <section className={`my-10`}>
           <div className={`grid grid-cols-3 place-items-center gap-4`}>
-            <UserContext.Provider value={providerValue}>
-              <DashboardFilters/>
-            </UserContext.Provider>
+            <UserChoiceContext.Provider value={userChoiceState}>
+              <UserChoiceDispatch.Provider value={userChoiceDispatch}>
+                <DashboardFilters/>
+              </UserChoiceDispatch.Provider>
+            </UserChoiceContext.Provider>
+            {/*<FiltersProvider>*/}
+            {/*</FiltersProvider>*/}
             <div>
               <Heatmap/>
             </div>
@@ -92,10 +106,12 @@ function Dashboard() {
           </div>
         </section>
         <section className={`w-full  flex justify-center items-center`}>
+          {/*<StoriesContext.Provider value={storyListEntries}>*/}
+          {/*  <StoryList/>*/}
+          {/*</StoriesContext.Provider>*/}
           <StoriesContext.Provider value={storyListEntries}>
             <StoryList/>
           </StoriesContext.Provider>
-
         </section>
       </div>
       <Footer/>

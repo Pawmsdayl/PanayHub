@@ -1,6 +1,6 @@
 import StoryListEntry from "@/components/StoryListEntry.tsx";
 import {useContext} from "react";
-import {StoriesContext} from "@/pages/Dashboard.tsx";
+import {StoriesContext} from "@/contexts/StoriesContext.ts";
 
 
 function StoryList() {

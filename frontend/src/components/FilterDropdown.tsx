@@ -1,6 +1,7 @@
 import {useContext, useState} from "react";
-import { FaCircleChevronUp } from "react-icons/fa6";
-import {UserContext} from "@/pages/Dashboard.tsx";
+import {FaCircleChevronUp} from "react-icons/fa6";
+import {ActionType, UserChoiceDispatch} from "@/contexts/UserChoiceContext.ts";
+
 function FilterDropdown(
   {
     filterName,
@@ -11,8 +12,9 @@ function FilterDropdown(
     filterList: string[],
   })
 {
-  const context = useContext(UserContext);
+  // const context = useContext(UserContext);
   // context?.setProvinceFilter("test");
+  const dispatch = useContext(UserChoiceDispatch);
 
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -49,16 +51,38 @@ function FilterDropdown(
               <li key={index + filter} className={`text-body-font ${filter === value? `bg-filter-blue-dark text-white`: `bg-filter-blue-light`} hover:bg-filter-blue-light duration-300 ease-out`}>
                 <button className={`hover:cursor-pointer w-full`}
                 onClick={() => {
+                  let type;
+                  switch (filterName) {
+                    case "Narrative Type":
+                      type = ActionType.narrativeType;
+                      break;
+                    case "Narrative Subtype":
+                      type = ActionType.narrativeSubtype;
+                      break;
+                    case "Researcher":
+                      type = ActionType.researcher;
+                      break;
+                    default:
+                      type = "Storyteller"
+                      break;
+                  }
+
                   if (value === filter) {
                     setValue(null);
+                    if (dispatch) {
+                      dispatch({
+                        type: type,
+                        payload: null,
+                      })
+                    }
 
                   }else {
                     setValue(filter)
-                    if (context === null) {
-                      console.log("Context is null");
-                    }else {
-                      context.setProvinceFilter(filter);
-                      console.log(filter);
+                    if (dispatch) {
+                        dispatch({
+                          type: type,
+                          payload: filter,
+                        })
                     }
                   }
                 }}
