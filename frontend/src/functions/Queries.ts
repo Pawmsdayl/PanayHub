@@ -31,7 +31,7 @@ export async function storytellersOnly(): Promise<UriResponse> {
   }
 }
 
-export const queryNeo4j = async (userChoiceState: UserChoiceState) => {
+export const queryNeo4j = async (userChoiceState: UserChoiceState):Promise<UriResponse> => {
   const statement = createQuery(userChoiceState);
   const cypherQuery = {
     // "statement": "MATCH (n:ns0__AnimalTales) RETURN n LIMIT 25;"
@@ -56,9 +56,10 @@ export const queryNeo4j = async (userChoiceState: UserChoiceState) => {
 
     const result = await response.json();
     console.log("Query Result:", result);
+    return result;
     // setData(result);
   } catch (err) {
-    // setError(err.message);
+    console.log(err.message);
   }
 };
 
@@ -67,14 +68,12 @@ function withNarrativeType(narrativeType: string): string {
   if (narrativeType === "Legends"){
     return `
     MATCH (n)-[:rdf__type]->(m)-[:rdfs__subClassOf*]->(c:owl__Class)
-    WHERE c.uri ENDS WITH '#Legends'
-    RETURN n.ns0__title, n.ns0__provenance\n
+    WHERE c.uri ENDS WITH '#Legends'\n
     `;
   }
   return `  
   MATCH (n)-[rdf__type]->(sc:owl__Class)-[rdfs__subClassOf]->(c:owl__Class)
-  WHERE c.uri ENDS WITH '#${narrativeType}'
-  RETURN n.ns0__title, n.ns0__provenance\n`;
+  WHERE c.uri ENDS WITH '#${narrativeType}'\n`;
 }
 
 function withStoryteller(storyteller:string) : string {
@@ -96,7 +95,6 @@ function withResearcher(researcher:string): string {
 function withNarrativeSubtype(subtype:string): string {
   return `
   MATCH (n:ns0__${subtype}) 
-  RETURN n.ns0__title, n.ns0__provenance\n
   `;
 }
 
@@ -108,12 +106,14 @@ export function createQuery(userChoices:UserChoiceState): string {
     storyteller
   } = userChoices
   console.log(userChoices);
-  let query = storyteller? withStoryteller(removeSpaces(storyteller)): "";
-  query += researcher? withResearcher(researchersDictionary[researcher]): "";
+  let query = storyteller? withStoryteller(removeSpaces(storyteller)): "MATCH (ki:ns0__KeyInformant)-[:ns0__isKeyInformantOf]->(n)";
+  query += researcher? withResearcher(researchersDictionary[researcher]): "MATCH (r:ns0__ResearcherOrRecorder)-[:ns0__conductedResearchOrRecorded]->(n)";
   if (narrativeSubtype) {
     query += withNarrativeSubtype(narrativeSubtypesDictionary[narrativeSubtype]);
+    query += `RETURN n.ns0__title, n.ns0__provenance, split(ki.uri, '#')[1] as key_informant, split(r.uri, '#')[1] as researcher`;
     return query
   }
-  query += narrativeType? withNarrativeType(narrativeType): "";
+  query += narrativeType? withNarrativeType(narrativeType): "MATCH (n)";
+  query += `RETURN n.ns0__title, n.ns0__provenance, split(ki.uri, '#')[1] as key_informant, split(r.uri, '#')[1] as researcher`;
   return query;
 }

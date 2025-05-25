@@ -19,6 +19,9 @@ function FilterDropdown(
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [value, setValue] = useState<string | null>(null);
   const toggleDropdown = () => {
+    if (userChoiceContext.narrativeType === null && filterName === "Narrative Subtype") {
+      setValue("Must select a Narrative Type");
+    }
     setIsDropdownOpen(prev => !prev);
   }
 
@@ -38,10 +41,10 @@ function FilterDropdown(
       >
         <div className={`flex items-center justify-center h-full w-full`}>
           <div className={`flex justify-between items-center w-full`}>
-            <p className={`text-body-font`}>
+            <p className={`text-body-font font-bold`}>
               {filterName}
               <br/>
-              <span className={`text-sm`}>
+              <span className={`text-sm font-normal`}>
                 {value}
               </span>
             </p>
@@ -91,6 +94,8 @@ function FilterDropdown(
                         })
                     }
                   }
+
+                  setIsDropdownOpen(false);
                 }}
                 >
                   <p className={`overflow-x-hidden`}>

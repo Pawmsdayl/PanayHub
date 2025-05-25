@@ -9,7 +9,7 @@ import {StoriesContext} from "@/contexts/StoriesContext.ts";
 import {reducer, UserChoiceContext, UserChoiceDispatch} from "@/contexts/UserChoiceContext.ts";
 import {StorytellersContext} from "@/contexts/StorytellersContext.ts";
 import {queryNeo4j, storytellersOnly} from "@/functions/Queries.ts";
-import {addSpacesBeforeCapitals, cleanUris} from "@/utils.ts";
+import {addSpacesBeforeCapitals, cleanUris, createStoryListEntries} from "@/utils.ts";
 
 function Dashboard() {
   const [userChoiceState, userChoiceDispatch] = useReducer(reducer, {
@@ -20,36 +20,42 @@ function Dashboard() {
   })
 
 
-  const [storytellersList, setStorytellersList] = useState<string[]>([
-    "Asd", "Asd", "Ad,", "Asd"
-  ]);
-  const [storyListEntries, setStoryListEntries] = useState<StoryListEntryProps[]>([
-    {
-      title: "Title 1",
-      researcher: "Researcher 1",
-      libraryLocation: "Library Location 1"
-    },
-    {
-      title: "Title 2",
-      researcher: "Researcher 2",
-      libraryLocation: "Library Location 2asd"
-    }
-  ]);
+  const [storytellersList, setStorytellersList] = useState<string[]>([]);
+  const [storyListEntries, setStoryListEntries] = useState<StoryListEntryProps[]>([]);
+
 
   useEffect(() => {
-     storytellersOnly().then(r =>{
-       const cleanNames:string[] = [];
-       const cleanUri = cleanUris(r.data.values)
-       cleanUri.forEach((uri) => {
-         cleanNames.push(addSpacesBeforeCapitals(uri));
-       });
-       cleanNames.sort((a, b) => a.localeCompare(b));
-       setStorytellersList(cleanNames);
-     });
-  }, []);
+    if (storytellersList.length === 0) {
+      storytellersOnly().then(r =>{
+        const cleanNames:string[] = [];
+        const cleanUri = cleanUris(r.data.values)
+        cleanUri.forEach((uri) => {
+          cleanNames.push(addSpacesBeforeCapitals(uri));
+        });
+        cleanNames.sort((a, b) => a.localeCompare(b));
+        setStorytellersList(cleanNames);
+      });
+    }
+    if(!userChoiceState.narrativeSubtype && !userChoiceState.narrativeType && !userChoiceState.researcher) return;
+
+    const query = async () => {
+      const response = await queryNeo4j(userChoiceState);
+      const cleanNames: string[] = [];
+      const cleanUri = cleanUris(response.data.values);
+      cleanUri.forEach((uri) => {
+        cleanNames.push(addSpacesBeforeCapitals(uri));
+      });
+      cleanNames.sort((a, b) => a.localeCompare(b));
+      setStorytellersList(cleanNames);
+    }
+    // query();
+  }, [userChoiceState.narrativeType, userChoiceState.narrativeSubtype, userChoiceState.researcher]);
 
   const handleOnClick = async () => {
-    await queryNeo4j(userChoiceState);
+    const response = await queryNeo4j(userChoiceState);
+    const arr = createStoryListEntries(response);
+    console.log(arr);
+    setStoryListEntries(arr);
   }
 
   return (

@@ -20,8 +20,6 @@ function DashboardFilters() {
     storytellers
   } = storytellersContext;
 
-  console.log(storytellers);
-
   const narrativeTypesList: string[] = [
     "Folktales",
     "Legends",
@@ -59,7 +57,6 @@ function DashboardFilters() {
   ];
 
   let subtypesList;
-  console.log(narrativeType);
   switch (narrativeType){
     case NarrativeTypes.folkTales:
       subtypesList = folktalesSubtypesList;
