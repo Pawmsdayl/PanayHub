@@ -19,8 +19,12 @@ function Dashboard() {
     storyteller: null
   })
 
-  const [researchersList, setResearchersList] = useState<string[]>([]);
-  const [storytellersList, setStorytellersList] = useState<string[]>([]);
+  const [researchersList, setResearchersList] = useState<string[]>([
+    "Asd", "Asd", "Ad,", "Asd"
+  ]);
+  const [storytellersList, setStorytellersList] = useState<string[]>([
+    "Asd", "Asd", "Ad,", "Asd"
+  ]);
   const [storyListEntries, setStoryListEntries] = useState<StoryListEntryProps[]>([
     {
       title: "Title 1",
@@ -74,20 +78,26 @@ function Dashboard() {
           <h1 className={`font-serif font-bold text-7xl gradient-text-highlight`}>
             Dashboard
           </h1>
-          <button onClick={queryNeo4j}>Run Query</button>
         </section>
 
         <section className={`my-10`}>
           <div className={`grid grid-cols-3 place-items-center gap-4`}>
-            <UserChoiceContext.Provider value={userChoiceState}>
-              <UserChoiceDispatch.Provider value={userChoiceDispatch}>
-                <ResearchersContext.Provider value={{researchers:researchersList}}>
-                  <StorytellersContext.Provider value={{storytellers:storytellersList}}>
-                    <DashboardFilters/>
-                  </StorytellersContext.Provider>
-                </ResearchersContext.Provider>
-              </UserChoiceDispatch.Provider>
-            </UserChoiceContext.Provider>
+            <div className={`flex flex-col`}>
+              <UserChoiceContext.Provider value={userChoiceState}>
+                <UserChoiceDispatch.Provider value={userChoiceDispatch}>
+                  <ResearchersContext.Provider value={{researchers: researchersList}}>
+                    <StorytellersContext.Provider value={{storytellers: storytellersList}}>
+                      <DashboardFilters/>
+                    </StorytellersContext.Provider>
+                  </ResearchersContext.Provider>
+                </UserChoiceDispatch.Provider>
+              </UserChoiceContext.Provider>
+              <button
+                className={`bg-chatbot-light text-white p-2 rounded-lg hover:cursor-pointer duration-300 transition-ease-out hover:bg-black`}
+                onClick={queryNeo4j}>
+                Run Query
+              </button>
+            </div>
             <div>
               <Heatmap/>
             </div>
