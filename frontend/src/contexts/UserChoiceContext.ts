@@ -16,7 +16,7 @@ export enum ActionType {
 
 }
 
-export interface UserChoiceState {
+interface UserChoiceState {
   narrativeType: string|null
   narrativeSubtype: string|null
   researcher: string|null
