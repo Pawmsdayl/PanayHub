@@ -73,7 +73,7 @@ function Dashboard() {
         </section>
 
         <section className={`my-10`}>
-          <div className={`grid grid-cols-3 place-items-center gap-4`}>
+          <div className={`grid grid-cols-3 place-items-center  gap-4`}>
             <div className={`flex flex-col`}>
               <UserChoiceContext.Provider value={userChoiceState}>
                 <UserChoiceDispatch.Provider value={userChoiceDispatch}>
@@ -98,9 +98,13 @@ function Dashboard() {
               <Heatmap/>
             </div>
             <div>
-             <ChartDiv provenances={provenances} storyList={storyListEntries}>
-               <p></p>
-             </ChartDiv>
+              {
+                provenances.length !== 0 &&
+                  <ChartDiv provenances={provenances} storyList={storyListEntries}>
+                      <p></p>
+                  </ChartDiv>
+              }
+
             </div>
           </div>
         </section>

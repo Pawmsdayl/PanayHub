@@ -1,6 +1,6 @@
 
 
-interface UriResponse {
+export interface UriResponse {
   bookmarks:string[],
   data: {
     fields: string[],

@@ -4,16 +4,6 @@ import {Record} from "neo4j-driver";
 import {ChartConfig} from "@/components/ui/chart.tsx";
 
 
-const chartConfig = {
-  researcher: {
-    label: "Researcher",
-    color: "#2563eb",
-  },
-  // mobile: {
-  //   label: "Mobile",
-  //   color: "#60a5fa",
-  // },
-} satisfies ChartConfig;
 export function ChartDiv({children , storyList, provenances}: {children: React.ReactNode, storyList:StoryListEntryProps[], provenances: string[]}) {
   interface ResearchChartDataItem{
     researcher: string;
@@ -60,22 +50,18 @@ export function ChartDiv({children , storyList, provenances}: {children: React.R
     }
   });
 
-    // console.log(researchersCount);
 
   console.log(researchersData);
-    // const researchersChartConfig = {
-    //
-    // } satisfies  ChartConfig;
 
     return (
-      <div className={`overflow-y-scroll h-[550px]`}>
-        <div className={`flex flex-col`}>
+      <div className={`overflow-y-scroll h-[600px]`}>
+        <div className={` border-2 border-black border flex flex-col`}>
           <Chart title={"Count of Researchers"} chartData={researchersData} xDataKey={"count"} yDataKey={"researcher"}>
           </Chart>
           <Chart title={"Count of Storytellers"} chartData={storytellersData} xDataKey={"count"} yDataKey={"storyteller"}/>
           <Chart title={"Count of Provenances"} chartData={provenanceData} xDataKey={"count"} yDataKey={"provenance"}/>
         </div>
-      </div>
+       </div>
     );
 
 }

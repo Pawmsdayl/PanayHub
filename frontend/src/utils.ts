@@ -1,4 +1,5 @@
 import {StoryListEntryProps} from "@/components/StoryListEntry.tsx";
+import {UriResponse} from "@/object-types.ts";
 
 const locations = {
   "Agdao, Tubungan, Iloilo": [10.744483287359957, 122.32198964029378],
@@ -122,35 +123,10 @@ export function createStoryListEntries(response: UriResponse):{
     provenances.push(objectStringArray[1]);
     storyListEntries.push(storyListEntry);
   });
-  // const storyListEntry: StoryListEntryProps = {
-  //   libraryLocation: "Center for West Visayan Studies",
-  //   title: objectStringArray[0],
-  //   storyteller: addSpacesBeforeCapitals(objectStringArray[2]),
-  //   researcher: addSpacesBeforeCapitals(objectStringArray[3])
-  // };
+
 
   return {
     storyListEntries,
     provenances
   };
 }
-
-  // const cleanedUris: string[] = [];
-  // uris.forEach((uri,) => {
-  //   const splitUri = uri.split("#");
-  //   if (splitUri.length > 1) {
-  //     cleanedUris.push(splitUri[1]);
-  //   } else {
-  //     cleanedUris.push("");
-  //   }
-  // });
-  //
-  // return cleanedUris;
-  //
-
-  // const splitUri = uri.split("#");
-  // if (splitUri.length > 1) {
-  //   return splitUri[1];
-  // }else {
-  //   return "";
-  // }

@@ -1,5 +1,6 @@
 import PanayIsland from "./components/PanayIsland.tsx";
 import Footer from "@/components/Footer.tsx";
+import {ImageCollage} from "@/components/ImageCollage.tsx";
 function LandingPage(){
   return (
     <div className="w-full min-h-screen bg-white ">
@@ -52,8 +53,10 @@ function LandingPage(){
               <div className={`text-black place-items-center`}>image</div>
             </div>
           </div>
-          <div className={`relative grid grid-cols-3 w-full text-black place-items-center h-96`}>
-            <div>iamge</div>
+          <div className={`relative grid grid-cols-3 w-full text-black place-items-center h-96 `}>
+            <div className={`w-full h-full border`}>
+              <ImageCollage/>
+            </div>
             <div>
               <h1 className={` font-serif text-(--body-font-color) text-6xl text-center`}>We believe in <br/> <span
                 className={` font-serif underline text-(--body-font-highlight)`}>something.</span></h1>
