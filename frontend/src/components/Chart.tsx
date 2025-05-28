@@ -2,7 +2,16 @@ import {Bar, BarChart, XAxis, YAxis, } from "recharts"
 import { ChartConfig, ChartContainer } from "@/components/ui/chart"
 
 
-export function Chart({chartData, xDataKey, yDataKey, title}) {
+interface ChartData {
+  researcher?: string;
+  storyteller?: string;
+  provenance?: string;
+  count: number;
+
+}
+
+
+export function Chart({chartData, xDataKey, yDataKey, title}: {chartData: ChartData[], xDataKey:string, yDataKey:string, title:string}) {
 
   const chartConfig = {
   [xDataKey]: {

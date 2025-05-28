@@ -1,26 +1,32 @@
 import {StoryListEntryProps} from "@/components/StoryListEntry.tsx";
 import {Chart} from "@/components/Chart.tsx";
-import {Record} from "neo4j-driver";
-import {ChartConfig} from "@/components/ui/chart.tsx";
 
 
-export function ChartDiv({children , storyList, provenances}: {children: React.ReactNode, storyList:StoryListEntryProps[], provenances: string[]}) {
-  interface ResearchChartDataItem{
-    researcher: string;
-    count: number;
-  }
+interface ChartData {
+  researcher?: string;
+  storyteller?: string;
+  provenance?: string;
+  count: number;
 
-  interface StorytellerChartDataItem {
-    storyteller: string;
-    count: number;
-  }
+}
 
-  interface ProvenanceChartDataItem {
-    provenance: string;
-    count: number;
-  }
+export function ChartDiv({storyList, provenances}: { storyList:StoryListEntryProps[], provenances: string[]}) {
+  // interface ResearchChartDataItem{
+  //   researcher: string;
+  //   count: number;
+  // }
+  //
+  // interface StorytellerChartDataItem {
+  //   storyteller: string;
+  //   count: number;
+  // }
+  //
+  // interface ProvenanceChartDataItem {
+  //   provenance: string;
+  //   count: number;
+  // }
 
-  const researchersData: ResearchChartDataItem[] = [];
+  const researchersData: ChartData[] = [];
   storyList.forEach((story) => {
     const existing = researchersData.find(item => item.researcher === story.researcher);
     if (existing) {
@@ -30,7 +36,7 @@ export function ChartDiv({children , storyList, provenances}: {children: React.R
     }
   });
 
-  const storytellersData: StorytellerChartDataItem[] = [];
+  const storytellersData: ChartData[] = [];
   storyList.forEach((story) => {
     const existing = storytellersData.find(item => item.storyteller === story.storyteller);
     if (existing) {
@@ -40,7 +46,7 @@ export function ChartDiv({children , storyList, provenances}: {children: React.R
     }
   });
 
-  const provenanceData: ProvenanceChartDataItem[] = [];
+  const provenanceData: ChartData[] = [];
   provenances.forEach((provenance) => {
     const existing = provenanceData.find(item => item.provenance === provenance);
     if (existing) {
