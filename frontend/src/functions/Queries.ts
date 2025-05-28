@@ -1,10 +1,17 @@
-import {UserChoiceState} from "@/contexts/UserChoiceContext.ts";
 import {narrativeSubtypesDictionary, removeSpaces, researchersDictionary} from "@/utils.ts";
+import {UriResponse} from "@/object-types.ts";
 const url = "https://85be2d53.databases.neo4j.io/db/neo4j/query/v2";
 const credentials = `${import.meta.env.VITE_AURA_CREDENTIALS}`;
 
 
-export async function storytellersOnly(): Promise<UriResponse> {
+interface UserChoiceState {
+  narrativeType: string|null
+  narrativeSubtype: string|null
+  researcher: string|null
+  storyteller: string|null
+}
+
+export async function storytellersOnly() {
   const statement = `MATCH (ki:ns0__KeyInformant)
   RETURN ki.uri`;
   const cypherQuery = {
@@ -59,7 +66,7 @@ export const queryNeo4j = async (userChoiceState: UserChoiceState):Promise<UriRe
     return result;
     // setData(result);
   } catch (err) {
-    console.log(err.message);
+    throw(err);
   }
 };
 
