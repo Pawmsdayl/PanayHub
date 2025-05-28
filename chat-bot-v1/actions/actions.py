@@ -11,6 +11,11 @@ import random
 import Levenshtein
 
 
+uri = "neo4j+s://85be2d53.databases.neo4j.io"
+username = "neo4j"
+password = "xQMRKBb2Ixc-PRaMU8EIYb3Tzwmr9XTWsmD8qtFb8ys"
+
+
 # parrot = Parrot(model_tag="prithivida/parrot_paraphraser_on_T5")
 
 
@@ -38,9 +43,9 @@ class ActionGetStoryCharacters(Action):
             dispatcher.utter_message("I couldn't find the story title. Can you specify the title again?")
             return []
 
-        uri = "bolt://localhost:7687/neo4j"
-        username = "neo4j"
-        password = "password"
+        global uri
+        global username
+        global password
         driver = GraphDatabase.driver(uri, auth=(username, password), encrypted=False)
 
         title_query = "MATCH (s) RETURN s.ns0__title AS title"
@@ -97,9 +102,9 @@ class ActionGetResearcher(Action):
             dispatcher.utter_message("I need the story's title before I can give you the name/s of its researcher/s. Can you specify the title again?")
             return []
 
-        uri = "bolt://localhost:7687/neo4j"
-        username = "neo4j"
-        password = "password"
+        global uri
+        global username
+        global password
         driver = GraphDatabase.driver(uri, auth=(username, password), encrypted=False)
 
         title_query = "MATCH (s) RETURN s.ns0__title AS title"
@@ -158,9 +163,10 @@ class ActionGetStoryGenres(Action):
             dispatcher.utter_message("I can't provide the genres of a story without its title. Can you provide the title again?")
             return []
 
-        uri = "bolt://localhost:7687/neo4j"
-        username = "neo4j"
-        password = "password"
+        global uri
+        global username
+        global password
+
         driver = GraphDatabase.driver(uri, auth=(username, password), encrypted=False)
 
         title_query = "MATCH (s) RETURN s.ns0__title AS title"
@@ -228,9 +234,9 @@ class ActionGetRandomStories(Action):
     #         dispatcher.utter_message("Please use positive integers when specifying the number of stories.")
     #         return []
 
-        uri = "bolt://localhost:7687/neo4j"
-        username = "neo4j"
-        password = "password"
+        global uri
+        global username
+        global password
         driver = GraphDatabase.driver(uri, auth=(username, password), encrypted=False)
 
         query = """
