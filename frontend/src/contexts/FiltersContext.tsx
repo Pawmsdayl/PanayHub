@@ -1,4 +1,5 @@
 import {createContext, useReducer} from "react";
+import * as React from "react";
 
 enum ActionType  {
   setResearcherFilter= 'SETRESEARCHERFILTER',
@@ -46,7 +47,7 @@ const reducer = (state: FilterState, action:FilterAction): FilterState=> {
   }
 }
 
-export function FiltersProvider({children}) {
+export function FiltersProvider({children}: {children: React.ReactNode}) {
   const [filters, dispatch] = useReducer(reducer, {
     researchers: [],
     storytellers: [],
