@@ -10,7 +10,6 @@ import {reducer, UserChoiceContext, UserChoiceDispatch} from "@/contexts/UserCho
 import {StorytellersContext} from "@/contexts/StorytellersContext.ts";
 import {queryNeo4j, storytellersOnly} from "@/functions/Queries.ts";
 import {addSpacesBeforeCapitals, cleanUris, createStoryListEntries} from "@/utils.ts";
-import {Chart} from "@/components/Chart.tsx";
 import {ChartDiv} from "@/components/ChartDiv.tsx";
 
 function Dashboard() {
@@ -40,17 +39,7 @@ function Dashboard() {
     }
     if(!userChoiceState.narrativeSubtype && !userChoiceState.narrativeType && !userChoiceState.researcher) return;
 
-    const query = async () => {
-      const response = await queryNeo4j(userChoiceState);
-      const cleanNames: string[] = [];
-      const cleanUri = cleanUris(response.data.values);
-      cleanUri.forEach((uri) => {
-        cleanNames.push(addSpacesBeforeCapitals(uri));
-      });
-      cleanNames.sort((a, b) => a.localeCompare(b));
-      setStorytellersList(cleanNames);
-    }
-    // query();
+
   }, [userChoiceState.narrativeType, userChoiceState.narrativeSubtype, userChoiceState.researcher]);
 
   const handleOnClick = async () => {
