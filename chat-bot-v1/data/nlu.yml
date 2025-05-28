@@ -82,3 +82,9 @@ nlu:
     - what is love baby don't hurt me
     - potato banana monkey cat
     - gibberish nonsense
+
+- intent: ask_for_help
+  examples: |
+    - help
+    - can I get help
+    - please help me

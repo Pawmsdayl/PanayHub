@@ -4,26 +4,26 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from fuzzywuzzy import process
-from parrot import Parrot
+# from parrot import Parrot
 import torch
 import random
 
 import Levenshtein
 
 
-parrot = Parrot(model_tag="prithivida/parrot_paraphraser_on_T5")
+# parrot = Parrot(model_tag="prithivida/parrot_paraphraser_on_T5")
 
 
-def paraphrase(text: str) -> str:
-    para_phrases = parrot.augment(
-        input_phrase=text,
-        adequacy_threshold=0.00,
-        fluency_threshold=0.00
-    )
+# def paraphrase(text: str) -> str:
+#     para_phrases = parrot.augment(
+#         input_phrase=text,
+#         adequacy_threshold=0.00,
+#         fluency_threshold=0.00
+#     )
 
-    if para_phrases:
-        return random.choice([para[0] for para in para_phrases])
-    return text
+#     if para_phrases:
+#         return random.choice([para[0] for para in para_phrases])
+#     return text
 
 class ActionGetStoryCharacters(Action):
     def name(self) -> Text:
@@ -70,10 +70,16 @@ class ActionGetStoryCharacters(Action):
 
         driver.close()
 
+        # if characters:
+        #     dispatcher.utter_message(paraphrase(f"Some of the characters you'll include in the story'{title_match}' include: {', '.join(characters)}."))
+        # else:
+        #     dispatcher.utter_message(paraphrase(f"I couldn't find characters for '{title_match}'."))
+
         if characters:
-            dispatcher.utter_message(paraphrase(f"Some of the characters you'll include in the story'{title_match}' include: {', '.join(characters)}."))
+            dispatcher.utter_message((f"Some of the characters you'll include in the story'{title_match}' include: {', '.join(characters)}."))
         else:
-            dispatcher.utter_message(paraphrase(f"I couldn't find characters for '{title_match}'."))
+            dispatcher.utter_message((f"I couldn't find characters for '{title_match}'."))
+
 
         return []
     
@@ -124,10 +130,16 @@ class ActionGetResearcher(Action):
 
         driver.close()
 
+        # if researcher:
+        #     dispatcher.utter_message(paraphrase(f"The people that are responsible for researching or recording '{title_match}' include: {', '.join(researcher)}."))
+        # else:
+        #     dispatcher.utter_message(paraphrase(f"I couldn't find any reseacher/recorder for '{title_match}'."))
+        
         if researcher:
-            dispatcher.utter_message(paraphrase(f"The people that are responsible for researching or recording '{title_match}' include: {', '.join(researcher)}."))
+            dispatcher.utter_message((f"The people that are responsible for researching or recording '{title_match}' include: {', '.join(researcher)}."))
         else:
-            dispatcher.utter_message(paraphrase(f"I couldn't find any reseacher/recorder for '{title_match}'."))
+            dispatcher.utter_message((f"I couldn't find any reseacher/recorder for '{title_match}'."))
+        
         
         SlotSet("researcher", researcher)
 
@@ -163,7 +175,7 @@ class ActionGetStoryGenres(Action):
         title_match = min(available_titles, key=lambda t: Levenshtein.distance(story_title, t))
 
         print(title_match)  
-
+        
         query = """
         MATCH (story)-[:rdf__type]->(genre)
         WHERE story.ns0__title = $title
@@ -178,10 +190,16 @@ class ActionGetStoryGenres(Action):
 
         driver.close()
 
+        # if genres:
+        #     dispatcher.utter_message(paraphrase(f"'{title_match}' falls under the following genre(s): {', '.join(genres)}."))
+        # else:
+        #     dispatcher.utter_message(paraphrase(f"I couldn't find genres for '{title_match}'."))
+
         if genres:
-            dispatcher.utter_message(paraphrase(f"'{title_match}' falls under the following genre(s): {', '.join(genres)}."))
+            dispatcher.utter_message((f"'{title_match}' falls under the following genre(s): {', '.join(genres)}."))
         else:
-            dispatcher.utter_message(paraphrase(f"I couldn't find genres for '{title_match}'."))
+            dispatcher.utter_message((f"I couldn't find genres for '{title_match}'."))
+
 
         return []
 
@@ -196,6 +214,19 @@ class ActionGetRandomStories(Action):
         story_count = int(tracker.get_slot("story_count"))
         if  int(story_count) <= 0:
             dispatcher.utter_message("Please use positive integers when specifying the number of stories.")
+
+    #    story_count_slot = tracker.get_slot("story_count")
+    #     if story_count_slot is None:
+    #         dispatcher.utter_message("Please specify how many stories you want to retrieve.")
+    #         return []
+    #     try:
+    #         story_count = int(story_count_slot)
+    #     except (ValueError, TypeError):
+    #         dispatcher.utter_message("Please use a valid integer for the number of stories.")
+    #         return []
+    #     if story_count <= 0:
+    #         dispatcher.utter_message("Please use positive integers when specifying the number of stories.")
+    #         return []
 
         uri = "bolt://localhost:7687/neo4j"
         username = "neo4j"
@@ -213,13 +244,20 @@ class ActionGetRandomStories(Action):
         titles = []
         with driver.session() as session:
             result = session.run(query, story_count=story_count)
-            titles = [record["title_name"] for record in result]
+            titles = [record["title_name"][0] for record in result]
 
         driver.close()
 
+        # if titles:
+        #     dispatcher.utter_message(paraphrase(f"Here are some stories taken from the database: {', '.join(titles)}."))
+        # else:
+        #     dispatcher.utter_message(paraphrase(f"I couldn't find any titles from the database."))
+
         if titles:
-            dispatcher.utter_message(paraphrase(f"Here are some stories taken from the database: {', '.join(titles)}."))
+            dispatcher.utter_message((f"Here are some stories taken from the database: {', '.join(titles)}."))
         else:
-            dispatcher.utter_message(paraphrase(f"I couldn't find any titles from the database."))
+            dispatcher.utter_message((f"I couldn't find any titles from the database."))
+
+
         return []
     

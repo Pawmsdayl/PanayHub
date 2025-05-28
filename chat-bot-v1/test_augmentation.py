@@ -4,7 +4,7 @@ from collections import defaultdict
 import os
 import random
 import yaml
-
+import subprocess
 
 df = pd.read_excel("dataset.xlsx")  
 
@@ -79,5 +79,44 @@ for i, (train, test) in enumerate(folds):
     with open(os.path.join(fold_dir, "nlu_test.yml"), "w", encoding="utf-8") as f:
         yaml.dump(rasa_format_yaml(test), f, allow_unicode=True, sort_keys=False)
 
+all_results = {}
 
+for i in range(5):
+    print(f"Testing Fold {i}")
+    # Ensure output directory exists
+    os.makedirs(f"results/fold_{i}", exist_ok=True)
 
+    subprocess.run([
+    "rasa", "train", "nlu",
+    "--config", "config.yml",
+    "--nlu", f"fold_{i}/nlu_train.yml",
+    "--out", f"models/fold_{i}"
+    ])
+
+    # Run test and store logs
+    result = subprocess.run([
+        "rasa", "test", "nlu",
+        "--nlu", f"fold_{i}/nlu_test.yml",
+        "--model", f"models/fold_{i}"
+    ], capture_output=True, text=True)
+
+    # Load intent classification metrics from Rasa's auto-generated file
+    report_path = "results/intent_report.json"
+    if os.path.exists(report_path):
+        with open(report_path, "r", encoding="utf-8") as f:
+            metrics = json.load(f)
+        all_results[f"fold_{i}"] = metrics
+        # Move the result file into fold-specific directory
+        os.replace(report_path, f"results/fold_{i}/intent_report.json")
+    else:
+        all_results[f"fold_{i}"] = {
+            "error": "intent_report.json not found",
+            "stdout": result.stdout,
+            "stderr": result.stderr,
+            "returncode": result.returncode
+        }
+
+# Save all test results into a JSON file
+os.makedirs("results", exist_ok=True)
+with open("results/all_test_results.json", "w", encoding="utf-8") as f:
+    json.dump(all_results, f, indent=4)

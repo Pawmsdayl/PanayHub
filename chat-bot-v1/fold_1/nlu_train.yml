@@ -1,25 +1,25 @@
 version: '3.1'
 nlu:
 - intent: ask_for_characters
-  examples: '- Whos in it?
-
-    - List the main characters in this story.
-
-    - Give me the names of the characters.
-
-    - Give characters.
+  examples: '- Which characters appear in the narrative?
 
     - List all characters.
 
+    - Give characters.
+
     - Who are the characters in the story?
 
-    - Story involves what characters?
+    - Name key figures in the story
+
+    - Enumerate characters from story.
+
+    - Give me the names of the characters.
 
     - Characters?
 
-    - Which characters appear in the narrative?
+    - List the main characters in this story.
 
-    - Whos featured there?
+    - Story involves what characters?
 
     - Can you tell me the characters from the story?
 
@@ -121,21 +121,21 @@ nlu:
 
     - What people are part of the story?'
 - intent: ask_for_researcher
-  examples: '- Who conducted fieldwork on the folk tale?
+  examples: '- Who can I ask about this?
 
-    - Recorder?
+    - Who conducted fieldwork on the folk tale?
 
     - Researcher?
 
-    - Enumerate the researchers responsible for gathering information about the story.
+    - Who researched the story?
+
+    - Recorder?
 
     - Who recorded the story?
 
-    - Identify the main researcher of the narrative.
-
-    - Who can I ask about this?
-
     - Which researcher recorded that?
+
+    - Enumerate the researchers responsible for gathering information about the story.
 
     - Who is the researcher behind the story?
 
@@ -237,21 +237,21 @@ nlu:
 
     - Can you point me to the researcher?'
 - intent: ask_for_themes
-  examples: '- Tell me about the theme in the formulary.
-
-    - I want to know the theme of this story.
-
-    - What theme is in the formulary?
+  examples: '- Show theme
 
     - State the theme of the hurubaton.
+
+    - Tell me about the theme in the formulary.
+
+    - Theme?
+
+    - What theme is in the formulary?
 
     - What thematic topic is in the hurubaton?
 
     - Identify the theme found in the story.
 
-    - Theme?
-
-    - Show theme
+    - Tell me the theme.
 
     - Analyze the theme in the excerpt.
 
@@ -353,21 +353,21 @@ nlu:
 
     - Which theme is relevant here?'
 - intent: 'ask_for_random_stories '
-  examples: '- Enumerate a few random stories.
+  examples: '- Fetch me some stories.
 
     - Sample of random stories.
 
-    - Fetch me some stories.
-
-    - Random stories.
-
-    - I want random stories.
+    - Enumerate a few random stories.
 
     - Show me a few of your stories.
 
-    - Give me some stories.
+    - What stories do you have?
 
-    - Which stories do you know?
+    - List some stories.
+
+    - I want random stories.
+
+    - Give me some stories.
 
     - Any random stories?
 
@@ -469,23 +469,23 @@ nlu:
 
     - Which stories are available?'
 - intent: ask_for_genres
-  examples: '- Genre?
+  examples: '- Tell me about the genre in the story.
 
-    - I want to know the category of this story.
+    - Genre?
 
     - Show category
 
-    - Identify the genre of the story.
-
-    - Type of story.
+    - What is the genre of this story?
 
     - State the category of the story.
 
-    - How was this story categorized?
-
-    - Tell me about the genre in the story.
-
     - What kind of story is this story?
+
+    - Type of story.
+
+    - Identify the genre of the story.
+
+    - I want to know the category of this story.
 
     - Can you classify the story type?
 

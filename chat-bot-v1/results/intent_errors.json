@@ -1,18 +1,10 @@
 [
   {
-    "text": "Type of story.",
-    "intent": "ask_for_genres",
-    "intent_prediction": {
-      "name": "ask_for_random_stories",
-      "confidence": 0.9985867738723755
-    }
-  },
-  {
     "text": "What kind of story is this story?",
     "intent": "ask_for_genres",
     "intent_prediction": {
       "name": "ask_for_random_stories",
-      "confidence": 0.9999642372131348
+      "confidence": 0.999504566192627
     }
   }
 ]

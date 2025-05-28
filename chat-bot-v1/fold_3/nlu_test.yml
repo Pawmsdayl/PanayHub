@@ -1,22 +1,22 @@
 version: '3.1'
 nlu:
 - intent: ask_for_characters
-  examples: '- List the main characters in this story.
+  examples: '- Enumerate characters from story.
 
     - Which characters appear in the narrative?'
 - intent: ask_for_researcher
-  examples: '- Documented by?
+  examples: '- Identify the main researcher of the narrative.
 
-    - Researcher?'
+    - Who conducted fieldwork on the folk tale?'
 - intent: ask_for_themes
-  examples: '- Theme?
+  examples: '- I want to know the theme of this story.
 
-    - State the theme of the hurubaton.'
+    - Tell me the theme.'
 - intent: 'ask_for_random_stories '
-  examples: '- Which stories do you know?
+  examples: '- Random stories.
 
-    - List some stories.'
+    - I want random stories.'
 - intent: ask_for_genres
   examples: '- Type of story.
 
-    - What kind of story is this story?'
+    - How was this story categorized?'

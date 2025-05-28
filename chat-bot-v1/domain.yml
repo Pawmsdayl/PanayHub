@@ -43,7 +43,7 @@ slots:
 
 responses:
   utter_fallback:
-  - text: "I'm sorry, I didn't quite understand that. Could you please rephrase?"
+  - text: "I'm sorry, I didn't quite understand that. Could you please rephrase? You may type 'help' for more information"
 
 
 
