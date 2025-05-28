@@ -1,9 +1,365 @@
-sentence,intent
-"Hello, can you tell me about the characters?","ask_for_characters"
-"Who is the researcher of the story?","ask_for_researcher"
-"Can you list the genres for this story?","ask_for_genres"
-"I want to know about the themes in this story.","ask_for_themes"
-"Give me random story suggestions.","ask_for_random_stories"
-"Hello, I want to know who the characters are.","ask_for_characters"
-"Who conducted the research for this?","ask_for_researcher"
-"DADASDASDASDASDASDASDASD","ask_for_characters"
+sentence,intent,source
+Who are the characters in the story?,ask_for_characters,human
+Story involves what characters?,ask_for_characters,human
+List the main characters in this story.,ask_for_characters,human
+Whos featured there?,ask_for_characters,human
+Which characters appear in the narrative?,ask_for_characters,human
+Give me the names of the characters.,ask_for_characters,human
+Name key figures in the story,ask_for_characters,human
+Enumerate characters from story.,ask_for_characters,human
+Give characters.,ask_for_characters,human
+Characters?,ask_for_characters,human
+Whos in it?,ask_for_characters,human
+List all characters.,ask_for_characters,human
+Can you tell me the characters from the story?,ask_for_characters,augmented
+Who are the people in that story?,ask_for_characters,augmented
+Tell me the names of the characters.,ask_for_characters,augmented
+Who is featured in the story?,ask_for_characters,augmented
+What characters does the story have?,ask_for_characters,augmented
+Show me the characters from the tale.,ask_for_characters,augmented
+Can you list the people in the story?,ask_for_characters,augmented
+Who takes part in the story?,ask_for_characters,augmented
+Give me a list of the story’s characters.,ask_for_characters,augmented
+Who are the main figures in the story?,ask_for_characters,augmented
+Which characters appear in the story?,ask_for_characters,augmented
+Name the characters involved in the story.,ask_for_characters,augmented
+Tell me who the key characters are.,ask_for_characters,augmented
+Who is in the tale?,ask_for_characters,augmented
+List all characters in the story.,ask_for_characters,augmented
+Who are the protagonists of the story?,ask_for_characters,augmented
+What are the names of the story’s characters?,ask_for_characters,augmented
+Can you name the people in the story?,ask_for_characters,augmented
+Who are the main characters in the tale?,ask_for_characters,augmented
+Give me the characters featured in the story.,ask_for_characters,augmented
+Tell me who the story is about.,ask_for_characters,augmented
+Who plays a role in the story?,ask_for_characters,augmented
+Who are the players in the story?,ask_for_characters,augmented
+List the important people in the story.,ask_for_characters,augmented
+Who shows up in the tale?,ask_for_characters,augmented
+What figures are in the story?,ask_for_characters,augmented
+Can you tell me the people involved?,ask_for_characters,augmented
+Who does the story include?,ask_for_characters,augmented
+Tell me about the cast of the story.,ask_for_characters,augmented
+Who are the characters that appear in the story?,ask_for_characters,augmented
+Identify the main characters of the story.,ask_for_characters,augmented
+Who are the people featured in the story?,ask_for_characters,augmented
+Can you provide a list of the story’s characters?,ask_for_characters,augmented
+Who are the individuals in the story?,ask_for_characters,augmented
+Tell me who’s in the folk tale.,ask_for_characters,augmented
+Who plays parts in the story?,ask_for_characters,augmented
+Who are the characters mentioned in the story?,ask_for_characters,augmented
+Name the key people in the story.,ask_for_characters,augmented
+Who is mentioned in the story?,ask_for_characters,augmented
+Tell me about the figures in the story.,ask_for_characters,augmented
+Who are the heroes in the story?,ask_for_characters,augmented
+Who are the characters involved?,ask_for_characters,augmented
+List the names of the people in the story.,ask_for_characters,augmented
+Who are the personalities in the tale?,ask_for_characters,augmented
+Can you name the characters in the story?,ask_for_characters,augmented
+Who are the cast members in the story?,ask_for_characters,augmented
+Who participates in the story?,ask_for_characters,augmented
+Tell me the characters included in the story.,ask_for_characters,augmented
+Who are the key players in the story?,ask_for_characters,augmented
+What people are part of the story?,ask_for_characters,augmented
+Who researched the story?,ask_for_researcher,human
+Who recorded the story?,ask_for_researcher,human
+Which researcher recorded that?,ask_for_researcher,human
+Researcher?,ask_for_researcher,human
+Recorder?,ask_for_researcher,human
+Who can I ask about this?,ask_for_researcher,human
+Enumerate the researchers responsible for gathering information about the story.,ask_for_researcher,human
+Documented by?,ask_for_researcher,human
+Identify the main researcher of the narrative.,ask_for_researcher,human
+Who conducted fieldwork on the folk tale?,ask_for_researcher,human
+Who is the researcher behind the story?,ask_for_researcher,augmented
+Tell me who documented this tale.,ask_for_researcher,augmented
+Who collected the story?,ask_for_researcher,augmented
+Who gathered this folk tale?,ask_for_researcher,augmented
+Can you name the recorder of the story?,ask_for_researcher,augmented
+Who is credited with recording the story?,ask_for_researcher,augmented
+Who compiled the information for the story?,ask_for_researcher,augmented
+Who’s the person responsible for researching this?,ask_for_researcher,augmented
+Who’s the author of the documentation?,ask_for_researcher,augmented
+Who did the research for this folk tale?,ask_for_researcher,augmented
+Who’s behind the documentation of this tale?,ask_for_researcher,augmented
+Give me the name of the storys researcher.,ask_for_researcher,augmented
+Who interviewed people for this story?,ask_for_researcher,augmented
+Who noted this folk tale down?,ask_for_researcher,augmented
+Who originally recorded this narrative?,ask_for_researcher,augmented
+Who conducted the interviews for this story?,ask_for_researcher,augmented
+Identify the person who researched the tale.,ask_for_researcher,augmented
+Who’s responsible for this ethnographic work?,ask_for_researcher,augmented
+Who’s the fieldworker behind this story?,ask_for_researcher,augmented
+Tell me who gathered the data.,ask_for_researcher,augmented
+Which individual recorded the tale?,ask_for_researcher,augmented
+Can you list the story’s researchers?,ask_for_researcher,augmented
+Who’s the folklorist behind this?,ask_for_researcher,augmented
+Do you know who documented this story?,ask_for_researcher,augmented
+Who is credited with the research?,ask_for_researcher,augmented
+Who did the field study for this?,ask_for_researcher,augmented
+Who went into the field to gather this tale?,ask_for_researcher,augmented
+Who’s the ethnographer here?,ask_for_researcher,augmented
+Name the recorder of this folk narrative.,ask_for_researcher,augmented
+Who’s the scholar responsible for this story?,ask_for_researcher,augmented
+Who sourced this story?,ask_for_researcher,augmented
+Who took down this story?,ask_for_researcher,augmented
+Which researcher was involved?,ask_for_researcher,augmented
+Who’s listed as the field researcher?,ask_for_researcher,augmented
+Who can I contact about this tale?,ask_for_researcher,augmented
+Who compiled the account of this folk tale?,ask_for_researcher,augmented
+Tell me the name of the documenter.,ask_for_researcher,augmented
+Who collected this oral tradition?,ask_for_researcher,augmented
+Who is mentioned as the researcher?,ask_for_researcher,augmented
+Who studied this tale?,ask_for_researcher,augmented
+Who archived this story?,ask_for_researcher,augmented
+Who filed this documentation?,ask_for_researcher,augmented
+Who chronicled this folk tale?,ask_for_researcher,augmented
+Identify the folklorist for this story.,ask_for_researcher,augmented
+Who was in charge of the research?,ask_for_researcher,augmented
+Whos known for collecting this folk tale?,ask_for_researcher,augmented
+Who created the field notes for this?,ask_for_researcher,augmented
+Who’s behind the research efforts for the story?,ask_for_researcher,augmented
+Who conducted the study of this tale?,ask_for_researcher,augmented
+Can you point me to the researcher?,ask_for_researcher,augmented
+What is the theme in this story?,ask_for_themes,human
+I want to know the theme of this story.,ask_for_themes,human
+Tell me the theme.,ask_for_themes,human
+Tell me about the theme in the formulary.,ask_for_themes,human
+Theme?,ask_for_themes,human
+Show theme,ask_for_themes,human
+State the theme of the hurubaton.,ask_for_themes,human
+What theme is in the formulary?,ask_for_themes,human
+Identify the theme found in the story.,ask_for_themes,human
+What thematic topic is in the hurubaton?,ask_for_themes,human
+Analyze the theme in the excerpt.,ask_for_themes,augmented
+Can you extract the theme for me?,ask_for_themes,augmented
+Can you find the theme in this?,ask_for_themes,augmented
+Can you identify the theme?,ask_for_themes,augmented
+Can you show the theme expressed?,ask_for_themes,augmented
+Clarify the theme in this tale.,ask_for_themes,augmented
+Could you reveal the theme?,ask_for_themes,augmented
+Determine the theme of this selection.,ask_for_themes,augmented
+Discover the theme in the hurubaton.,ask_for_themes,augmented
+Discuss the theme shown here.,ask_for_themes,augmented
+Do you know the theme?,ask_for_themes,augmented
+Get the thematic idea.,ask_for_themes,augmented
+Get the theme in this piece.,ask_for_themes,augmented
+Extract the theme from the passage.,ask_for_themes,augmented
+Focus on the theme of this work.,ask_for_themes,augmented
+Give a theme analysis of this piece.,ask_for_themes,augmented
+Give me the theme of the narrative.,ask_for_themes,augmented
+Help me understand the theme.,ask_for_themes,augmented
+Highlight the theme in this story.,ask_for_themes,augmented
+I’d like to know the theme.,ask_for_themes,augmented
+I’m searching for the theme.,ask_for_themes,augmented
+Identify any themes here.,ask_for_themes,augmented
+Identify the core theme.,ask_for_themes,augmented
+Is there a theme in this text?,ask_for_themes,augmented
+Look for the theme in this story.,ask_for_themes,augmented
+Please tell me the theme of this hurubaton.,ask_for_themes,augmented
+Point out the theme.,ask_for_themes,augmented
+Provide the theme shown in the story.,ask_for_themes,augmented
+Pull out the theme.,ask_for_themes,augmented
+Share the theme of the story.,ask_for_themes,augmented
+Tell me what the theme is.,ask_for_themes,augmented
+Thematic idea?,ask_for_themes,augmented
+Uncover the theme in this document.,ask_for_themes,augmented
+What is the central theme here?,ask_for_themes,augmented
+What kind of theme is present?,ask_for_themes,augmented
+What message or theme is in this?,ask_for_themes,augmented
+What recurring theme do you notice?,ask_for_themes,augmented
+What theme does this reflect?,ask_for_themes,augmented
+What theme is being conveyed?,ask_for_themes,augmented
+What theme is presented?,ask_for_themes,augmented
+What theme runs through the formulary?,ask_for_themes,augmented
+What’s the conceptual theme?,ask_for_themes,augmented
+What’s the dominant theme in this?,ask_for_themes,augmented
+What’s the implied theme?,ask_for_themes,augmented
+What's the main idea or theme?,ask_for_themes,augmented
+What’s the story’s theme?,ask_for_themes,augmented
+What's the underlying theme?,ask_for_themes,augmented
+Which theme can be found here?,ask_for_themes,augmented
+Which theme is explored?,ask_for_themes,augmented
+Which theme is relevant here?,ask_for_themes,augmented
+Give me some stories.,ask_for_random_stories ,human
+I want random stories.,ask_for_random_stories ,human
+Fetch me some stories.,ask_for_random_stories ,human
+What stories do you have?,ask_for_random_stories ,human
+Which stories do you know?,ask_for_random_stories ,human
+Sample of random stories.,ask_for_random_stories ,human
+Random stories.,ask_for_random_stories ,human
+List some stories.,ask_for_random_stories ,human
+Enumerate a few random stories.,ask_for_random_stories ,human
+Show me a few of your stories.,ask_for_random_stories ,human
+Any random stories?,ask_for_random_stories ,augmented
+Any sample stories you have?,ask_for_random_stories ,augmented
+Bring some stories for me.,ask_for_random_stories ,augmented
+Bring up some stories.,ask_for_random_stories ,augmented
+Can I get a few stories?,ask_for_random_stories ,augmented
+Can I see some stories?,ask_for_random_stories ,augmented
+Can you list some stories?,ask_for_random_stories ,augmented
+Can you recommend some stories?,ask_for_random_stories ,augmented
+Can you suggest stories?,ask_for_random_stories ,augmented
+Could you provide some stories?,ask_for_random_stories ,augmented
+Display a few stories.,ask_for_random_stories ,augmented
+Display a list of stories.,ask_for_random_stories ,augmented
+Do you have any stories?,ask_for_random_stories ,augmented
+Do you have stories to show?,ask_for_random_stories ,augmented
+Fetch some story samples.,ask_for_random_stories ,augmented
+Get me a list of stories.,ask_for_random_stories ,augmented
+Give me a list of stories.,ask_for_random_stories ,augmented
+Give me different stories.,ask_for_random_stories ,augmented
+Give me story samples.,ask_for_random_stories ,augmented
+Give random story examples.,ask_for_random_stories ,augmented
+I need some story samples.,ask_for_random_stories ,augmented
+I want to see your stories.,ask_for_random_stories ,augmented
+I’d like to read some stories.,ask_for_random_stories ,augmented
+I’d love to see some stories.,ask_for_random_stories ,augmented
+I’m interested in random stories.,ask_for_random_stories ,augmented
+Introduce me to some stories.,ask_for_random_stories ,augmented
+What are some stories to read.,ask_for_random_stories ,augmented
+Let me see random stories.,ask_for_random_stories ,augmented
+Let’s see some stories.,ask_for_random_stories ,augmented
+List random story options.,ask_for_random_stories ,augmented
+Offer a few stories.,ask_for_random_stories ,augmented
+Please list a few stories.,ask_for_random_stories ,augmented
+Provide a few stories.,ask_for_random_stories ,augmented
+Provide me with stories.,ask_for_random_stories ,augmented
+Provide samples of stories.,ask_for_random_stories ,augmented
+Pull up some stories.,ask_for_random_stories ,augmented
+"Random story examples, please.",ask_for_random_stories ,augmented
+Recommend some stories.,ask_for_random_stories ,augmented
+Retrieve random stories.,ask_for_random_stories ,augmented
+Share examples of stories.,ask_for_random_stories ,augmented
+Share some random stories.,ask_for_random_stories ,augmented
+Show me your story examples.,ask_for_random_stories ,augmented
+Show random stories.,ask_for_random_stories ,augmented
+Show your random story set.,ask_for_random_stories ,augmented
+Suggest a few stories.,ask_for_random_stories ,augmented
+Tell me a few stories.,ask_for_random_stories ,augmented
+Tell me which stories you have.,ask_for_random_stories ,augmented
+What are some stories you know?,ask_for_random_stories ,augmented
+What stories can you give me?,ask_for_random_stories ,augmented
+Which stories are available?,ask_for_random_stories ,augmented
+What is the genre of this story?,ask_for_genres,human
+I want to know the category of this story.,ask_for_genres,human
+Tell me the category.,ask_for_genres,human
+Tell me about the genre in the story.,ask_for_genres,human
+Genre?,ask_for_genres,human
+Show category,ask_for_genres,human
+State the category of the story.,ask_for_genres,human
+What kind of story is this story?,ask_for_genres,human
+How was this story categorized?,ask_for_genres,human
+Type of story.,ask_for_genres,human
+Identify the genre of the story.,ask_for_genres,human
+Can you classify the story type?,ask_for_genres,augmented
+Can you tell me the genre?,ask_for_genres,augmented
+Classify this story.,ask_for_genres,augmented
+Find the genre of this passage.,ask_for_genres,augmented
+Genre of the text?,ask_for_genres,augmented
+Genre of this story?,ask_for_genres,augmented
+Give me the genre of this.,ask_for_genres,augmented
+How do you categorize this story?,ask_for_genres,augmented
+How do you define this genre?,ask_for_genres,augmented
+I want to know the genre.,ask_for_genres,augmented
+I’d like to know the story’s genre.,ask_for_genres,augmented
+I’m asking for the genre.,ask_for_genres,augmented
+Identify the category of the story.,ask_for_genres,augmented
+Identify the literary genre.,ask_for_genres,augmented
+In which genre is this categorized?,ask_for_genres,augmented
+Mention the genre.,ask_for_genres,augmented
+Please categorize this story.,ask_for_genres,augmented
+Please give the category label.,ask_for_genres,augmented
+Reveal the story’s genre.,ask_for_genres,augmented
+Show me the story’s genre.,ask_for_genres,augmented
+Show the narrative genre.,ask_for_genres,augmented
+State the genre.,ask_for_genres,augmented
+Tell me the genre classification.,ask_for_genres,augmented
+Type of literature?,ask_for_genres,augmented
+Under what genre is this listed?,ask_for_genres,augmented
+What category is this story in?,ask_for_genres,augmented
+What genre does the story fall under?,ask_for_genres,augmented
+What genre fits this story?,ask_for_genres,augmented
+What genre label applies to this?,ask_for_genres,augmented
+What genre tag applies?,ask_for_genres,augmented
+What genre title is given?,ask_for_genres,augmented
+What is the category?,ask_for_genres,augmented
+What is the genre classification?,ask_for_genres,augmented
+What kind of genre is shown?,ask_for_genres,augmented
+What narrative category is this?,ask_for_genres,augmented
+What story genre does this belong to?,ask_for_genres,augmented
+What type of genre is this?,ask_for_genres,augmented
+What’s the artistic category here?,ask_for_genres,augmented
+What’s the classification of this story?,ask_for_genres,augmented
+What’s the format or category here?,ask_for_genres,augmented
+What's the genre assigned to this?,ask_for_genres,augmented
+What’s the genre type?,ask_for_genres,augmented
+What’s the genre?,ask_for_genres,augmented
+What’s the label for this story?,ask_for_genres,augmented
+What's the storytelling category?,ask_for_genres,augmented
+What’s the type of literature here?,ask_for_genres,augmented
+Where does this story fall genre-wise?,ask_for_genres,augmented
+Which classification is used?,ask_for_genres,augmented
+Which genre does this story belong to?,ask_for_genres,augmented
+Which type of genre applies?,ask_for_genres,augmented
+What kind of landmarks were mentioned in the story?,ask_for_geographical_feature,human
+The story contained which notable geographic features?,ask_for_geographical_feature,human
+Tell me about the geographic features present.,ask_for_geographical_feature,human
+I'd like to know the geographic features present in the story.,ask_for_geographical_feature,human
+Landmarks?,ask_for_geographical_feature,human
+What kinds of landforms or waterforms were in the story?,ask_for_geographical_feature,human
+The story had what kind of bodies of water?,ask_for_geographical_feature,human
+Was there any notable geographic feature in the story.,ask_for_geographical_feature,human
+Did the story mention any type of place in nature?,ask_for_geographical_feature,human
+Were there interesting places mentioned?,ask_for_geographical_feature,human
+Describe the places mentioned.,ask_for_geographical_feature,human
+Are there any notable landforms in the story?,ask_for_geographical_feature,augmented
+Can you identify any natural landmarks in the story?,ask_for_geographical_feature,augmented
+Can you list the geographic elements mentioned?,ask_for_geographical_feature,augmented
+Can you tell me what kind of geography the story involved?,ask_for_geographical_feature,augmented
+Did it happen in the mountains or near the ocean?,ask_for_geographical_feature,augmented
+Did nature play a role in the story’s setting?,ask_for_geographical_feature,augmented
+Did the characters visit any geographical landmarks?,ask_for_geographical_feature,augmented
+Did the setting include any mountains or seas?,ask_for_geographical_feature,augmented
+"Did the story describe any rivers, mountains, or valleys?",ask_for_geographical_feature,augmented
+Did the story happen in a valley or on a plateau?,ask_for_geographical_feature,augmented
+Did the story include any geographic areas like mountains or rivers?,ask_for_geographical_feature,augmented
+"Did the story involve a jungle, a desert, or a tundra?",ask_for_geographical_feature,augmented
+Did the story take place in a specific natural location?,ask_for_geographical_feature,augmented
+Did the story take place near any bodies of water?,ask_for_geographical_feature,augmented
+Tell me about the natural setting of the story.,ask_for_geographical_feature,augmented
+Was the landscape described in detail?,ask_for_geographical_feature,augmented
+Was the location natural or man-made?,ask_for_geographical_feature,augmented
+Was the setting in the countryside or wilderness?,ask_for_geographical_feature,augmented
+Was the story set near a lake or a river?,ask_for_geographical_feature,augmented
+"Was there a forest, hill, or desert mentioned?",ask_for_geographical_feature,augmented
+"Was there a mention of islands, beaches, or rivers?",ask_for_geographical_feature,augmented
+"Was there a mention of water, land, or both?",ask_for_geographical_feature,augmented
+"Was there a volcano, lake, or cave in the story?",ask_for_geographical_feature,augmented
+"Were any caves, cliffs, or coasts in the story?",ask_for_geographical_feature,augmented
+Were any coastal areas featured in the story?,ask_for_geographical_feature,augmented
+Were any land or water forms highlighted?,ask_for_geographical_feature,augmented
+Were any nature-related places described in the story?,ask_for_geographical_feature,augmented
+Were any remarkable natural places mentioned?,ask_for_geographical_feature,augmented
+Were forests or plains described in the story?,ask_for_geographical_feature,augmented
+Were there any geographical symbols or locations?,ask_for_geographical_feature,augmented
+Were there any hills or valleys in the story?,ask_for_geographical_feature,augmented
+Were there any natural landscapes in the narrative?,ask_for_geographical_feature,augmented
+What environment was the story set in?,ask_for_geographical_feature,augmented
+What environmental features were important to the story?,ask_for_geographical_feature,augmented
+What geographic background did the story have?,ask_for_geographical_feature,augmented
+What kind of natural settings were described?,ask_for_geographical_feature,augmented
+What landforms can be found in the story?,ask_for_geographical_feature,augmented
+What natural places were mentioned in the story?,ask_for_geographical_feature,augmented
+What physical environment did the characters experience?,ask_for_geographical_feature,augmented
+What physical features were part of the story's setting?,ask_for_geographical_feature,augmented
+What places formed the backdrop of the story?,ask_for_geographical_feature,augmented
+What places in nature were part of the story?,ask_for_geographical_feature,augmented
+What sort of natural geography framed the story?,ask_for_geographical_feature,augmented
+What sort of places made up the setting?,ask_for_geographical_feature,augmented
+What terrains were included in the story?,ask_for_geographical_feature,augmented
+What types of terrain were present?,ask_for_geographical_feature,augmented
+"Where did the story take place, geographically speaking?",ask_for_geographical_feature,augmented
+Which geographic places shaped the events in the story?,ask_for_geographical_feature,augmented
+Which parts of nature were important in the story?,ask_for_geographical_feature,augmented
+Which types of environments were described?,ask_for_geographical_feature,augmented

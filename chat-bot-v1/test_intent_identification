@@ -35,9 +35,9 @@ def evaluate_model(csv_file: str, model: Model) -> float:
     accuracy = correct / len(df)
     return accuracy
 
-mdl = Model(r'C:\Users\ACER\Desktop\hackathon\PanayHub\chat-bot-v1\models\20250404-123109-timid-brush.tar.gz')
+mdl = Model(r'C:\Users\User\Documents\Eskul\Y4S2\CMSC 198.2 - Special Problem II\PanayHub\chat-bot-v1\models\20250526-062925-feldspar-freeway.tar.tar.gz')
 
-csv_file = r'C:\Users\ACER\Desktop\hackathon\PanayHub\chat-bot-v1\test.csv'
+csv_file = r'C:\Users\User\Documents\Eskul\Y4S2\CMSC 198.2 - Special Problem II\PanayHub\chat-bot-v1\test.csv'
 accuracy = evaluate_model(csv_file, mdl)
 
 print(f"Accuracy: {accuracy * 100:.2f}%")

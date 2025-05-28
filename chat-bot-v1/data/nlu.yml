@@ -63,3 +63,13 @@ nlu:
     - Give me [3](story_count) random stories
     - What are some[story_count] random stories you can give?
     - What are some[story_count] stories you can give?
+
+- intent: ask_for_geographical_feature
+  examples: |
+    - What are the geographical features of [Ang Ido Nga Nagbata](story_title)?
+    - Can you tell me about the geographical features in [Pagtaas Ko Langit](story_title)?
+    - What geographical features were present in [Ang Tuko](story_title)?
+    - What landmarks were in [Ang Bawa](story_title).
+    - Were there any notable places in [Ang Mameleu](story_title)?
+    - [Si Manong Roman](story_title) had what kinds of landmarks?
+    - Were there any notable geographical features mentioned in [Si Dapaw-Dangaw](story_title)?

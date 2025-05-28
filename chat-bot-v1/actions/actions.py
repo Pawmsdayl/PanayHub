@@ -57,7 +57,58 @@ class ActionGetStoryCharacters(Action):
             dispatcher.utter_message(f"I couldn't find characters for '{title_match}'.")
 
         return []
-    
+
+class ActionGetGeographicalFeature(Action):
+    def name(self) -> Text:
+        return "action_get_geographical_feature"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker, 
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        story_title = tracker.get_slot("story_title")
+        if not story_title:
+            dispatcher.utter_message("I couldn't find the story title. Can you specify the title again?")
+            return []
+
+        uri = "bolt://localhost:7687/neo4j"
+        username = "neo4j"
+        password = "password"
+        driver = GraphDatabase.driver(uri, auth=(username, password), encrypted=False)
+
+        title_query = "MATCH (s) RETURN s.ns0__title AS title"
+        with driver.session() as session:
+            result = session.run(title_query)
+            available_titles = [record["title"] for record in result if record["title"]]
+
+        if not available_titles:
+            dispatcher.utter_message("I couldn't find any available story titles.")
+            return []
+
+        title_match = min(available_titles, key=lambda t: Levenshtein.distance(story_title, t))
+
+        print(title_match)  
+
+        query = """
+        MATCH (geographic_feature)-[:ns0__isGeographicFeatureIn]->(story)
+        WHERE story.ns0__title = $title
+        RETURN replace(split(geographic_feature.uri, "#")[1], "_", " ") AS geographic_feature
+        LIMIT 10
+        """
+
+        geographic_features = []
+        with driver.session() as session:
+            result = session.run(query, title=title_match)
+            geographic_features = [record["geographic_feature"] for record in result]
+
+        driver.close()
+
+        if geographic_features:
+            dispatcher.utter_message(f"The geographic features in '{title_match}' are: {', '.join(geographic_features)}.")
+        else:
+            dispatcher.utter_message(f"I couldn't find characters for '{title_match}'.")
+
+        return []
 
 class ActionGetResearcher(Action):
     def name(self) -> Text:
@@ -89,7 +140,6 @@ class ActionGetResearcher(Action):
         title_match = min(available_titles, key=lambda t: Levenshtein.distance(story_title, t))
 
         print(title_match)  
-
 
         query = """
         MATCH (researcher)-[:ns0__conductedResearchOrRecorded]->(story)
@@ -174,9 +224,18 @@ class ActionGetRandomStories(Action):
             tracker: Tracker, 
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        story_count = int(tracker.get_slot("story_count"))
-        if  int(story_count) <= 0:
+        story_count_slot = tracker.get_slot("story_count")
+        if story_count_slot is None:
+            dispatcher.utter_message("Please specify how many stories you want to get.")
+            return []
+        try:
+            story_count = int(story_count_slot)
+        except (ValueError, TypeError):
+            dispatcher.utter_message("Please use a valid integer for the number of stories.")
+            return []
+        if story_count <= 0:
             dispatcher.utter_message("Please use positive integers when specifying the number of stories.")
+            return []
 
         uri = "bolt://localhost:7687/neo4j"
         username = "neo4j"
@@ -203,4 +262,3 @@ class ActionGetRandomStories(Action):
         else:
             dispatcher.utter_message(f"I couldn't find any titles from the database.")
         return []
-    
