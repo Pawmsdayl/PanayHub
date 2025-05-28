@@ -46,7 +46,7 @@ class ActionGetStoryCharacters(Action):
         global uri
         global username
         global password
-        driver = GraphDatabase.driver(uri, auth=(username, password), encrypted=False)
+        driver = GraphDatabase.driver(uri, auth=(username, password))
 
         title_query = "MATCH (s) RETURN s.ns0__title AS title"
         with driver.session() as session:
@@ -105,7 +105,7 @@ class ActionGetResearcher(Action):
         global uri
         global username
         global password
-        driver = GraphDatabase.driver(uri, auth=(username, password), encrypted=False)
+        driver = GraphDatabase.driver(uri, auth=(username, password))
 
         title_query = "MATCH (s) RETURN s.ns0__title AS title"
         with driver.session() as session:
@@ -167,7 +167,7 @@ class ActionGetStoryGenres(Action):
         global username
         global password
 
-        driver = GraphDatabase.driver(uri, auth=(username, password), encrypted=False)
+        driver = GraphDatabase.driver(uri, auth=(username, password))
 
         title_query = "MATCH (s) RETURN s.ns0__title AS title"
         with driver.session() as session:
@@ -237,7 +237,7 @@ class ActionGetRandomStories(Action):
         global uri
         global username
         global password
-        driver = GraphDatabase.driver(uri, auth=(username, password), encrypted=False)
+        driver = GraphDatabase.driver(uri, auth=(username, password))
 
         query = """
         MATCH (node)
