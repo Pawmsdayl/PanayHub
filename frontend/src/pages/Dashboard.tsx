@@ -11,6 +11,7 @@ import {StorytellersContext} from "@/contexts/StorytellersContext.ts";
 import {queryNeo4j, storytellersOnly} from "@/functions/Queries.ts";
 import {addSpacesBeforeCapitals, cleanUris, createStoryListEntries} from "@/utils.ts";
 import {ChartDiv} from "@/components/ChartDiv.tsx";
+import {ProvenancesContext} from "@/contexts/ProvenancesContext.tsx";
 
 function Dashboard() {
   const [userChoiceState, userChoiceDispatch] = useReducer(reducer, {
@@ -84,7 +85,9 @@ function Dashboard() {
               </button>
             </div>
             <div>
-              <Heatmap/>
+              <ProvenancesContext.Provider value={provenances}>
+                <Heatmap/>
+              </ProvenancesContext.Provider>
             </div>
             <div>
               {

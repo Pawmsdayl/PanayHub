@@ -1,17 +1,20 @@
 import * as React from "react";
-import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
+  import {MapContainer, TileLayer} from "react-leaflet";
 import {useMap} from 'react-leaflet/hooks';
 import HeatmapLayer from "react-leaflet-heat-layer";
 import "leaflet/dist/leaflet.css";
 import {latLng, LatLng} from "leaflet";
+import {useContext} from "react";
+import {ProvenancesContext} from "@/contexts/ProvenancesContext.tsx";
+import {locations} from "@/utils.ts";
 
 
 
 const center: LatLng = latLng(11.2035, 122.5145);
 
-const addressPoints = [
-  center,
-];
+// const addressPoints = [
+//   center,
+// ];
 
 function ChangeView(){
   const map = useMap();
@@ -25,6 +28,16 @@ function ChangeView(){
 }
 
 const Heatmap: React.FC = () => {
+
+  const provenances = useContext(ProvenancesContext);
+
+  const latLngList : LatLng[]= [];
+
+  provenances.map((provenance) => {
+    latLngList.push(locations[provenance]);
+  })
+
+
 
   return (
 
@@ -51,14 +64,14 @@ const Heatmap: React.FC = () => {
           1.0: 'red'
         }}
         // latlngs={addressPoints.map((p) => [p[0], p[1]])}
-        latlngs={addressPoints}
+        latlngs={latLngList}
       />
       {/*<heatMap/>*/}
-      <Marker position={[51.505, -0.09]}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
+      {/*<Marker position={[51.505, -0.09]}>*/}
+      {/*  <Popup>*/}
+      {/*    A pretty CSS3 popup. <br /> Easily customizable.*/}
+      {/*  </Popup>*/}
+      {/*</Marker>*/}
     </MapContainer>
 
   );

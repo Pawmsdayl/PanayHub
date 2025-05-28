@@ -21,7 +21,6 @@ export function Chart({chartData, xDataKey, yDataKey, title}: {chartData: ChartD
   } satisfies ChartConfig
 
 
-  console.log("Chart Data", chartConfig);
   return (
     <div className={`flex flex-col`}>
       <h1 className={`text-black font-bold`}>{title}</h1>
