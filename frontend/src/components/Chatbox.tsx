@@ -17,12 +17,13 @@ function Chatbox(){
     setMessages(prevMessages => [...prevMessages, userMessage]);
 
     try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+      const response = await fetch('https://a79d-35-240-204-59.ngrok-free.app/webhooks/rest/webhook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          sender: "user",
           message: message,
         }),
       });
