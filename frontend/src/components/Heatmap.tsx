@@ -12,19 +12,21 @@ const addressPoints = [
   latLng(11.2035,122.5145)
 ]
 
-const center = latLng(11.2035, 122.5145);
+// const center = latLng(11.2035, 122.5145);
 
 const Heatmap: React.FC = () => {
   return (
 
-      <MapContainer center={center}  className={`size-[600px] rounded-lg`}>
+      <MapContainer
+        // center={center}
+        className={`size-[600px] rounded-lg`}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <HeatmapLayer
-          fitBoundsOnLoad = {true}
-          fitBoundsOnUpdate = {false}
+          // fitBoundsOnLoad = {true}
+          // fitBoundsOnUpdate = {false}
           maxZoom={9.4}
           gradient={ {
           0.0: 'green',
