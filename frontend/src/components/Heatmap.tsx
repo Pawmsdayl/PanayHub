@@ -1,46 +1,65 @@
 import * as React from "react";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
+import {useMap} from 'react-leaflet/hooks';
 import HeatmapLayer from "react-leaflet-heat-layer";
-import {latLng} from "leaflet";
 import "leaflet/dist/leaflet.css";
+import {latLng, LatLng} from "leaflet";
 
-// const addressPoints = [
-//   [11.2035, 122.5145, 1],
-// ];
+
+
+const center: LatLng = latLng(11.2035, 122.5145);
 
 const addressPoints = [
-  latLng(11.2035,122.5145)
-]
+  center,
+];
 
-// const center = latLng(11.2035, 122.5145);
+function ChangeView(){
+  const map = useMap();
+  map.scrollWheelZoom.disable()
+  map.setZoom(9.4);
+  map.panTo(center);
+  map.dragging.disable();
+  // map.zoomControl.remove();
+  return null;
+
+}
 
 const Heatmap: React.FC = () => {
+
   return (
 
-      <MapContainer
-        // center={center}
-        className={`size-[600px] rounded-lg`}>
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <HeatmapLayer
-          // fitBoundsOnLoad = {true}
-          // fitBoundsOnUpdate = {false}
-          maxZoom={9.4}
-          gradient={ {
+    <MapContainer
+      // dragging={false}
+      //       zoomControl={false}
+            className={`size-[600px] rounded-lg`}
+            // center={[11.2035, 122.5145]}
+            // zoom={9.4}
+            // scrollWheelZoom={false}
+    >
+      <ChangeView/>
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      <HeatmapLayer
+        // fitBoundsOnLoad = {true}
+        // fitBoundsOnUpdate = {false}
+        maxZoom={9.4}
+        gradient={ {
           0.0: 'green',
           0.5: 'yellow',
           1.0: 'red'
         }}
-          latlngs={addressPoints}
-        />
-        <Marker position={[51.505, -0.09]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
-      </MapContainer>
+        // latlngs={addressPoints.map((p) => [p[0], p[1]])}
+        latlngs={addressPoints}
+      />
+      {/*<heatMap/>*/}
+      <Marker position={[51.505, -0.09]}>
+        <Popup>
+          A pretty CSS3 popup. <br /> Easily customizable.
+        </Popup>
+      </Marker>
+    </MapContainer>
 
   );
 };
