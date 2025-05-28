@@ -23,13 +23,18 @@ function Chatbox(){
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          sender: "user",
-          message: message,
+          "sender": "user",
+          "message": message,
         }),
       });
 
       const data = await response.json();
-      const apiResponse = {sender: "bot", message: data.message + "yo"};
+      const botResponse = data[0];
+
+      const {
+        text
+      } = botResponse;
+      const apiResponse = {sender: "bot", message: text};
       setMessages(prevMessages => [...prevMessages, apiResponse]);
 
     } catch (error) {
