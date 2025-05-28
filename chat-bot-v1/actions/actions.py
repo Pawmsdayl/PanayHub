@@ -250,7 +250,7 @@ class ActionGetRandomStories(Action):
         titles = []
         with driver.session() as session:
             result = session.run(query, story_count=story_count)
-            titles = [record["title_name"][0] for record in result]
+            titles = [record["title_name"] for record in result]
 
         driver.close()
 
