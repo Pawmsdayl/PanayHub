@@ -18,9 +18,9 @@ function Contact() {
     <div className={`min-h-screen w-full flex flex-col items-center justify-center`}>
       <div className={`w-full`}>
         <div className={`relative w-full h-full`}>
-          <img className={`absolute right-0`} src="src/assets/blob%20contact%202.png" alt={`blb`}/>
-          <img className={`absolute left-0 z-0`} src="src/assets/blob%20contact.png" alt={`blb`}/>
-          <img className={`absolute right-0 bottom-0 z-0`} src="src/assets/blob%20contact%203.png" alt={`blb`}/>
+          <img className={`absolute right-0`} src="/blob%20contact%202.png" alt={`blb`}/>
+          <img className={`absolute left-0 z-0`} src="/blob%20contact.png" alt={`blb`}/>
+          <img className={`absolute right-0 bottom-0 z-0`} src="/blob%20contact%203.png" alt={`blb`}/>
           <div className={`relative flex flex-col items-center z-10`}>
             <div className={`flex flex-col items-center justify-center m-20 `}>
               <h1 className={`text-[80px] gradient-text-highlight font-bold font-serif`}>Contact Us.</h1>
@@ -33,7 +33,7 @@ function Contact() {
             <div className={`grid grid-cols-2 m-20`}>
 
               <div className={`flex gap-1`}>
-                <img src="src/assets/cwvs%20big.png" alt={`UPV Logo`}/>
+                <img src="/cwvs%20big.png" alt={`UPV Logo`}/>
                 <div className={`text-body-font h-full flex flex-col  justify-center`}>
                   <h1 className={`font-serif font-bold text-3xl`}>Center for<br/>
                     West Visayan Studies </h1>
@@ -49,7 +49,7 @@ function Contact() {
 
               </div>
               <div className={`flex gap-1`}>
-                <img src="src/assets/upv%20big.png" alt={`UPV Logo`}/>
+                <img src="/upv%20big.png" alt={`UPV Logo`}/>
                 <div className={`text-body-font h-full flex flex-col  justify-center`}>
                   <h1 className={`font-serif font-bold text-3xl `}>
                     University of the <br/>

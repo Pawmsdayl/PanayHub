@@ -10,7 +10,7 @@ function Navbar(){
           <div className={`w-full flex flex-row justify-between mx-10 items-center`}>
             <div className={`text-black font-bold text-4xl flex gap-3 place-content-center`}>
               <Link to={`/`}>
-                <img src="src/assets/panayhub-logo.png" alt={`panayhub logo`}/>
+                <img src="/panayhub-logo.png" alt={`panayhub logo`}/>
               </Link>
               <Link to={`/`}>
                 <h1>PanayHub</h1>

@@ -19,7 +19,7 @@ function LandingPage(){
             className={`absolute top-150 left-40 w-150 h-150 bg-yellow-400 rounded-full -mix-blend-multiply filter  blur-3xl  opacity-30`}/>
           <div
             className={`absolute top-150 -left-40 w-150 h-150 bg-orange-500 rounded-full -mix-blend-multiply filter blur-3xl opacity-50`}/>
-          <img className={`absolute right-0`} src="src/assets/blob4.png" alt={`blob`}/>
+          <img className={`absolute right-0`} src="/blob4.png" alt={`blob`}/>
 
           <div className={`relative grid grid-cols-2 h-150 place-items-center mb-10`}>
             <PanayIsland></PanayIsland>
@@ -37,7 +37,7 @@ function LandingPage(){
           </div>
           <div className={`relative grid grid-cols-2 grid-rows-2 h-96 place-items-center`}>
             <div className={`flex place-items-center flex-col`}>
-              <img src="src/assets/user%201.png" alt={`user`}/>
+              <img src="/user%201.png" alt={`user`}/>
               <h2 className={`text-(--body-font-color) font-bold`}>Ask Questions</h2>
               <p className={`text-(--body-font-color)`}>Ask questions from our chat bot about topics of interesting regarding Panayanon folk narratives.</p>
             </div>
@@ -45,7 +45,7 @@ function LandingPage(){
               <div className={`text-black place-items-center`}>image</div>
             </div>
             <div className={`flex place-items-center flex-col`}>
-              <img src="src/assets/laptop-computer%201.png" alt={`user`}/>
+              <img src="/laptop-computer%201.png" alt={`user`}/>
               <h2 className={`text-(--body-font-color) font-bold`}>Get answers</h2>
               <p className={`text-(--body-font-color)`}>Receive answers from the chat bot regarding your query.</p>
             </div>

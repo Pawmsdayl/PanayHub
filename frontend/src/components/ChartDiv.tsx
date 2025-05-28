@@ -61,7 +61,7 @@ export function ChartDiv({storyList, provenances}: { storyList:StoryListEntryPro
 
     return (
       <div className={`overflow-y-scroll h-[600px]`}>
-        <div className={` border-2 border-black border flex flex-col`}>
+        <div className={` border-2 border-black flex flex-col`}>
           <Chart title={"Count of Researchers"} chartData={researchersData} xDataKey={"count"} yDataKey={"researcher"}>
           </Chart>
           <Chart title={"Count of Storytellers"} chartData={storytellersData} xDataKey={"count"} yDataKey={"storyteller"}/>
