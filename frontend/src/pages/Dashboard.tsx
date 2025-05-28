@@ -89,9 +89,7 @@ function Dashboard() {
             <div>
               {
                 provenances.length !== 0 &&
-                  <ChartDiv provenances={provenances} storyList={storyListEntries}>
-                      <p></p>
-                  </ChartDiv>
+                  <ChartDiv provenances={provenances} storyList={storyListEntries}/>
               }
 
             </div>
