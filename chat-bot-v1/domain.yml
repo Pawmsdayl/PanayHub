@@ -6,7 +6,6 @@ intents:
   - ask_for_researcher
   - ask_for_genres
   - ask_for_random_stories
-  - ask_for_geographical_feature
 
 actions:
   - action_get_story_themes
@@ -14,12 +13,12 @@ actions:
   - action_get_researcher
   - action_get_story_genres
   - action_get_random_stories
-  - action_get_geographical_feature
 
 entities:
   - story_title
   - researcher
   - story_count
+
 
 slots:
   story_title:
@@ -40,6 +39,14 @@ slots:
     mappings:
       - type: from_entity
         entity: story_count
+
+
+responses:
+  utter_fallback:
+  - text: "I'm sorry, I didn't quite understand that. Could you please rephrase?"
+
+
+
 
 session_config:
   session_expiration_time: 60

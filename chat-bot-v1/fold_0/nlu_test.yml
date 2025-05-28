@@ -1,0 +1,22 @@
+version: '3.1'
+nlu:
+- intent: ask_for_characters
+  examples: '- Characters?
+
+    - Give characters.'
+- intent: ask_for_researcher
+  examples: '- Recorder?
+
+    - Enumerate the researchers responsible for gathering information about the story.'
+- intent: ask_for_themes
+  examples: '- Show theme
+
+    - State the theme of the hurubaton.'
+- intent: 'ask_for_random_stories '
+  examples: '- Enumerate a few random stories.
+
+    - I want random stories.'
+- intent: ask_for_genres
+  examples: '- What is the genre of this story?
+
+    - Show category'

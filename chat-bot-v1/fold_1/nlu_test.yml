@@ -1,0 +1,22 @@
+version: '3.1'
+nlu:
+- intent: ask_for_characters
+  examples: '- Name key figures in the story
+
+    - Enumerate characters from story.'
+- intent: ask_for_researcher
+  examples: '- Documented by?
+
+    - Who researched the story?'
+- intent: ask_for_themes
+  examples: '- What is the theme in this story?
+
+    - Tell me the theme.'
+- intent: 'ask_for_random_stories '
+  examples: '- What stories do you have?
+
+    - List some stories.'
+- intent: ask_for_genres
+  examples: '- Tell me the category.
+
+    - What is the genre of this story?'

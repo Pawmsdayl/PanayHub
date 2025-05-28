@@ -7,6 +7,8 @@ nlu:
     - a
     - A
     - one
+    - an
+
 
 - intent: ask_for_characters
   examples: |
@@ -16,6 +18,7 @@ nlu:
     - Who are the characters in the [Ang Bawa](story_title)?
     - give characters
     - characters who
+    - characters of the story?
 
 
 - intent: ask_for_themes
@@ -29,6 +32,7 @@ nlu:
     - What's the deeper meaning of [Ngaa May Adlaw, Bulan Kag Mga Bitoon](story_title)? 
     - what themes?
     - themes
+    - themes of story?
 
 - intent: ask_for_researcher
   examples: |
@@ -42,6 +46,7 @@ nlu:
     - Do you know who first recorded [Ang Kataw](story_title)?  
     - Who is credited with researching [Si Binukot](story_title)?  
     - I'd like to know who compiled information about [Ang Eklipse](story_title).
+    - researcher of the story? 
     - researcher?
     - recorder?
     - who researcher?  
@@ -54,22 +59,26 @@ nlu:
     - what genre?
     - What kind of story is [Si Dapaw-Dangaw](story_title)?
     - [Ngaa May Adlaw, Bulan Kag Mga Bitoon](story_title) belongs to what genre?
+    - genre of the story?
 
 - intent: ask_for_random_stories
   examples: |
-    - give me a[story_count] random story
-    - give me a[story_count] story
+    - give me [a](story_count) random story
+    - give me [a](story_count) story
     - Give me [2](story_count) stories
     - Give me [3](story_count) random stories
-    - What are some[story_count] random stories you can give?
-    - What are some[story_count] stories you can give?
+    - What are [some](story_count) random stories you can give?
+    - What are [some](story_count) stories you can give?
 
-- intent: ask_for_geographical_feature
+- intent: nlu_fallback
   examples: |
-    - What are the geographical features of [Ang Ido Nga Nagbata](story_title)?
-    - Can you tell me about the geographical features in [Pagtaas Ko Langit](story_title)?
-    - What geographical features were present in [Ang Tuko](story_title)?
-    - What landmarks were in [Ang Bawa](story_title).
-    - Were there any notable places in [Ang Mameleu](story_title)?
-    - [Si Manong Roman](story_title) had what kinds of landmarks?
-    - Were there any notable geographical features mentioned in [Si Dapaw-Dangaw](story_title)?
+    - asdasdasdasd
+    - qweqwe
+    - ????
+    - lkajsdflkasjdf
+    - help meeeeeee
+    - whatever this means
+    - !@#$%^&*()
+    - what is love baby don't hurt me
+    - potato banana monkey cat
+    - gibberish nonsense

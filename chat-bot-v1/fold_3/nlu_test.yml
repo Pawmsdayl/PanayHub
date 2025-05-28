@@ -1,0 +1,22 @@
+version: '3.1'
+nlu:
+- intent: ask_for_characters
+  examples: '- List the main characters in this story.
+
+    - Which characters appear in the narrative?'
+- intent: ask_for_researcher
+  examples: '- Documented by?
+
+    - Researcher?'
+- intent: ask_for_themes
+  examples: '- Theme?
+
+    - State the theme of the hurubaton.'
+- intent: 'ask_for_random_stories '
+  examples: '- Which stories do you know?
+
+    - List some stories.'
+- intent: ask_for_genres
+  examples: '- Type of story.
+
+    - What kind of story is this story?'
