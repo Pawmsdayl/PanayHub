@@ -24,10 +24,21 @@ function InputBar({handleSendMessage}: {handleSendMessage: (message: string) => 
     console.log(value);
   }
 
+  function handleKeyDown(event){
+    if(event.key !== 'Enter') return;
+    const trimmedMessage = value.trim();
+    if (!trimmedMessage) return;
+
+    handleSendMessage(value);
+    setValue("");
+    console.log(value);
+  }
+
   return(
     <div className={`self-end max-h-100 w-full bg-chatbot-bg shadow-input-bar rounded-[80px]`}>
       <div className={`flex items-center justify-center pl-10 py-5 pr-5`}>
       <textarea
+        onKeyDown={handleKeyDown}
         style={{
           maxHeight: "200px",
         }}

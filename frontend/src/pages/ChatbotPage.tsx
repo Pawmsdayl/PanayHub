@@ -10,11 +10,13 @@ function ChatbotPage() {
 
          </div>
          <div className={`h-full flex flex-col justify-center gap-4`}>
-           <h1 className={`t bg-gradient-to-r from-[#FFFFFF] to-[#80BCFD] bg-clip-text text-transparent font-bold  font-serif text-3xl text-center`}>
+           <h1 className={`text-right bg-gradient-to-r from-[#FFFFFF] to-[#80BCFD] bg-clip-text text-transparent font-bold  font-serif text-3xl text-center`}>
              Some possible questions to ask:
            </h1>
-           <p className={`text-white text-center italic text-xl`}>"Give me a random story"</p>
-           <p className={`text-white text-center italic text-xl`}>"Give me a random story"</p>
+           <p className={`text-white text-center italic text-base text-right`}>"Who are the characters of the [Ang Ido Nga Nagbata](story_title)?"</p>
+           <p className={`text-white text-center italic text-base text-right`}>"Who recorded the story of [Ang Agta](story_title)?"</p>
+           <p className={`text-white text-center italic text-base text-right`}>"What type of story is [Si Juan Kag Si Maria](story_title)?"</p>
+           <p className={`text-white text-center italic text-base text-right`}>"Give me[2](story_count) stories."</p>
          </div>
        </div>
 
