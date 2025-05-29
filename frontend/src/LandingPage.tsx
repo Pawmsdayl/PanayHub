@@ -1,6 +1,7 @@
 import PanayIsland from "./components/PanayIsland.tsx";
 import Footer from "@/components/Footer.tsx";
 import {ImageCollage} from "@/components/ImageCollage.tsx";
+import YouTube from "react-youtube";
 function LandingPage(){
   return (
     <div className="w-full min-h-screen bg-white ">
@@ -35,22 +36,35 @@ function LandingPage(){
             <h1 className={`text-(--body-font-color) text-6xl font-serif italic`}>Introducing our smart <span
               className={`text-(--body-font-highlight)`}>chat bot.</span></h1>
           </div>
-          <div className={`relative grid grid-cols-2 grid-rows-2 h-96 place-items-center`}>
+            <div className={`relative grid  grid-cols-2 grid-rows-2 h-[900px] place-items-center`}>
             <div className={`flex place-items-center flex-col`}>
               <img src="/user%201.png" alt={`user`}/>
               <h2 className={`text-(--body-font-color) font-bold`}>Ask Questions</h2>
               <p className={`text-(--body-font-color)`}>Ask questions from our chat bot about topics of interesting regarding Panayanon folk narratives.</p>
             </div>
             <div>
-              <div className={`text-black place-items-center`}>image</div>
+              <div className={`text-black place-items-center`}>
+                <YouTube
+                    id={"2nk5UOeMnU4"}
+                    className={`object-fit`}
+                >
+                </YouTube>
+
+              </div>
             </div>
             <div className={`flex place-items-center flex-col`}>
               <img src="/laptop-computer%201.png" alt={`user`}/>
               <h2 className={`text-(--body-font-color) font-bold`}>Use the dashboard</h2>
               <p className={`text-(--body-font-color)`}>Receive insights about current data from Panay.</p>
             </div>
-            <div>
-              <div className={`text-black place-items-center`}>image</div>
+            <div className={``}>
+              <div className={`text-black border h-full w-full place-items-center`}>
+                <YouTube
+                  className={"object-cover"}
+                  id={"kfTRJB5H9iM"}
+                >
+                </YouTube>
+              </div>
             </div>
           </div>
           <div className={`relative grid grid-cols-3 w-full text-black place-items-center h-96 mb-20`}>
