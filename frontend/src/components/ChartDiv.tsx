@@ -7,7 +7,6 @@ interface ChartData {
   storyteller?: string;
   provenance?: string;
   count: number;
-
 }
 
 export function ChartDiv({storyList, provenances}: { storyList:StoryListEntryProps[], provenances: string[]}) {
@@ -56,6 +55,22 @@ export function ChartDiv({storyList, provenances}: { storyList:StoryListEntryPro
     }
   });
 
+  // const topProvenances =
+  //   provenanceData.sort((a, b) => b.count - a.count).slice(0, 5);
+  // const topStorytellers =
+  //   storytellersData.sort((a, b) => b.count -a.count).slice(0, 5);
+  const topProvenances =
+    provenanceData.length > 5
+      ? provenanceData.sort((a, b) => b.count - a.count).slice(0, 5)
+      : provenanceData;
+
+  const topStorytellers =
+    storytellersData.length > 5
+      ? storytellersData.sort((a, b) => b.count - a.count).slice(0, 5)
+      : storytellersData;
+
+
+
 
   console.log(researchersData);
 
@@ -64,8 +79,8 @@ export function ChartDiv({storyList, provenances}: { storyList:StoryListEntryPro
         <div className={` border-2 border-black flex flex-col`}>
           <Chart title={"Count of Researchers"} chartData={researchersData} xDataKey={"count"} yDataKey={"researcher"}>
           </Chart>
-          <Chart title={"Count of Storytellers"} chartData={storytellersData} xDataKey={"count"} yDataKey={"storyteller"}/>
-          <Chart title={"Count of Provenances"} chartData={provenanceData} xDataKey={"count"} yDataKey={"provenance"}/>
+          <Chart title={"Top 5 Count of Storytellers"} chartData={topStorytellers} xDataKey={"count"} yDataKey={"storyteller"}/>
+          <Chart title={"Top 5 Count of Provenances"} chartData={topProvenances} xDataKey={"count"} yDataKey={"provenance"}/>
         </div>
        </div>
     );

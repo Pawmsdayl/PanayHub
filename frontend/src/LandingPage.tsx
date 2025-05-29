@@ -46,22 +46,24 @@ function LandingPage(){
             </div>
             <div className={`flex place-items-center flex-col`}>
               <img src="/laptop-computer%201.png" alt={`user`}/>
-              <h2 className={`text-(--body-font-color) font-bold`}>Get answers</h2>
-              <p className={`text-(--body-font-color)`}>Receive answers from the chat bot regarding your query.</p>
+              <h2 className={`text-(--body-font-color) font-bold`}>Use the dashboard</h2>
+              <p className={`text-(--body-font-color)`}>Receive insights about current data from Panay.</p>
             </div>
             <div>
               <div className={`text-black place-items-center`}>image</div>
             </div>
           </div>
-          <div className={`relative grid grid-cols-3 w-full text-black place-items-center h-96 `}>
-            <div className={`w-full h-full border`}>
+          <div className={`relative grid grid-cols-3 w-full text-black place-items-center h-96 mb-20`}>
+            <div className={`w-full h-full`}>
               <ImageCollage/>
             </div>
             <div>
               <h1 className={` font-serif text-(--body-font-color) text-6xl text-center`}>We believe in <br/> <span
                 className={` font-serif underline text-(--body-font-highlight)`}>something.</span></h1>
             </div>
-            <div>image</div>
+            <div className={`w-full h-full`}>
+              <ImageCollage/>
+            </div>
           </div>
         </div>
         <Footer/>

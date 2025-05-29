@@ -1,40 +1,70 @@
 {
-  "hash": "330e020d",
+  "hash": "d0ba57b9",
   "configHash": "8b983009",
-  "lockfileHash": "10d6eb13",
-  "browserHash": "f2e97e5d",
+  "lockfileHash": "41c2e3ce",
+  "browserHash": "1a98f38a",
   "optimized": {
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "15458095",
+      "fileHash": "a581110f",
       "needsInterop": true
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "b1fa52c7",
+      "fileHash": "5878fc1a",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "d30a4070",
+      "fileHash": "9c522075",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
-      "fileHash": "e00eb4bf",
+      "fileHash": "86ea3b88",
+      "needsInterop": false
+    },
+    "heatmap.js": {
+      "src": "../../node_modules/heatmap.js/build/heatmap.js",
+      "file": "heatmap__js.js",
+      "fileHash": "532eb449",
+      "needsInterop": true
+    },
+    "react-icons/tb": {
+      "src": "../../node_modules/react-icons/tb/index.mjs",
+      "file": "react-icons_tb.js",
+      "fileHash": "d3b36e6e",
+      "needsInterop": false
+    },
+    "react-icons/bs": {
+      "src": "../../node_modules/react-icons/bs/index.mjs",
+      "file": "react-icons_bs.js",
+      "fileHash": "72eeca90",
+      "needsInterop": false
+    },
+    "@emailjs/browser": {
+      "src": "../../node_modules/@emailjs/browser/es/index.js",
+      "file": "@emailjs_browser.js",
+      "fileHash": "a1313038",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-WZVU6G5Y": {
-      "file": "chunk-WZVU6G5Y.js"
+    "chunk-QJWJCAXU": {
+      "file": "chunk-QJWJCAXU.js"
     },
-    "chunk-Q462PRL3": {
-      "file": "chunk-Q462PRL3.js"
+    "chunk-LLBSXP7K": {
+      "file": "chunk-LLBSXP7K.js"
+    },
+    "chunk-3527N3GG": {
+      "file": "chunk-3527N3GG.js"
+    },
+    "chunk-EQCVQC35": {
+      "file": "chunk-EQCVQC35.js"
     }
   }
 }

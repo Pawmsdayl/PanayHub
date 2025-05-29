@@ -34,9 +34,12 @@ const Heatmap: React.FC = () => {
   const latLngList : LatLng[]= [];
 
   provenances.map((provenance) => {
-    latLngList.push(locations[provenance]);
+
+    if (locations[provenance] !== undefined)
+      latLngList.push(locations[provenance]);
   })
 
+  console.log("provenances", latLngList);
 
 
   return (
@@ -63,7 +66,6 @@ const Heatmap: React.FC = () => {
           0.5: 'yellow',
           1.0: 'red'
         }}
-        // latlngs={addressPoints.map((p) => [p[0], p[1]])}
         latlngs={latLngList}
       />
       {/*<heatMap/>*/}
