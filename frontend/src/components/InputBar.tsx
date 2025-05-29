@@ -1,4 +1,4 @@
-import {useState} from "react";
+import React, {useState} from "react";
 
 
 function InputBar({handleSendMessage}: {handleSendMessage: (message: string) => void}){
@@ -24,7 +24,7 @@ function InputBar({handleSendMessage}: {handleSendMessage: (message: string) => 
     console.log(value);
   }
 
-  function handleKeyDown(event){
+  function handleKeyDown(event: React.KeyboardEvent<HTMLTextAreaElement>){
     if(event.key !== 'Enter') return;
     const trimmedMessage = value.trim();
     if (!trimmedMessage) return;
