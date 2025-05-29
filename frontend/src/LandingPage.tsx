@@ -58,8 +58,8 @@ function LandingPage(){
               <ImageCollage/>
             </div>
             <div>
-              <h1 className={` font-serif text-(--body-font-color) text-6xl text-center`}>We believe in <br/> <span
-                className={` font-serif underline text-(--body-font-highlight)`}>something.</span></h1>
+              <h1 className={` font-serif text-(--body-font-color) text-6xl text-center`}>We believe in the<br/> <span
+                className={` font-serif underline text-(--body-font-highlight)`}>beauty of our roots.</span></h1>
             </div>
             <div className={`w-full h-full`}>
               <ImageCollage/>
