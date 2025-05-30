@@ -1,0 +1,20 @@
+{
+  "0": "ask_for_characters",
+  "1": "ask_for_genres",
+  "2": "ask_for_geographic_features",
+  "3": "ask_for_help",
+  "4": "ask_for_key_informant",
+  "5": "ask_for_language",
+  "6": "ask_for_provenance",
+  "7": "ask_for_random_stories",
+  "8": "ask_for_researcher",
+  "9": "ask_for_themes",
+  "10": "inv_ask_for_characters",
+  "11": "inv_ask_for_genres",
+  "12": "inv_ask_for_geographic_features",
+  "13": "inv_ask_for_key_informant",
+  "14": "inv_ask_for_language",
+  "15": "inv_ask_for_researcher",
+  "16": "inv_ask_for_themes",
+  "17": "nlu_fallback"
+}

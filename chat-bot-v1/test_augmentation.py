@@ -8,8 +8,6 @@ import subprocess
 
 df = pd.read_excel("dataset.xlsx")  
 
-
-
 # Group queries by intent
 grouped = defaultdict(lambda: {"human": [], "augmented": []})
 

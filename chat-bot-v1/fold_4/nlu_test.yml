@@ -1,22 +1,67 @@
 version: '3.1'
 nlu:
 - intent: ask_for_characters
-  examples: '- List the main characters in this story.
+  examples: '- List all characters.
 
-    - Name key figures in the story'
+    - Give characters.'
 - intent: ask_for_researcher
-  examples: '- Who recorded the story?
+  examples: '- Researcher?
 
-    - Recorder?'
+    - Who researched the story?'
 - intent: ask_for_themes
-  examples: '- State the theme of the hurubaton.
+  examples: '- Tell me about the theme in the formulary.
 
-    - Tell me about the theme in the formulary.'
+    - What is the theme in this story?'
 - intent: 'ask_for_random_stories '
-  examples: '- Random stories.
+  examples: '- Enumerate a few random stories.
 
-    - Which stories do you know?'
+    - Show me a few of your stories.'
 - intent: ask_for_genres
   examples: '- State the category of the story.
 
-    - What is the genre of this story?'
+    - I want to know the category of this story.'
+- intent: ask_for_geographic_features
+  examples: '- Were there bodies of water brought up in story?
+
+    - What are the different kinds of geographic features present in the story?'
+- intent: inv_ask_for_geographic_features
+  examples: "- Are there narratives that have a river as the setting? \n- Return stories\
+    \ that mention a hill.\n- Forest as setting?"
+- intent: ask_for_language
+  examples: '- What was the language used in the original manuscript?
+
+    - Language?'
+- intent: inv_ask_for_language
+  examples: '- Do you have any narratives that were originally in Hiligaynon?
+
+    - Stories in Cebuano please'
+- intent: ask_for_provenance
+  examples: '- What is the place that is closely tied to the story?
+
+    - Provenance?
+
+    - Where does the story originate?'
+- intent: ask_for_key_informant
+  examples: '- Who shared the story with the researcher?
+
+    - Who was listed as the informant?'
+- intent: inv_ask_for_themes
+  examples: '- Stories about hope?
+
+    - Which narratives talk about loss?'
+- intent: inv_ask_for_researcher
+  examples: '- What are the narratives transcribed by the researcher?
+
+    - Can you show the stories attributed to the researcher?'
+- intent: inv_ask_for_characters
+  examples: '- In which stories does character appear?
+
+    - Is character found anywhere?'
+- intent: inv_ask_for_key_informant
+  examples: '- I want to know more stories from key_informant.
+
+    - Which stories were submitted by key_informant?'
+- intent: inv_ask_for_genres
+  examples: '- Are there any folk narratives of genre?
+
+    - Tell me genre stories.'

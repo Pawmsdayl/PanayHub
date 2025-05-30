@@ -1,0 +1,83 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "ask_for_characters": 0,
+        "ask_for_genres": 1,
+        "ask_for_random_stories": 2,
+        "ask_for_researcher": 3,
+        "ask_for_themes": 4,
+        "back": 5,
+        "inv_ask_for_characters": 6,
+        "inv_ask_for_genres": 7,
+        "inv_ask_for_researcher": 8,
+        "nlu_fallback": 9,
+        "out_of_scope": 10,
+        "restart": 11,
+        "session_start": 12
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_get_story_themes": 13,
+        "action_get_story_characters": 14,
+        "action_get_researcher": 15,
+        "action_get_story_genres": 16,
+        "action_get_random_stories": 17,
+        "inv_action_get_story_characters": 18,
+        "inv_action_get_researcher": 19,
+        "inv_action_get_story_genres": 20,
+        "action_get_key_informant": 21,
+        "inv_action_get_key_informant": 22,
+        "action_get_language": 23,
+        "inv_action_get_language": 24,
+        "action_get_geographic_feature": 25,
+        "inv_action_get_geographic_feature": 26,
+        "action_get_provenance": 27,
+        "utter_fallback": 28
+      },
+      "entities": {
+        "character": 0,
+        "genre": 1,
+        "geographic_feature": 2,
+        "key_informant": 3,
+        "language": 4,
+        "provenance": 5,
+        "researcher": 6,
+        "story_count": 7,
+        "story_title": 8,
+        "theme": 9
+      },
+      "slots": {
+        "story_title_0": 0,
+        "researcher_0": 1,
+        "story_count_0": 2,
+        "story_count_1": 3,
+        "character_0": 4,
+        "geographic_feature_0": 5,
+        "theme_0": 6,
+        "genre_0": 7,
+        "key_informant_0": 8,
+        "provenance_0": 9,
+        "language_0": 10
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

@@ -1,25 +1,25 @@
 version: '3.1'
 nlu:
 - intent: ask_for_characters
-  examples: '- Give characters.
-
-    - Story involves what characters?
-
-    - Give me the names of the characters.
-
-    - Name key figures in the story
+  examples: '- Story involves what characters?
 
     - List the main characters in this story.
 
-    - Characters?
+    - Name key figures in the story
 
-    - Who are the characters in the story?
+    - List all characters.
+
+    - Characters?
 
     - Which characters appear in the narrative?
 
+    - Enumerate characters from story.
+
     - Whos featured there?
 
-    - List all characters.
+    - Who are the characters in the story?
+
+    - Give me the names of the characters.
 
     - Can you tell me the characters from the story?
 
@@ -121,22 +121,21 @@ nlu:
 
     - What people are part of the story?'
 - intent: ask_for_researcher
-  examples: '- Enumerate the researchers responsible for gathering information about
-    the story.
+  examples: '- Researcher?
+
+    - Documented by?
 
     - Who conducted fieldwork on the folk tale?
 
     - Identify the main researcher of the narrative.
 
+    - Enumerate the researchers responsible for gathering information about the story.
+
     - Recorder?
 
+    - Who can I ask about this?
+
     - Who recorded the story?
-
-    - Researcher?
-
-    - Which researcher recorded that?
-
-    - Who researched the story?
 
     - Who is the researcher behind the story?
 
@@ -238,21 +237,21 @@ nlu:
 
     - Can you point me to the researcher?'
 - intent: ask_for_themes
-  examples: '- Show theme
+  examples: '- Theme?
 
-    - Identify the theme found in the story.
+    - I want to know the theme of this story.
 
-    - What thematic topic is in the hurubaton?
-
-    - What theme is in the formulary?
-
-    - Theme?
-
-    - Tell me about the theme in the formulary.
+    - State the theme of the hurubaton.
 
     - What is the theme in this story?
 
+    - Show theme
+
     - Tell me the theme.
+
+    - What thematic topic is in the hurubaton?
+
+    - Identify the theme found in the story.
 
     - Analyze the theme in the excerpt.
 
@@ -354,21 +353,21 @@ nlu:
 
     - Which theme is relevant here?'
 - intent: 'ask_for_random_stories '
-  examples: '- List some stories.
+  examples: '- Which stories do you know?
 
-    - Random stories.
-
-    - Sample of random stories.
-
-    - Show me a few of your stories.
-
-    - What stories do you have?
+    - List some stories.
 
     - Enumerate a few random stories.
 
-    - Fetch me some stories.
+    - Give me some stories.
 
-    - Which stories do you know?
+    - I want random stories.
+
+    - What stories do you have?
+
+    - Show me a few of your stories.
+
+    - Fetch me some stories.
 
     - Any random stories?
 
@@ -470,23 +469,23 @@ nlu:
 
     - Which stories are available?'
 - intent: ask_for_genres
-  examples: '- Genre?
+  examples: '- Type of story.
 
-    - Type of story.
+    - What is the genre of this story?
+
+    - Identify the genre of the story.
+
+    - Tell me the category.
 
     - I want to know the category of this story.
 
     - How was this story categorized?
 
-    - Tell me the category.
-
     - What kind of story is this story?
 
-    - Identify the genre of the story.
+    - Genre?
 
-    - What is the genre of this story?
-
-    - Show category
+    - Tell me about the genre in the story.
 
     - Can you classify the story type?
 
@@ -587,3 +586,1143 @@ nlu:
     - Which genre does this story belong to?
 
     - Which type of genre applies?'
+- intent: ask_for_geographic_features
+  examples: '- What geological features were included?
+
+    - List natural landmarks in folk tale
+
+    - Are there any landforms mentioned in the story?
+
+    - Landforms/waterforms in story?
+
+    - Were there bodies of water brought up in story?
+
+    - What kind of terrain is found in narrative?
+
+    - Did the plot say anything about the local environment?
+
+    - What are the different kinds of geographic features present in the story?
+
+    - I wanna ask for geographic features within the myth
+
+    - What natural features are described in the story?
+
+    - Can you list the landforms found in this tale?
+
+    - Does the narrative mention any rivers or lakes?
+
+    - Are there any mountains in the story?
+
+    - What types of landscapes appear in the plot?
+
+    - Are geographical elements present in the story?
+
+    - Does the story reference any forests or woods?
+
+    - What kind of environment surrounds the characters?
+
+    - Are there any valleys or hills in the tale?
+
+    - Which physical features are highlighted in the narrative?
+
+    - Does the story include any deserts or plains?
+
+    - What water bodies are mentioned in the story?
+
+    - Are there cliffs or canyons in this folk tale?
+
+    - What terrain do the characters encounter?
+
+    - Does the setting include any islands or coastlines?
+
+    - Are there any references to natural scenery?
+
+    - What land features are described in the story?
+
+    - Is there a mention of a swamp or marsh?
+
+    - What kinds of natural surroundings are in the plot?
+
+    - Are there any notable geological formations?
+
+    - Does the narrative talk about hills or plateaus?
+
+    - Are there any environmental details included?
+
+    - What kind of physical geography is present?
+
+    - Is there a mention of a jungle or rainforest?
+
+    - Does the story involve crossing a river?
+
+    - Are there any notable landscapes in the story?
+
+    - What natural obstacles do the characters face?
+
+    - Does the tale mention any caves or underground spaces?
+
+    - What features of the land are important in the story?
+
+    - Are there any references to the local geography?
+
+    - What kinds of terrain are traversed in the story?
+
+    - Is there a mention of a waterfall or spring?
+
+    - What sorts of natural settings are described?
+
+    - Are there any unique landforms in the tale?
+
+    - Does the story take place near a body of water?
+
+    - Are there any references to the weather or climate?
+
+    - What are the prominent environmental features?
+
+    - Does the setting include any rocky outcrops?
+
+    - Are there any hills or ridges mentioned?
+
+    - What geographical obstacles appear in the story?
+
+    - Are there any references to the earth or soil?
+
+    - Does the narrative include any natural wonders?
+
+    - What physical characteristics define the setting?
+
+    - Are there any mentions of the sea or ocean?
+
+    - What sort of land shapes the story’s backdrop?
+
+    - Are there any notable topographical features?
+
+    - Does the story mention any meadows or fields?
+
+    - What’s the natural setting of the story?
+
+    - Are there any references to the surrounding landscape?
+
+    - What environmental aspects are described in the tale?
+
+    - Does the story highlight any geographic landmarks?'
+- intent: inv_ask_for_geographic_features
+  examples: "- Waterfall?\n- Do any of the stories involve a cave?\n- Are there any\
+    \ stories that say anything about volcanoes?\n- Which myths involve a mountain?\n\
+    - Do any of the narratives feature a volcano?\n- Give me stories that take place\
+    \ near a waterfall\n- Return stories that mention a hill.\n- Which folk tale have\
+    \ a hill as part of their setting?\n- Which stories talk about rivers?\n- Are\
+    \ there tales that are set in an island?\n- Are there narratives that have a river\
+    \ as the setting? \n- Can you find  titles that include a forest?\n- Forest as\
+    \ setting?\n- Mentions of lakes?\n- Are there any stories that were set near lakes?\n\
+    - Are there mentions of mountains in the stories?\n- Are there any legends that\
+    \ unfold beside a river?\n- Can you name a few stories that revolve around mountains?\n\
+    - I’m curious—do any myths include a forest setting?\n- Do you know any tales\
+    \ that take place on or around a hill?\n- Which narratives include a lake as a\
+    \ major element?\n- Any stories centered on the mystery of a cave?\n- Are there\
+    \ folk tales that play out on an island?\n- Can you find a story where a waterfall\
+    \ is a key location?\n- Share some traditional tales that reference hills.\n-\
+    \ Have any stories ever used a volcano as the central setting?\n- What myths include\
+    \ mountains as part of the landscape?\n- Could you point me to a story where a\
+    \ forest is the main backdrop?\n- Do any narratives use a river as the primary\
+    \ environment?\n- Know of any myths that take place near a scenic waterfall?\n\
+    - Which folktales mention caves in their plot?\n- Are volcanoes ever featured\
+    \ in classic stories?\n- Tell me about a tale that takes place on a hill.\n- I’m\
+    \ looking for stories set in dense forests—got any?\n- What are some stories where\
+    \ lakes play a significant role?\n- Any folktales that include a mighty mountain?\n\
+    - Do you have examples of stories that unfold in the woods?\n- Which stories unfold\
+    \ near a rushing river?\n- Are there legends set on isolated islands?\n- Point\
+    \ out a myth where a cave becomes important to the plot.\n- Do any tales take\
+    \ place near a volcanic region?\n- Name a story with a hilltop scene.\n- Which\
+    \ ancient stories describe waterfalls vividly?\n- Got any stories that are based\
+    \ in a forest?\n- I want to read something that features a mountain—any suggestions?\n\
+    - Are there any fables that happen by a lake?\n- What tales unfold in a setting\
+    \ with a hidden cave?\n- Do any stories explore the life around a riverbank?\n\
+    - Give me a narrative where the forest is alive and central to the story.\n- Are\
+    \ there traditional stories with volcanic landscapes?\n- Any children’s tales\
+    \ that take place on a small hill?\n- Have you read a story that begins in the\
+    \ woods?\n- What narratives are rooted in island settings?\n- Can you list any\
+    \ stories where caves hold secrets?\n- What folk stories are told near the base\
+    \ of a mountain?\n- Which tales have characters living near lakes?\n- Is there\
+    \ a myth that begins at a waterfall?\n- Are there ancient tales set within deep\
+    \ forests?\n- What legends begin along a winding river?\n- I’m searching for stories\
+    \ set in tropical islands—know any?\n- Where can I find a story that describes\
+    \ a volcano?\n- Which stories revolve around a journey up a hill?\n- Are forests\
+    \ ever central to mythological tales?\n- Any epic sagas that take place by a waterfall?\n\
+    - Name a story where a cave leads to discovery or danger.\n- What kind of stories\
+    \ are told around lakeside villages?"
+- intent: ask_for_language
+  examples: '- What was the language used in the original manuscript?
+
+    - What is the native tongue of the story?
+
+    - What language was the story originally written in?
+
+    - Which langauge does the given tale use?
+
+    - What was the original language that the story was written in?
+
+    - Can you give the source language of the story?
+
+    - Native language of story?
+
+    - Language of origin?
+
+    - What''s the indigenous language that the story was written in?
+
+    - Can you tell me the language of this narrative?
+
+    - What language was this tale originally told in?
+
+    - Can you identify the original language of the narrative?
+
+    - Do you know which language this story first appeared in?
+
+    - In what language was the story passed down?
+
+    - What’s the linguistic origin of this myth?
+
+    - Could you tell me what language the tale was preserved in?
+
+    - Which tongue was the story originally spoken in?
+
+    - What was the original language of the tale''s oral tradition?
+
+    - Was this story recorded in its native language?
+
+    - Can you specify the original language used in this legend?
+
+    - Do you know the indigenous language associated with this story?
+
+    - Which language does the source material use?
+
+    - What language was used when this tale was first shared?
+
+    - Was the story passed down orally or written in a specific language?
+
+    - Can you find the language that the original version was in?
+
+    - What language tradition does this story belong to?
+
+    - In which language was the first version of this myth created?
+
+    - What’s the original spoken language of the tale?
+
+    - What was the mother tongue of the storytellers?
+
+    - Do we know the ancestral language of this narrative?
+
+    - Can you give the cultural or linguistic origin of this tale?
+
+    - Was the story originally spoken or written, and in what language?
+
+    - What language community did this narrative come from?
+
+    - Can you share the original linguistic context of the story?
+
+    - In which native tongue was the story initially told?
+
+    - Do you have details on the source language of this folk tale?
+
+    - Was this tale first conveyed in a regional dialect or language?
+
+    - What is the heritage language of the original story?
+
+    - Which language family does the tale''s origin belong to?
+
+    - What language was traditionally used to tell this story?
+
+    - Could you determine the original language it was narrated in?
+
+    - Was this myth first documented in the vernacular?
+
+    - Which spoken language was used when this tale originated?
+
+    - Tell me the native linguistic form of this story.
+
+    - In what dialect or language did this story first circulate?
+
+    - What was the language of the earliest version of this tale?
+
+    - Can you trace the story back to its original language?
+
+    - What’s the language base for this narrative?
+
+    - Do you know the original speech form of this myth?
+
+    - Was it part of an oral tradition in a specific language?
+
+    - What language would early storytellers have used for this?
+
+    - From which linguistic root does the story derive?
+
+    - Was the original account in a local or classical language?
+
+    - Which native or tribal language was used for this tale?
+
+    - What tongue was spoken by the first storytellers of this narrative?
+
+    - Can you identify the first linguistic version of this myth?
+
+    - What was the primary language when this story was first told?
+
+    - Is the tale preserved in a traditional language?
+
+    - Which language did the earliest narrators use?
+
+    - In what spoken language did this tale take shape?
+
+    - What is the foundational language of this folklore?'
+- intent: inv_ask_for_language
+  examples: '- Akeanon stories?
+
+    - Which of the narratives were written in Hiligaynon?
+
+    - Can you list some stories in Cebuano?
+
+    - Do you have any narratives that were originally in Hiligaynon?
+
+    - Do you have any tales that are in Kinaray-a?
+
+    - Are there stories available in Cebuano?
+
+    - Are there any myths in Kinaray-a?
+
+    - Give me Hiligaynon folk tales
+
+    - Hiligaynon Kinaray-a Akeanon Cebuano
+
+    - Can you recommend any folk tales told in Hiligaynon?
+
+    - Are there traditional stories written in Kinaray-a?
+
+    - I’m looking for Akeanon myths—got any?
+
+    - Could you share some Cebuano legends with me?
+
+    - Which tales are originally narrated in Hiligaynon?
+
+    - Do you know any classic Kinaray-a stories?
+
+    - Give me a list of Akeanon folk narratives.
+
+    - Are there epics or stories recorded in Cebuano?
+
+    - What are some well-known stories in Hiligaynon?
+
+    - Can you name a few Kinaray-a myths or folktales?
+
+    - Do you have access to tales written in Akeanon?
+
+    - Which folk tales are told in the Cebuano language?
+
+    - Any ancient stories in Hiligaynon that you know?
+
+    - Have you come across narratives in Kinaray-a?
+
+    - Tell me a popular Akeanon legend.
+
+    - I’d love to read a tale in Cebuano—any suggestions?
+
+    - Are there folk traditions preserved in Hiligaynon storytelling?
+
+    - What are examples of Kinaray-a oral narratives?
+
+    - Akeanon folklore—do you have some examples?
+
+    - What Cebuano stories can you recommend?
+
+    - List folk tales originally spoken in Hiligaynon.
+
+    - Do any myths exist in the Kinaray-a language?
+
+    - Can you show me some Akeanon stories from tradition?
+
+    - Which narratives are available in Cebuano?
+
+    - I''m interested in Hiligaynon mythology—what’s out there?
+
+    - Could you provide some Kinaray-a cultural stories?
+
+    - Know any fairy tales in Akeanon?
+
+    - Are there any Cebuano legends from the Visayas?
+
+    - Do you know folktales that use Hiligaynon as the main language?
+
+    - What kinds of stories are passed down in Kinaray-a?
+
+    - Point me to some traditional tales in Akeanon.
+
+    - Are there Cebuano-language stories with historical roots?
+
+    - Have you read any stories composed in Hiligaynon?
+
+    - Can you recommend legends from the Kinaray-a tradition?
+
+    - Which Akeanon stories are still told today?
+
+    - Any old Cebuano narratives worth reading?
+
+    - What stories exist in Hiligaynon literature?
+
+    - Tell me a tale that uses the Kinaray-a language.
+
+    - Give me an Akeanon folk tale if you have one.
+
+    - Are Cebuano myths part of your collection?
+
+    - Which folk stories come from Hiligaynon-speaking communities?
+
+    - Do you preserve any oral traditions in Kinaray-a?
+
+    - Can you pull up a story originally told in Akeanon?
+
+    - What kinds of Cebuano folk tales are available?
+
+    - Share a legend told in Hiligaynon.
+
+    - Kinaray-a storytelling—what do you have?
+
+    - Give me something mythic in the Akeanon language.
+
+    - Do you know of old Cebuano stories?
+
+    - Are there famous myths from the Hiligaynon tradition?
+
+    - What are key Kinaray-a tales from oral or written history?
+
+    - Any popular Akeanon stories you''d suggest?
+
+    - Could you show me Cebuano folktales that people still tell?'
+- intent: ask_for_provenance
+  examples: "- What is the place that the tale is associated with?\n- Where was the\
+    \ story first told? \n- Original location of story?\n- Where was the story first\
+    \ collected?\n- Origin?\n- Source location of story?\n- What is the geographical\
+    \ source of the narrative?\n- Origin of story?\n- What is the place that is closely\
+    \ tied to the story?\n- Where did the earliest documented version of the story\
+    \ appear?\n- Where does the story originate?\n- Place of origin?\n- What area\
+    \ is the story originally from?\n- Where does this tale trace its roots to?\n\
+    - What region is this story originally from?\n- Can you tell me where the story\
+    \ comes from?\n- Which place is known as the origin of this narrative?\n- Where\
+    \ was the tale first told or recorded?\n- What’s the geographical background of\
+    \ the story?\n- From which area does the story originate?\n- Could you share the\
+    \ cultural or geographic origin of this tale?\n- What land or territory is the\
+    \ story connected to?\n- Do we know where this story began?\n- Which place is\
+    \ this story most closely associated with?\n- Where was the earliest version of\
+    \ this tale found?\n- Tell me the original setting or location of this myth.\n\
+    - Where is this legend said to have come from?\n- Can you identify the story’s\
+    \ place of origin?\n- Where did the first version of this tale appear?\n- From\
+    \ what location was this narrative first collected?\n- Which part of the world\
+    \ is this story rooted in?\n- Where can we trace this story’s beginnings?\n- Is\
+    \ there a known region this tale originated in?\n- What’s the native region of\
+    \ the story?\n- What country or locality gave rise to this tale?\n- Do you know\
+    \ where this story was born?\n- Where might this narrative have first taken shape?\n\
+    - Tell me about the provenance of the story.\n- Which cultural landscape gave\
+    \ us this story?\n- Where did the story originate geographically?\n- Was this\
+    \ tale first heard in a particular area?\n- Where is this narrative believed to\
+    \ have started?\n- Do we have a record of the story’s place of emergence?\n- In\
+    \ what location was this myth originally passed down?\n- What region or place\
+    \ can claim this tale?\n- Which community or region does this story belong to?\n\
+    - From what province or town is the story derived?\n- Where does this folk tale\
+    \ stem from?\n- Do you know the earliest place where this story circulated?\n\
+    - What’s the original context or locale for the tale?\n- Was this story collected\
+    \ from a specific location?\n- Tell me which area gave rise to this narrative.\n\
+    - Which town, village, or region birthed this story?\n- Do you have details on\
+    \ the geographic source of the story?\n- Which local culture does this tale come\
+    \ from?\n- Where did early storytellers first share this tale?\n- What is the\
+    \ native setting of this story?\n- From what traditional homeland does this story\
+    \ emerge?\n- Can you pinpoint the story’s geographical roots?\n- What land or\
+    \ region is linked to the origin of the story?\n- Is the tale associated with\
+    \ a specific location or community?\n- Where was the narrative first part of oral\
+    \ or written tradition?\n- What geographic area is considered the story’s origin?"
+- intent: ask_for_key_informant
+  examples: '- Give me the informant of the story?
+
+    - Who was credited as the story teller of the story?
+
+    - Can you tell me the name of the key informant of the story?
+
+    - Key informant of the story?
+
+    - Key informant?
+
+    - Who was the original informant of the story?
+
+    - Who passed down the story to the researchers?
+
+    - Is there a known informant for this narrative?
+
+    - Documented informant of story?
+
+    - Can you provide me with the key informant of the story?
+
+    - Primary informant?
+
+    - Who first told this story to the researchers?
+
+    - Who was identified as the source of this story?
+
+    - Can you name the person who first told this tale to researchers?
+
+    - Do we know who shared this narrative originally?
+
+    - Who is credited with telling this version of the story?
+
+    - Is there a documented informant associated with the tale?
+
+    - Who provided the story during its collection?
+
+    - Who acted as the main informant for this narrative?
+
+    - Was a specific individual acknowledged as the storyteller?
+
+    - Who is the named source for this folk tale?
+
+    - Could you tell me who the story was collected from?
+
+    - Who originally narrated this tale to the collector?
+
+    - Do we know the identity of the person who passed down the story?
+
+    - Who was interviewed for this story?
+
+    - Who told this story in the version we have?
+
+    - Name of the person who provided this tale?
+
+    - Which storyteller is linked to this narrative?
+
+    - Can you specify who shared the story with the researcher?
+
+    - Who first recounted the tale to the documenters?
+
+    - Which individual is associated with transmitting this story?
+
+    - Is the story linked to a known oral informant?
+
+    - Who was the local source for this version of the story?
+
+    - Who is mentioned as the oral source of the narrative?
+
+    - Who passed on the story to those recording it?
+
+    - Do we have the name of the key informant for this tale?
+
+    - What is the identity of the person who relayed this myth?
+
+    - Can you share the storyteller’s name?
+
+    - Who was the original speaker of this story?
+
+    - Which individual preserved and conveyed this narrative?
+
+    - Do records mention who the story was gathered from?
+
+    - Who is the recorded narrator of this tale?
+
+    - From whom was this version of the story obtained?
+
+    - Any information on who recounted the story?
+
+    - Who contributed this version of the folk tale?
+
+    - Who was interviewed for the story’s documentation?
+
+    - Do we know who the main source was for this narrative?
+
+    - Is there an individual credited with telling this tale?
+
+    - Tell me the name of the person who shared this myth.
+
+    - Who was cited as the informant in the documentation?
+
+    - Can you provide the name of the person who told this story?
+
+    - Who offered this story to the researchers?
+
+    - Which person’s account is this story based on?
+
+    - Was a local informant credited for this tale?
+
+    - Who’s the original informant mentioned for this story?
+
+    - Who shared this version of the narrative with collectors?
+
+    - Was the story passed down by a specific individual?
+
+    - Do we know who orally transmitted the story?
+
+    - Any details about who told this version of the tale?
+
+    - Is the storyteller’s name documented?
+
+    - Can you find out who originally shared this folk tale?
+
+    - Was this tale attributed to a known informant?
+
+    - Whose voice preserved this version of the story?'
+- intent: inv_ask_for_themes
+  examples: '- Which narratives talk about loss?
+
+    - Are there any stories that talk about the concept of grief?
+
+    - Which stories focus on friendship?
+
+    - Are there any stories that teach the importance of honesty?
+
+    - Show me stories that have themes on love
+
+    - Give me stories with themes on revenge.
+
+    - Stories about hope?
+
+    - Stories that talk about love?
+
+    - Are there any tales that center around forgiveness?
+
+    - Can you give me stories that highlight kindness?
+
+    - Which narratives explore the theme of sacrifice?
+
+    - Do you know of any stories that are about redemption?
+
+    - Show me stories that focus on courage.
+
+    - Are there any folktales that deal with betrayal?
+
+    - Can you point me to stories that emphasize loyalty?
+
+    - Give me some narratives that talk about perseverance.
+
+    - Do you have stories with the theme of justice?
+
+    - Which stories revolve around the idea of freedom?
+
+    - Tell me stories that explore the concept of identity.
+
+    - Any myths that speak about transformation?
+
+    - Are there stories that teach resilience?
+
+    - Do you know of tales that celebrate generosity?
+
+    - Can you share stories about the power of truth?
+
+    - Are there stories that reflect on grief and healing?
+
+    - What stories are centered on overcoming fear?
+
+    - Any folktales that deal with jealousy?
+
+    - Can you show me narratives that touch on unity?
+
+    - Which stories revolve around self-discovery?
+
+    - Do you have tales that are themed around ambition?
+
+    - Looking for stories that convey messages of peace.
+
+    - What are some narratives that teach about humility?
+
+    - Stories focused on compassion—got any?
+
+    - Which tales are built around wisdom?
+
+    - Know of any stories that revolve around duty or responsibility?
+
+    - Show me stories that address personal growth.
+
+    - Are there any legends that highlight the importance of trust?
+
+    - Can you recommend tales that center on reconciliation?
+
+    - Do you have narratives that talk about longing or yearning?
+
+    - Tell me stories that capture the spirit of adventure.
+
+    - Any myths that involve endurance through hardship?
+
+    - Stories that explore the cost of greed?
+
+    - Give me narratives with themes of kindness and empathy.
+
+    - Are there tales that teach lessons on patience?
+
+    - Which stories focus on sibling relationships?
+
+    - Got any stories that talk about justice and fairness?
+
+    - What stories revolve around the search for belonging?
+
+    - Know any stories that deal with inner strength?
+
+    - Can you suggest tales that explore destiny or fate?
+
+    - Stories involving parental love—do you have any?
+
+    - Which narratives teach about selflessness?
+
+    - Do you have stories that tackle the struggle for equality?
+
+    - Any stories that speak of transformation and rebirth?
+
+    - Tell me tales that center around friendship and trust.
+
+    - What stories are about staying true to oneself?
+
+    - Do you have stories about navigating change or transition?
+
+    - Are there stories that focus on dreams and aspirations?
+
+    - Which narratives are about making difficult choices?
+
+    - Know of any tales that explore the weight of guilt?
+
+    - Can you list stories that reflect on legacy or ancestry?'
+- intent: inv_ask_for_researcher
+  examples: '- What stories are associated with the researcher?
+
+    - What narratives did the researcher compile?
+
+    - Which tales were researched by the researcher?
+
+    - Can you show the stories attributed to the researcher?
+
+    - Which folk tales did the researcher record?
+
+    - Which stories were collected by the researcher?
+
+    - List the folk tales documented by the researcher.
+
+    - What are the narratives transcribed by the researcher?
+
+    - Which stories did the researcher investigate?
+
+    - Can you list the folk tales the researcher studied?
+
+    - What stories did the researcher document?
+
+    - Which narratives were written down by the researcher?
+
+    - Which stories are linked to the researcher''s research?
+
+    - What tales did the researcher collect?
+
+    - Which stories did the researcher analyze?
+
+    - Show me the folk tales the researcher compiled.
+
+    - Which narratives were explored by the researcher?
+
+    - What stories did the researcher contribute to?
+
+    - Which tales are credited to the researcher?
+
+    - Which stories did the researcher investigate?
+
+    - What folk tales were written by the researcher?
+
+    - Which stories did the researcher record?
+
+    - Which narratives did the researcher work on?
+
+    - Show me the stories the researcher researched.
+
+    - What tales are attributed to the researcher?
+
+    - Which folk tales did the researcher study?
+
+    - What stories did the researcher gather information on?
+
+    - Which stories did the researcher transcribe?
+
+    - Can you show the narratives the researcher documented?
+
+    - Which folk tales were collected by the researcher?
+
+    - What stories has the researcher investigated?
+
+    - Which stories did the researcher research?
+
+    - Which tales did the researcher work on?
+
+    - Show me the stories the researcher analyzed.
+
+    - What narratives did the researcher record?
+
+    - Which stories did the researcher compile?
+
+    - What folk tales are linked to the researcher?
+
+    - Which tales were investigated by the researcher?
+
+    - Which stories did the researcher write down?
+
+    - What stories did the researcher document?
+
+    - Which narratives did the researcher transcribe?
+
+    - What folk tales did the researcher study?
+
+    - Which stories were explored by the researcher?
+
+    - Which tales did the researcher contribute to?
+
+    - What stories did the researcher analyze?
+
+    - Show me the folk tales the researcher worked on.
+
+    - Which narratives did the researcher investigate?
+
+    - Which stories did the researcher research?
+
+    - What tales did the researcher collect?'
+- intent: inv_ask_for_characters
+  examples: '- Which stories include character as a character?
+
+    - In which stories does character appear?
+
+    - Character is a character in which folk narratives?
+
+    - Where can I know about character?
+
+    - Where can I read about character?
+
+    - Are there folk narratives that include character?
+
+    - Character is mentioned where?
+
+    - Is character found anywhere?
+
+    - In what folk tales is character involved?
+
+    - Which stories feature character?
+
+    - Can you list stories with character in them?
+
+    - I want to see which narratives include character.
+
+    - What tales have character as part of the story?
+
+    - Find me stories that have character.
+
+    - Where does character appear in the folk stories?
+
+    - Which narratives involve character?
+
+    - Are there stories that include character?
+
+    - Does character appear in any stories?
+
+    - What folk tales include character?
+
+    - What myths have character in them?
+
+    - Can I read stories with character?
+
+    - In what legends can character be found?
+
+    - Is character present in any Panay folk stories?
+
+    - What stories from Panay include character?
+
+    - Where can I learn about character in folk tales?
+
+    - Where does character show up in the narratives?
+
+    - Tell me stories where character plays a role.
+
+    - Which stories talk about character?
+
+    - I want to find folk narratives with character.
+
+    - Was character involved in any story?
+
+    - What are some stories that include character?
+
+    - What folk stories is character a part of?
+
+    - Can you show me stories that have character in them?
+
+    - Which narratives contain character?
+
+    - What stories feature character as a main or side character?
+
+    - Which stories has character appeared in?
+
+    - Has character appeared in any Panayanon myth or legend?
+
+    - Where does character come up in the stories?
+
+    - What stories mention the name character?
+
+    - Are there any tales that include character?
+
+    - Which characters appear in the same stories as character?
+
+    - What story includes character as a character?
+
+    - In which folk narratives can we find character?
+
+    - Was character ever mentioned in any folk tale?
+
+    - What folk tale includes the presence of character?
+
+    - Is character involved in any myth or legend?
+
+    - Can you identify stories that have character in them?
+
+    - Are there any Panayanon stories that involve character?
+
+    - What is a story where character plays a part?
+
+    - I want stories where character appears.
+
+    - Give examples of tales with character in them.
+
+    - Tell me the stories that mention character in any way.
+
+    - What stories can I find character in?
+
+    - Point me to stories with character.
+
+    - Which stories in the database have character?
+
+    - What folk tales mention or involve character?
+
+    - Is there any story in which character is involved?
+
+    - Does any Panay folk narrative mention character?'
+- intent: inv_ask_for_key_informant
+  examples: '- Give me folk narratives retold by key_informant.
+
+    - What stories did key_informant tell?
+
+    - What folk narratives were shared by key_informant?
+
+    - What stories did key_informant share?
+
+    - Give me stories from key_informant.
+
+    - Key_informant gave what stories?
+
+    - The key_infromant told what stories?
+
+    - What stories are from key_informant?
+
+    - Which tales did key_informant tell?
+
+    - What narratives came from key_informant?
+
+    - Can you list the stories told by key_informant?
+
+    - What folk stories were recorded by key_informant?
+
+    - Are there any narratives attributed to key_informant?
+
+    - What stories can be traced back to key_informant?
+
+    - Show me stories contributed by key_informant.
+
+    - Which stories did key_informant recount?
+
+    - Which folk tales are linked to key_informant?
+
+    - Did key_informant tell any stories?
+
+    - I want stories collected from key_informant.
+
+    - Were there any folk stories narrated by key_informant?
+
+    - List all stories told by key_informant.
+
+    - What stories were shared by key_informant?
+
+    - Give examples of narratives told by key_informant.
+
+    - Are there any myths retold by key_informant?
+
+    - Did key_informant contribute any tales?
+
+    - Any legends recounted by key_informant?
+
+    - From which stories is key_informant the source?
+
+    - Who shared the stories? Did key_informant share any?
+
+    - Which folk tales were sourced from key_informant?
+
+    - Find all stories submitted by key_informant.
+
+    - Stories from key_informant — what are they?
+
+    - What is the list of stories told by key_informant?
+
+    - Is there any documentation of stories told by key_informant?
+
+    - Give me tales narrated by key_informant.
+
+    - What tales are known to be from key_informant?
+
+    - What are some folk narratives contributed by key_informant?
+
+    - Do we have stories from key_informant?
+
+    - Name stories linked to key_informant.
+
+    - Which folk stories did key_informant help preserve?
+
+    - What tales did we gather from key_informant?
+
+    - What were the stories told by key_informant?
+
+    - Identify stories narrated by key_informant.
+
+    - Where can I find the stories of key_informant?
+
+    - I want to know the tales told by key_informant.
+
+    - What folk tales came from key_informant’s account?
+
+    - Did key_informant submit any stories?
+
+    - Is key_informant the source of any stories?
+
+    - Can you point me to stories retold by key_informant?
+
+    - Which narratives were provided by key_informant?
+
+    - Are there any stories credited to key_informant?
+
+    - What stories do we have from key_informant?
+
+    - What kind of stories did key_informant share?
+
+    - From whom did the stories come? Was it key_informant?
+
+    - What stories did key_informant give us?
+
+    - Are there any traditional tales from key_informant?
+
+    - Which accounts were collected from key_informant?
+
+    - Who is the source of these stories? Did key_informant tell them?
+
+    - Was key_informant involved in telling any folk narratives?'
+- intent: inv_ask_for_genres
+  examples: '- Give me stories that are genre.
+
+    - Tell me genre stories.
+
+    - What stories are categorized under genre?
+
+    - Which stories are examples of genre?
+
+    - Genre has what stories?
+
+    - Which stories should I read to explore genre?
+
+    - Fetch stories under genre.
+
+    - Are there any folk narratives of genre?
+
+    - What stories fall under genre?
+
+    - Can you list stories that are part of the genre category?
+
+    - What folk tales are classified as genre?
+
+    - Show me examples of stories in the genre group.
+
+    - Which stories are labeled as genre?
+
+    - What kind of stories belong to the genre classification?
+
+    - Are there stories that fit the genre description?
+
+    - Give me a list of genre folk tales.
+
+    - I want to see what stories are in the genre category.
+
+    - Fetch me all stories marked under genre.
+
+    - What stories are part of the genre genre?
+
+    - Tell me which folk narratives are considered genre.
+
+    - What are good examples of genre stories?
+
+    - Are there any well-known stories in the genre type?
+
+    - List down all stories associated with genre.
+
+    - I’m looking for stories that are genre.
+
+    - Do we have tales categorized as genre?
+
+    - Can you provide me with genre examples?
+
+    - Give me all tales that belong to genre.
+
+    - Which narratives fall under the label genre?
+
+    - What stories can be read under the genre genre?
+
+    - What does the genre category include?
+
+    - I want to read stories in the genre classification.
+
+    - Are there any stories sorted into genre?
+
+    - Which stories are known to be genre?
+
+    - What stories are sorted under genre?
+
+    - What tales are tagged as genre?
+
+    - Are there folk narratives grouped as genre?
+
+    - Do any stories belong to the genre theme?
+
+    - Which stories fit under genre?
+
+    - What does the genre group contain?
+
+    - What can I read that falls into genre?
+
+    - Can you name stories that are considered genre?
+
+    - Show me folk tales under genre.
+
+    - Give me traditional stories that are genre.
+
+    - Which stories reflect the genre classification?
+
+    - What stories are grouped under genre in the database?
+
+    - What folk narratives fall into the genre category?
+
+    - Are there examples of genre narratives?
+
+    - What kinds of stories are listed as genre?
+
+    - I want to learn more about genre stories.
+
+    - Fetch me narratives from the genre section.
+
+    - Show all stories in the genre folder.
+
+    - I’d like to read stories of the genre type.
+
+    - What entries fall under genre?
+
+    - Which folk stories can be found in the genre classification?
+
+    - Give me the collection of stories that are genre.
+
+    - Are there entries that match the genre tag?
+
+    - What stories can I explore in the genre category?
+
+    - Do you have a list of stories that are of genre?'

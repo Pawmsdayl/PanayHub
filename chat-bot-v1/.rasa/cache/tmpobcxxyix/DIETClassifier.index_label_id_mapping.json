@@ -1,0 +1,15 @@
+{
+  "0": "ask_for_characters",
+  "1": "ask_for_genres",
+  "2": "ask_for_help",
+  "3": "ask_for_language",
+  "4": "ask_for_random_stories",
+  "5": "ask_for_researcher",
+  "6": "ask_for_themes",
+  "7": "inv_ask_for_characters",
+  "8": "inv_ask_for_genres",
+  "9": "inv_ask_for_geographic_features",
+  "10": "inv_ask_for_language",
+  "11": "inv_ask_for_researcher",
+  "12": "nlu_fallback"
+}
