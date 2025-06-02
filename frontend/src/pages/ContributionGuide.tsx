@@ -7,7 +7,6 @@ import {
   SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub, SidebarMenuSubItem
 } from "@/components/ui/sidebar.tsx";
 import {ContributionGuideContent} from "@/components/ContributionGuideContent.tsx";
-import {Link} from "react-router-dom";
 
 export function ContributionGuide() {
   return(
