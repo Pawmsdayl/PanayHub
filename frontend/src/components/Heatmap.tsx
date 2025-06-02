@@ -47,7 +47,7 @@ const Heatmap: React.FC = () => {
     <MapContainer
       // dragging={false}
       //       zoomControl={false}
-            className={`size-[600px] rounded-lg`}
+            className={`size-[600px] z-40 rounded-lg`}
             // center={[11.2035, 122.5145]}
             // zoom={9.4}
             // scrollWheelZoom={false}

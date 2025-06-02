@@ -15,17 +15,19 @@ function App() {
   return (
     <div className={`flex flex-col min-h-screen`}>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<LandingPage/>}/>
-        <Route path="/chatbot" element={<ChatbotPage/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path="/contributionguide" element={
-          <SidebarProvider>
-            <ContributionGuide/>
-          </SidebarProvider>
-        }/>
-      </Routes>
+      <div className={`pt-32 flex-1`}>
+        <Routes>
+          <Route path="/" element={<LandingPage/>}/>
+          <Route path="/chatbot" element={<ChatbotPage/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/contributionguide" element={
+            <SidebarProvider>
+              <ContributionGuide/>
+            </SidebarProvider>
+          }/>
+        </Routes>
+      </div>
     </div>
   );
 }

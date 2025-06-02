@@ -4,7 +4,7 @@ import {ImageCollage} from "@/components/ImageCollage.tsx";
 import YouTube from "react-youtube";
 function LandingPage(){
   return (
-    <div className="w-full min-h-screen bg-white ">
+    <div className="w-full min-h-screen bg-neutral-200 ">
       <div className={`flex flex-col min-h-screen`}>
         <div className={`relative min-w-full max-w-lg overflow-hidden`}>
           <div

@@ -54,7 +54,7 @@ function Dashboard() {
   }
 
   return (
-    <div className={`min-h-screen bg-white`}>
+    <div className={`min-h-screen bg-neutral-200`}>
       <div className={`p-10`}>
         <section>
           <h1 className={`font-serif font-bold text-7xl gradient-text-highlight`}>
@@ -65,7 +65,8 @@ function Dashboard() {
         <section className={`my-10`}>
           <div className={`grid grid-cols-3 place-items-center  gap-4`}>
             <div className={`flex flex-col`}>
-              <h1 className={`font-bold text-xl`}>Filters</h1>
+              <h1 className={`font-bold text-xl text-black
+              `}>Filters</h1>
               <UserChoiceContext.Provider value={userChoiceState}>
                 <UserChoiceDispatch.Provider value={userChoiceDispatch}>
                   <StorytellersContext.Provider value={{storytellers: storytellersList}}>
@@ -86,14 +87,13 @@ function Dashboard() {
               </button>
             </div>
             <div className={"flex flex-col"}>
-              <h1 className={`font-bold text-xl`}>Story Heatmap</h1>
+              <h1 className={`font-bold text-xl text-black`}>Story Heatmap</h1>
               <ProvenancesContext.Provider value={provenances}>
                 <Heatmap/>
               </ProvenancesContext.Provider>
             </div>
             <div className={"flex flex-col"}>
-              <h1 className={`"text-xl font-bold`}>Charts</h1>
-
+              <h1 className={`text-black text-xl font-bold`}>Charts</h1>
               {
                 provenances.length !== 0 &&
                   <ChartDiv provenances={provenances} storyList={storyListEntries}/>

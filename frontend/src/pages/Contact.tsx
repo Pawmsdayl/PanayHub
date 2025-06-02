@@ -15,7 +15,7 @@ function Contact() {
   }
 
   return (
-    <div className={`min-h-screen w-full flex flex-col items-center justify-center`}>
+    <div className={`min-h-screen bg-neutral-200 w-full flex flex-col items-center justify-center`}>
       <div className={`w-full`}>
         <div className={`relative w-full h-full`}>
           <img className={`absolute right-0`} src="/blob%20contact%202.png" alt={`blb`}/>

@@ -13,19 +13,9 @@ export function ContributionGuide() {
   return(
     <div className="flex flex-1 min-h-screen bg-chatbot-bg">
       {/*<aside className={`top-16 h-[calc(100vh-4rem)]`}>*/}
-        <Sidebar className={``} variant={`inset`}>
+        <Sidebar className={`bg-chatbot-bg pt-32 left-0`} variant={`inset`}>
           <SidebarInset>
             <SidebarContent>
-              <SidebarGroup className={`mt-9`}>
-                <div className={`text-black font-bold text-4xl flex gap-3 place-content-center`}>
-                  <Link to={`/`}>
-                    <img src="/panayhub-logo.png" alt={`panayhub logo`}/>
-                  </Link>
-                  <Link to={`/`}>
-                    <h1>PanayHub</h1>
-                  </Link>
-                </div>
-              </SidebarGroup>
               <SidebarGroup>
                 <SidebarGroupLabel className={`font-semibold text-xl`}>Outline</SidebarGroupLabel>
                 <SidebarGroupContent>
@@ -49,7 +39,7 @@ export function ContributionGuide() {
                       </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem className={`hover:cursor-pointer`}>
-                      <SidebarMenuButton>
+                      <SidebarMenuButton asChild>
                         <a href={`#adding-folk`}>
                              <span className={``}>
                                Adding a Folk Narrative
@@ -58,7 +48,7 @@ export function ContributionGuide() {
                       </SidebarMenuButton>
                       <SidebarMenuSub>
                         <SidebarMenuSubItem>
-                          <SidebarMenuButton>
+                          <SidebarMenuButton asChild>
                             <a href={`#step-1`}>
                              <span className={``}>
                                Step 1
@@ -69,7 +59,7 @@ export function ContributionGuide() {
                       </SidebarMenuSub>
                       <SidebarMenuSub>
                         <SidebarMenuSubItem>
-                          <SidebarMenuButton>
+                          <SidebarMenuButton asChild>
                             <a href={`#step-2`}>
                              <span className={``}>
                                Step 2
@@ -78,6 +68,79 @@ export function ContributionGuide() {
                           </SidebarMenuButton>
                         </SidebarMenuSubItem>
                       </SidebarMenuSub>
+                      <SidebarMenuSub>
+                        <SidebarMenuSubItem>
+                          <SidebarMenuButton asChild>
+                            <a href={`#step-3`}>
+                             <span className={``}>
+                               Step 3
+                             </span>
+                            </a>
+                          </SidebarMenuButton>
+                        </SidebarMenuSubItem>
+                      </SidebarMenuSub>
+                      <SidebarMenuSub>
+                        <SidebarMenuSubItem>
+                          <SidebarMenuButton asChild>
+                            <a href={`#step-4`}>
+                             <span className={``}>
+                               Step 4
+                             </span>
+                            </a>
+                          </SidebarMenuButton>
+                        </SidebarMenuSubItem>
+                      </SidebarMenuSub>
+                      <SidebarMenuSub>
+                        <SidebarMenuSubItem>
+                          <SidebarMenuButton asChild>
+                            <a href={`#step-5`}>
+                             <span className={``}>
+                               Step 5
+                             </span>
+                            </a>
+                          </SidebarMenuButton>
+                        </SidebarMenuSubItem>
+                      </SidebarMenuSub>
+                      <SidebarMenuSub>
+                        <SidebarMenuSubItem>
+                          <SidebarMenuButton asChild>
+                            <a href={`#step-6`}>
+                             <span className={``}>
+                               Step 6
+                             </span>
+                            </a>
+                          </SidebarMenuButton>
+                        </SidebarMenuSubItem>
+                      </SidebarMenuSub>
+                      <SidebarMenuSub>
+                        <SidebarMenuSubItem>
+                          <SidebarMenuButton asChild>
+                            <a href={`#done`}>
+                             <span className={``}>
+                               You're Done!
+                             </span>
+                            </a>
+                          </SidebarMenuButton>
+                        </SidebarMenuSubItem>
+                      </SidebarMenuSub>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      <SidebarMenuButton asChild>
+                        <a href={`#adding-entity`}>
+                         <span className={``}>
+                           Adding An Entity
+                         </span>
+                        </a>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      <SidebarMenuButton asChild>
+                        <a href={`#deleting-entity`}>
+                         <span className={``}>
+                           Deleting An Entity
+                         </span>
+                        </a>
+                      </SidebarMenuButton>
                     </SidebarMenuItem>
                   </SidebarMenu>
                 </SidebarGroupContent>

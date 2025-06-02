@@ -1,10 +1,11 @@
+import {ContributionImage} from "@/components/ContributionImage.tsx";
 
 export function ContributionGuideContent(){
 
 
   return(
 
-    <main className=" p-16  flex flex-1 justify-center text-neutral-200  border-black border">
+    <main className=" p-16  flex flex-1 justify-center text-neutral-200  border-neutral-200 border">
       <div className={` w-250`}>
         {/*Classes*/}
         <section id={`introduction`}>
@@ -22,14 +23,16 @@ export function ContributionGuideContent(){
           <p className={`contribution-p`}>To get started, you'll need to create a free account. This helps us keep a
             clear and trustworthy record of all contributions, which means tracking who added what in where, and when.
           </p>
-          <img></img>
+          <ContributionImage src={`/image-1.png`}/>
+
 
           <p className={`contribution-p`}>Once you’re logged in, you’ll be greeted with the ontology. Don’t worry about
             all the technical stuff, this guide will help you navigate through this interface. Think of the digital
             ontology like your computer’s file manager. Just like how folders can contain subfolders and files, our
             ontology is organized in a similar way. It’s all about structure, and you’ll get the hang of it in no time!
           </p>
-          <img></img>
+
+          <ContributionImage src={`/image-2.png`}/>
           <p className={`contribution-p`}> Ready to explore and contribute? Let's get started together!</p>
           {/*Exploring the ontrolgy calsses*/}
           <section id={`exploring`}>
@@ -59,7 +62,10 @@ export function ContributionGuideContent(){
               is about death-related beliefs, it might fall under <span className={`italic`}>“DeathMyths”</span>, which is a more specific type under the
               broader category of <span className={`italic`}>“Myth”</span>.
             </p>
-            <img></img>
+
+
+            <ContributionImage src={`/image-3.png`}/>
+
             <p className={`contribution-p`}>
               To look for a specific entry or item, head over to the “Individuals” tab. On the left side, you’ll find
               an alphabetical list of all the entities in PanayHub, these could be stories, characters, researchers,
@@ -73,7 +79,7 @@ export function ContributionGuideContent(){
               all categories. Just click on the class you’re interested in (like Myths, Characters, or KeyInformants),
               and the list will update to show only the related entities.
             </p>
-            <img></img>
+            <ContributionImage src={`/image-4.png`}/>
             <p className={`contribution-p`}>
               Once you’ve selected a class, the left panel will display all the entries that belong to that class.
               When you click on one, you’ll see its details appear in the main area, including information about the
@@ -81,7 +87,7 @@ export function ContributionGuideContent(){
             </p>
             <br/>
             <div className={``}>
-              <p className={`font-semibold`}>Tip:</p>
+              <p className={`font-semibold`}>💡 Tip:</p>
               <ul className={`list-inside list-disc`}>
                 <li className={`ml-6`}>
                   Information related to the story itself is shown in <span className={`font-semibold`}>green</span>
@@ -98,13 +104,14 @@ export function ContributionGuideContent(){
               section and click the <span className={`font-bold`}>arrow</span> that appears to the right of the name. This will take you straight to that
               entity’s page so you can explore further.
             </p>
-            <img></img>
+            <ContributionImage src={`/image-5.png`}/>
             <section id={`adding-folk`}>
-            <h1 className={`contribution-header`}>Adding a Folk Narrative</h1>
-            <p className={`contribution-p`}>
-              So, you’ve got a story to share? That’s wonderful! Let’s walk through how to add your folk narrative to PanayHub using our WebProtégé interface. Don’t worry, we’ll guide you every step of the way.
+              <h1 className={`contribution-header`}>Adding a Folk Narrative</h1>
+              <p className={`contribution-p`}>
+                So, you’ve got a story to share? That’s wonderful! Let’s walk through how to add your folk narrative to
+                PanayHub using our WebProtégé interface. Don’t worry, we’ll guide you every step of the way.
 
-            </p>
+              </p>
               <br/>
 
 
@@ -112,15 +119,17 @@ export function ContributionGuideContent(){
                 Step 1: Go to the “Individuals” Tab
               </h1>
               <p className={`contribution-p`}>
-                Start by clicking on the <code className={`contribution-bold`}> "Individuals"</code> tab. Here, you’ll see a list of all
+                Start by clicking on the <code className={`contribution-bold`}> "Individuals"</code> tab. Here, you’ll
+                see a list of all
                 the entries like stories, characters, researchers, and more. These are technically called
                 <span className={`italic`}> individuals or entities</span>.
               </p>
               <p className={`contribution-p`}>
                 To add your own, click the <code className={`contribution-bold`}>“Create individual”</code> button,
-                represented by a circle with a plus sign (+) found just under the <code className={`contribution-bold`}>“Individuals by Class” </code>section.
+                represented by a circle with a plus sign (+) found just under the <code className={`contribution-bold`}>“Individuals
+                by Class” </code>section.
               </p>
-
+              <ContributionImage src={`/image-6.png`}/>
 
               <h1 id={`step-2`} className={`contribution-subheader`}>
                 Step 2: Name Your Story
@@ -139,20 +148,24 @@ export function ContributionGuideContent(){
                 Then click “Create”.
               </p>
 
+              <ContributionImage src={`/image-7.png`}/>
+
 
               <h1 id={`step-3`} className={`contribution-subheader`}>Step 3: Classify the Story</h1>
 
               <p className={`contribution-p`}>
                 Now that your story is created, it’s time to tell the system what class of folk
-                narrative it is. In the <code className={`contribution-bold`}>“Types”</code> section, start typing the class name
+                narrative it is. In the <code className={`contribution-bold`}>“Types”</code> section, start typing the
+                class name
                 (e.g. DeathMyths, WhyLegends, AnimalTales). A list of suggestions will appear,
                 simply click the one that fits your story.
               </p>
 
-
+              <ContributionImage src={`/image-8.png`}/>
               <h1 id={`step-4`} className={`contribution-subheader`}>Step 4: Add Story Details</h1>
               <p className={`contribution-p`}>
-                Scroll down to the <code className={`contribution-bold`}>“Relationships”</code> section. Here, you’ll add important pieces of
+                Scroll down to the <code className={`contribution-bold`}>“Relationships”</code> section. Here, you’ll
+                add important pieces of
                 information about your story and how it was researched. Every story should have
                 these four properties:
               </p>
@@ -173,15 +186,18 @@ export function ContributionGuideContent(){
                 </li>
 
                 <li className={`ml-6 contribution-p`}>
-                  <span className={`font-bold`}>provenance</span> – The place of furthest origin of where the story came from
+                  <span className={`font-bold`}>provenance</span> – The place of furthest origin of where the story came
+                  from
                 </li>
               </ul>
               <br/>
               <p className={`contribution-p`}>
                 Type each property name in the <code className={`contribution-bold`}>"Enter
-                property”</code> textbox and the corresponding value in the <code className={`contribution-bold`}>“Enter value”</code> textbox.
+                property”</code> textbox and the corresponding value in the <code className={`contribution-bold`}>“Enter
+                value”</code> textbox.
               </p>
 
+              <ContributionImage src={`/image-9.png`}/>
 
               <h1 className={`contribution-subheader`} id={`step-5`}>Step 5: Connect Essential Relationships</h1>
               <p className={`contribution-p`}>Every story should be linked to three key individuals:</p>
@@ -201,7 +217,36 @@ export function ContributionGuideContent(){
                 <code className={`contribution-bold`}> “Adding an Entity”</code> guide to create them first.
               </p>
 
-              <h1 className={`contribution-subheader`}>Step 6: Add Story Elements</h1>
+              <ContributionImage src={`/image-10.png`}/>
+
+              <p>
+                Once linked, make sure to also add the reverse relationships:
+              </p>
+              <ul className={`list-decimal list-inside contribution-p`}>
+                <li className={`ml-6`}>
+                  Click the arrow beside the name to visit the page of the linked individual
+                </li>
+                <li className={`ml-6`}>
+                  Under their <code className={`contribution-bold`}>“Properties” </code>section, add:
+                  <ul className={`list-inside contribution-p list-disc`}>
+                    <li className={`ml-6`}>
+                      (KeyInformant) isKeyInformantOf - your story
+                    </li>
+
+                    <li className={`ml-6`}>
+                      (Researcher ) conductedResearchOrRecorded - your story
+                    </li>
+                    <li className={`ml-6`}>
+                      (Language) isLanguageIn - your story
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <ContributionImage src={`/image-11.png`}/>
+              <ContributionImage src={`/image-13.png`}/>
+              <ContributionImage src={`/image-12.png`}/>
+              <h1 id={`step-6`} className={`contribution-subheader`}>Step 6: Add Story Elements</h1>
               <p className={`contribution-p`}>
                 After adding the three essential relationships, you may also want to add other details that appear in
                 the story, such as:
@@ -218,16 +263,17 @@ export function ContributionGuideContent(){
                 If these individuals aren’t listed in the suggestions,
                 follow our <code className={`contribution-bold`}>"Adding an Entity”</code> guide to create them first.
               </p>
+              <ContributionImage src={`/image-14.png`}/>
               <p>
                 Once linked, make sure to also add the reverse relationships:
               </p>
-              <ul className={`list-decimal list-inside`}>
+              <ul className={`list-decimal list-inside contribution-p`}>
                 <li className={`ml-6`}>
                   Click the arrow beside the name to visit the page of the linked individual
                 </li>
                 <li className={`ml-6`}>
                   Under their “Properties” section, add:
-                  <ul className={`list-inside list-disc`}>
+                  <ul className={`list-inside list-disc contribution-p`}>
                     <li className={`ml-6`}>
                       (Character) isCharacterOf - your story
                     </li>
@@ -238,9 +284,11 @@ export function ContributionGuideContent(){
                   </ul>
                 </li>
               </ul>
+              <ContributionImage src={`/image-15.png`}/>
+              <ContributionImage src={`/image-16.png`}/>
 
-              <p>You're Done!</p>
-              <p>
+              <h1 id={`done`} className={`contribution-subheader`}>You're Done!</h1>
+              <p className={`contribution-p`}>
                 Now that you’ve added all the data and relationships,
                 you’ve successfully added your folk narrative to the ontology!
                 Thank you so much for helping preserve and organize the rich heritage
@@ -254,18 +302,24 @@ export function ContributionGuideContent(){
               </p>
               <br/>
               <p className={`contribution-p`}>
-                Start by clicking on the <code className={`contribution-bold`}>“Individuals” </code>tab. Here, you’ll see a list of all the entries like stories,
+                Start by clicking on the <code className={`contribution-bold`}>“Individuals” </code>tab. Here, you’ll
+                see a list of all the entries like stories,
                 characters, researchers, and more. These are technically called individuals or
                 entities.
               </p>
               <br/>
               <p className={`contribution-p`}>
-                To add your own, click the <code className={`contribution-bold`}>“Create individual”</code> button, represented by a
-                circle with a plus sign (+) found just under the<code className={`contribution-bold`}> “Individuals by Class”</code> section.
+                To add your own, click the <code className={`contribution-bold`}>“Create individual”</code> button,
+                represented by a
+                circle with a plus sign (+) found just under the<code className={`contribution-bold`}> “Individuals by
+                Class”</code> section.
               </p>
+
+              <ContributionImage src={`/image-17.png`}/>
               <p className={`contribution-p`}>
                 A pop-up will appear asking you to name the new individual. This name acts like a file name, helping us
-                keep things organized. If your entity is named “Maria Cruz”, you can enter: MariaCruz. This is the formatting used in PanayHub.
+                keep things organized. If your entity is named “Maria Cruz”, you can enter: MariaCruz. This is the
+                formatting used in PanayHub.
               </p>
               <br/>
               <p className={`contribution-p`}>
@@ -278,15 +332,21 @@ export function ContributionGuideContent(){
               <p className={`contribution-p`}>
                 Then click “Create”.
               </p>
+
+              <ContributionImage src={`/image-18.png`}/>
               <p className={`contribution-p`}>
                 Now that your individual is created, it’s time to tell the system
-                what class of individual it is. In the <code className={`contribution-bold`}>“Types”</code> section, start typing the class
+                what class of individual it is. In the <code className={`contribution-bold`}>“Types”</code> section,
+                start typing the class
                 name (e.g. Character, KeyInformant, ResearcherOrRecorder, Mountain, Falls). A
                 list of suggestions will appear, simply click the one that fits your individual.
               </p>
+
+              <ContributionImage src={`/image-19.png`}/>
               <p className={`contribution-p`}>
                 You now have successfully created the individual! You may refer back to the
-                <code className={`contribution-bold`}> “Adding A Folk Narrative”</code> guide to finish your contribution
+                <code className={`contribution-bold`}> “Adding A Folk Narrative”</code> guide to finish your
+                contribution
                 to PanayHub.
               </p>
               <h1 id={`deleting-entity`} className={`contribution-header`}>
@@ -296,19 +356,26 @@ export function ContributionGuideContent(){
                 You made a mistake? That’s fine! Just delete the entity. Find it in the
                 <code className={`contribution-bold`}> “Individuals” </code> tab. You can click the
                 <code className={`contribution-bold`}> "Search" </code> button just under the
-                “Individuals by Class” section, the button is represented by a magnifying glass.
+                <code className={`contribution-bold`}> “Individuals by Class”</code> section, the button is represented by a magnifying glass.
               </p>
+
+              <ContributionImage src={`/image-20.png`}/>
               <p className={`contribution-p`}>
                 A pop-up will appear asking for the name of the individual. Type the entity or
                 individual that you are looking for, and click on it.
               </p>
+
+              <ContributionImage src={`/image-21.png`}/>
               <p className={`contribution-p`}>
                 You will be directed to the page of the entity. To delete the entity, click
                 the <code className={`contribution-bold`}> “Delete”</code> button
-                represented by a circle with an ex, just under the <code className={`contribution-bold`}>“Individuals by Class” </code> section.
+                represented by a circle with an ex, just under the <code className={`contribution-bold`}>“Individuals by
+                Class” </code> section.
               </p>
+              <ContributionImage src={`/image-22.png`}/>
               <p className={`contribution-p`}>
-                Confirm the deletion and that individual will be deleted, including its relationship to other individuals.
+                Confirm the deletion and that individual will be deleted, including its relationship to other
+                individuals.
 
               </p>
 
