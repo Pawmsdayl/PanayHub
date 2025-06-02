@@ -7,6 +7,8 @@ import Dashboard from "./pages/Dashboard.tsx";
 import {
   Route, Routes
 } from "react-router-dom";
+import {ContributionGuide} from "@/pages/ContributionGuide.tsx";
+import {SidebarProvider} from "@/components/ui/sidebar.tsx";
 
 function App() {
 
@@ -18,6 +20,11 @@ function App() {
         <Route path="/chatbot" element={<ChatbotPage/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/contributionguide" element={
+          <SidebarProvider>
+            <ContributionGuide/>
+          </SidebarProvider>
+        }/>
       </Routes>
     </div>
   );

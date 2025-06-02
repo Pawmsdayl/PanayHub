@@ -159,5 +159,18 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .contribution-header{
+    @apply text-4xl font-semibold my-10 font-serif
+  }
+  .contribution-p {
+    @apply text-base/9
+  }
+  .contribution-bold {
+    @apply font-semibold text-lg
+  }
+  .contribution-subheader{
+    @apply font-semibold text-2xl my-5
+  }
 }
 
