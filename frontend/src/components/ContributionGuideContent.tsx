@@ -18,7 +18,8 @@ export function ContributionGuideContent(){
           </p>
 
           <br/>
-          <p className={`font-semibold`}>Visit the link here:</p>
+          <p className={`font-semibold`}>Visit the link here: <a href={`https://mammal-live-treefrog.ngrok-free.app/webprotege/#projects/5fa1cbb5-42ca-4ec2-b07b-9fe103e82f7a/edit/Classes`} className={`hover:cursor-pointer`}>
+            https://mammal-live-treefrog.ngrok-free.app/webprotege/#projects/5fa1cbb5-42ca-4ec2-b07b-9fe103e82f7a/edit/Classes</a> </p>
           <br/>
           <p className={`contribution-p`}>To get started, you'll need to create a free account. This helps us keep a
             clear and trustworthy record of all contributions, which means tracking who added what in where, and when.
