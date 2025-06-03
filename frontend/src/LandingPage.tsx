@@ -1,0 +1,103 @@
+import PanayIsland from "./components/PanayIsland.tsx";
+import Footer from "@/components/Footer.tsx";
+import {ImageCollage} from "@/components/ImageCollage.tsx";
+import YouTube from "react-youtube";
+function LandingPage(){
+
+  const opts: { playerVars: { origin: string }; } = {
+    playerVars:{
+      origin: "https://panayhub.onrender.com/"
+    }
+  };
+
+
+  return (
+    <div className="w-full min-h-screen bg-neutral-200 ">
+      <div className={`flex flex-col min-h-screen`}>
+        <div className={`relative min-w-full max-w-lg overflow-hidden`}>
+          <div
+            className={`absolute -top-50 -left-10 w-100 h-100 bg-yellow-400 rounded-full -mix-blend-multiply filter blur-3xl opacity-30`}/>
+          <div
+            className={`absolute -top-10 -left-20 w-100 h-100 bg-orange-500 rounded-full -mix-blend-multiply filter blur-3xl opacity-50`}/>
+          <div
+            className={` absolute top-0 -right-10 w-150 h-150 bg-yellow-400 rounded-full -mix-blend-multiply filter  blur-3xl  opacity-30`}/>
+          <div
+            className={`absolute top-0 -right-45 w-150 h-150 bg-orange-500 rounded-full -mix-blend-multiply filter blur-3xl opacity-50`}/>
+
+          <div
+            className={`absolute top-150 left-40 w-150 h-150 bg-yellow-400 rounded-full -mix-blend-multiply filter  blur-3xl  opacity-30`}/>
+          <div
+            className={`absolute top-150 -left-40 w-150 h-150 bg-orange-500 rounded-full -mix-blend-multiply filter blur-3xl opacity-50`}/>
+          <img className={`absolute right-0`} src="/blob4.png" alt={`blob`}/>
+
+          <div className={`relative grid grid-cols-2 h-150 place-items-center mb-10`}>
+            <PanayIsland></PanayIsland>
+            <div className={`flex flex-col justify-center items-center`}>
+              <h1 className={`text-(--body-font-color)  text-8xl font-serif`}>Panay Folk</h1>
+              <h1 className={`text-(--body-font-color) text-8xl font-serif`}>Narratives in</h1>
+              <h1 className={`gradient-text-highlight text-8xl font-bold font-serif`}>One Hub.</h1>
+              <p className={`text-(--body-font-color)`}>Looking for Panay Folk Narratives has been made easier.</p>
+              <p className={`text-(--body-font-color)`}>PanayHub is the starting point to your research journey.</p>
+            </div>
+          </div>
+          <div className={`relative w-full flex items-center justify-center`}>
+            <h1 className={`text-(--body-font-color) text-6xl font-serif italic`}>Introducing our smart <span
+              className={`text-(--body-font-highlight)`}>chat bot.</span></h1>
+          </div>
+            <div className={`relative grid  grid-cols-2 grid-rows-2 h-[900px] place-items-center`}>
+            <div className={`flex place-items-center flex-col`}>
+              <img src="/user%201.png" alt={`user`}/>
+
+              <h2 className={`text-(--body-font-color) font-bold`}>Use the dashboard</h2>
+              <p className={`text-(--body-font-color)`}>Receive insights about current data from Panay.</p>
+
+            </div>
+            <div>
+              <div className={`text-black place-items-center`}>
+                <YouTube
+                  opts={opts}
+                    id={"kfTRJB5H9iM"}
+                    className={`object-fit`}
+                >
+                </YouTube>
+
+              </div>
+            </div>
+              <div className={`flex place-items-center flex-col`}>
+                <img src="/laptop-computer%201.png" alt={`user`}/>
+
+                <h2 className={`text-(--body-font-color) font-bold`}>Ask Questions</h2>
+                <p className={`text-(--body-font-color)`}>Ask questions from our chat bot about topics of interesting
+                  regarding Panayanon folk narratives.</p>
+              </div>
+              <div className={``}>
+                <div className={`text-black border h-full w-full place-items-center`}>
+                  <YouTube
+                    opts={opts}
+                    className={"object-cover"}
+                    id={"2nk5UOeMnU4"}
+                  >
+                </YouTube>
+              </div>
+            </div>
+          </div>
+          <div className={`relative grid grid-cols-3 w-full text-black place-items-center h-96 mb-20`}>
+            <div className={`w-full h-full`}>
+              <ImageCollage/>
+            </div>
+            <div>
+              <h1 className={` font-serif text-(--body-font-color) text-6xl text-center`}>We believe in the<br/> <span
+                className={` font-serif underline text-(--body-font-highlight)`}>beauty of our roots.</span></h1>
+            </div>
+            <div className={`w-full h-full`}>
+              <ImageCollage/>
+            </div>
+          </div>
+        </div>
+        <Footer/>
+      </div>
+    </div>
+  );
+}
+
+export default LandingPage;

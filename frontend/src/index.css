@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@theme {
+  --color-regal-blue:#243c5a;
+  --color-chatbot-bubble: #22262B;
+  --color-chatbot-chat:#0C0D15;
+  --color-chatbot-bg: #0B0C14;
+  --color-chatbot-light: #2d3251;
+  --color-nav-hover: rgba(98, 158, 253, 0.3);
+  --color-body-font: #2D3251;
+    --color-notes-bg: #131313;
+    --shadow-input-bar: 0px -1px 31px 0px rgba(13, 0, 255, 0.3);
+    --color-orange-highlight-dark: #FE5014;
+    --color-orange-highlight-light:#FCAB40;
+    --color-contact-dark: rgba(0,0,0, 0.5);
+  --color-contact-light: #BBC7FA;
+  --color-dashboard-blue-light: #cce4ff;
+  --color-filter-blue-light: #6A99CF;
+  --color-storylist-blue-light: #C5E0FF;
+  --color-storylist-peach: #FFE0B8;
+  --color-filter-gray: #A29BA0;
+  --color-filter-blue-dark: #0c1927;
+}
+:root {
+  --body-font-color: #2D3251;
+  --body-font-highlight: #FE5014;
+  --chatbot-bg-color: #0B0C14;
+  --chatbot-light-color: #2d3251;
+  font-family: Inter, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  /*color: rgba(255, 255, 255, 0.87);*/
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components{
+  .nav-button {
+    @apply text-body-font visited:text-inherit rounded-full
+  }
+
+  .gradient-text-highlight{
+    @apply bg-gradient-to-r from-[#FF7700] to-[#FF0000] bg-clip-text text-transparent
+  }
+}
+
+.active{
+  position: relative;
+}
+.active::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-body-font);
+}
+/*@media (prefers-color-scheme: light) {*/
+/*  :root {*/
+/*    color: #213547;*/
+/*    background-color: #ffffff;*/
+/*  }*/
+/*  a:hover {*/
+/*    color: #747bff;*/
+/*  }*/
+/*  button {*/
+/*    background-color: #f9f9f9;*/
+/*  }*/
+/*}*/
+@layer base {
+  :root {
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
