@@ -1,9 +1,9 @@
-frontend/.env
-frontend/.vite/
-
-
 .idea
-/frontend/.vite
 /frontend/.vite
 /frontend/.vite/deps
 /.idea
+/frontend/node_modules
+/frontend/.idea
+/frontend/dist
+frontend/.env
+/frontend/.vite
