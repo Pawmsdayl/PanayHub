@@ -3,6 +3,14 @@ import Footer from "@/components/Footer.tsx";
 import {ImageCollage} from "@/components/ImageCollage.tsx";
 import YouTube from "react-youtube";
 function LandingPage(){
+
+  const opts: { playerVars: { origin: string }; } = {
+    playerVars:{
+      origin: "https://panayhub.onrender.com/"
+    }
+  };
+
+
   return (
     <div className="w-full min-h-screen bg-neutral-200 ">
       <div className={`flex flex-col min-h-screen`}>
@@ -47,6 +55,7 @@ function LandingPage(){
             <div>
               <div className={`text-black place-items-center`}>
                 <YouTube
+                  opts={opts}
                     id={"kfTRJB5H9iM"}
                     className={`object-fit`}
                 >
@@ -64,6 +73,7 @@ function LandingPage(){
               <div className={``}>
                 <div className={`text-black border h-full w-full place-items-center`}>
                   <YouTube
+                    opts={opts}
                     className={"object-cover"}
                     id={"2nk5UOeMnU4"}
                   >
