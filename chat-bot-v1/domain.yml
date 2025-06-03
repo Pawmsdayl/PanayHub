@@ -6,6 +6,16 @@ intents:
   - ask_for_researcher
   - ask_for_genres
   - ask_for_random_stories
+  - inv_ask_for_characters
+  - inv_ask_for_researcher
+  - inv_ask_for_genres
+  - inv_ask_for_key_informant
+  - ask_for_geographic_features
+  - inv_ask_for_geographic_features
+  - ask_for_language
+  - inv_ask_for_language
+  - ask_for_provenance
+  - ask_for_key_informant
 
 actions:
   - action_get_story_themes
@@ -13,11 +23,28 @@ actions:
   - action_get_researcher
   - action_get_story_genres
   - action_get_random_stories
+  - inv_action_get_story_characters
+  - inv_action_get_researcher
+  - inv_action_get_story_genres
+  - action_get_key_informant
+  - inv_action_get_key_informant
+  - action_get_language
+  - inv_action_get_language
+  - action_get_geographic_feature
+  - inv_action_get_geographic_feature
+  - action_get_provenance
 
 entities:
   - story_title
   - researcher
   - story_count
+  - character
+  - geographic_feature
+  - theme
+  - genre
+  - key_informant
+  - provenance
+  - language
 
 
 slots:
@@ -39,11 +66,52 @@ slots:
     mappings:
       - type: from_entity
         entity: story_count
-
+  character:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: character 
+  geographic_feature:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: geographic_feature
+  theme:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: theme
+  genre:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: genre
+  key_informant:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: key_informant
+  provenance:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: provenance
+  language:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: language
 
 responses:
   utter_fallback:
-  - text: "I'm sorry, I didn't quite understand that. Could you please rephrase? You may type 'help' for more information"
+  - text: "I'm sorry, I didn't quite understand that. Could you please rephrase?"
 
 
 

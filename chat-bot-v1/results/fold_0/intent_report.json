@@ -1,8 +1,8 @@
 {
-  "ask_for_researcher": {
-    "precision": 1.0,
+  "inv_ask_for_researcher": {
+    "precision": 0.6666666666666666,
     "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.8,
     "support": 2,
     "confused_with": {}
   },
@@ -12,6 +12,68 @@
     "f1-score": 1.0,
     "support": 2,
     "confused_with": {}
+  },
+  "ask_for_key_informant": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2,
+    "confused_with": {
+      "ask_for_researcher": 1
+    }
+  },
+  "ask_for_provenance": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1-score": 0.8571428571428571,
+    "support": 3,
+    "confused_with": {}
+  },
+  "inv_ask_for_themes": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2,
+    "confused_with": {
+      "ask_for_characters": 1
+    }
+  },
+  "inv_ask_for_key_informant": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "inv_ask_for_genres": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "inv_ask_for_characters": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "ask_for_language": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "ask_for_researcher": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1-score": 0.5,
+    "support": 2,
+    "confused_with": {
+      "inv_ask_for_researcher": 1
+    }
   },
   "ask_for_genres": {
     "precision": 1.0,
@@ -27,30 +89,53 @@
     "support": 2,
     "confused_with": {}
   },
-  "ask_for_characters": {
+  "inv_ask_for_language": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 2,
     "confused_with": {}
   },
-  "accuracy": 1.0,
-  "macro avg": {
+  "ask_for_geographic_features": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2,
+    "confused_with": {
+      "ask_for_provenance": 1
+    }
+  },
+  "ask_for_characters": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 2,
+    "confused_with": {}
+  },
+  "inv_ask_for_geographic_features": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 10
+    "support": 3,
+    "confused_with": {}
+  },
+  "accuracy": 0.8823529411764706,
+  "macro avg": {
+    "precision": 0.9114583333333333,
+    "recall": 0.875,
+    "f1-score": 0.8723214285714285,
+    "support": 34
   },
   "weighted avg": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 10
+    "precision": 0.909313725490196,
+    "recall": 0.8823529411764706,
+    "f1-score": 0.8756302521008402,
+    "support": 34
   },
   "micro avg": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 10
+    "precision": 0.8823529411764706,
+    "recall": 0.8823529411764706,
+    "f1-score": 0.8823529411764706,
+    "support": 34
   }
 }

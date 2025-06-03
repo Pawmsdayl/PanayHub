@@ -12,13 +12,78 @@ nlu:
 
 - intent: ask_for_characters
   examples: |
-    - Who are the characters of the [Ang Ido Nga Nagbata](story_title)? 
+    - Who are the characters of the [Ang Ido Nga Nagbata](story_title)?
     - Enumerate the characers of the [Pagtaas Ko Langit](story_title)?
     - List the characters of the [Ang Tuko](story_title)?
     - Who are the characters in the [Ang Bawa](story_title)?
     - give characters
     - characters who
-    - characters of the story?
+    - characters of the [Ang Istorya Sang Linti](story_title)?
+    - Who are the characters in the [Pagtaas Ko Langit](story_title)?
+    - [Ang Istorya Ka Mga Bitoon](story_title) involves what characters?
+    - List the main characters in this [Ang Daguob](story_title).
+    - Whos featured there?
+    - Which characters appear in the [Ang Daguob](story_title)?
+    - Give me the names of the characters.
+    - Name key figures in the [Ang Istorya Ka Mga Bitoon](story_title)
+    - Enumerate characters from [Ang Istorya Sang Linti](story_title).
+    - Give characters.
+    - Characters?
+    - Whos in it?
+    - List all characters.
+    - Can you tell me the characters from the [Pagtaas Ko Langit](story_title)?
+    - Who are the people in that [Ang Daguob](story_title)?
+    - Tell me the names of the characters.
+    - Who is featured in the [Ang Daguob](story_title)?
+    - What characters does the [Pagtaas Ko Langit](story_title) have?
+    - Show me the characters from the [Kuti Nga Linti](story_title).
+    - Can you list the people in the [Kuti Nga Linti](story_title)?
+    - Who takes part in the [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Give me a list of the [Ang Eklipse](story_title)’s characters.
+    - Who are the main figures in the [Ang Daguob](story_title)?
+    - Which characters appear in the [Ang Daguob](story_title)?
+    - Name the characters involved in the [Ang Istorya Ka Mga Bitoon](story_title).
+    - Tell me who the key characters are.
+    - Who is in the [Ang Daguob](story_title)?
+    - List all characters in the [Ang Istorya Ka Mga Bitoon](story_title).
+    - Who are the protagonists of the [Ang Istorya Sang Linti](story_title)?
+    - What are the names of the [Ang Istorya Sang Linti](story_title)’s characters?
+    - Can you name the people in the [Ang Daguob](story_title)?
+    - Who are the main characters in the [Ang Daguob](story_title)?
+    - Give me the characters featured in the [Kuti Nga Linti](story_title).
+    - Tell me who the [Kuti Nga Linti](story_title) is about.
+    - Who plays a role in the [Ang Istorya Sang Linti](story_title)?
+    - Who are the players in the [Ang Istorya Ka Mga Bitoon](story_title)?
+    - List the important people in the [Ang Istorya Ka Mga Bitoon](story_title).
+    - Who shows up in the [Pagtaas Ko Langit](story_title)?
+    - What figures are in the [Ang Daguob](story_title)?
+    - Can you tell me the people involved?
+    - Who does the [Ang Istorya Sang Linti](story_title) include?
+    - Tell me about the cast of the [Ang Istorya Sang Linti](story_title).
+    - Who are the characters that appear in the [Kuti Nga Linti](story_title)?
+    - Identify the main characters of the [Kuti Nga Linti](story_title).
+    - Who are the people featured in the [Kuti Nga Linti](story_title)?
+    - Can you provide a list of the [Ang Istorya Ka Mga Bitoon](story_title)’s characters?
+    - Who are the individuals in the [Ang Istorya Sang Linti](story_title)?
+    - Tell me who’s in the [Ang Istorya Ka Mga Bitoon](story_title).
+    - Who plays parts in the [Ang Daguob](story_title)?
+    - Who are the characters mentioned in the [Pagtaas Ko Langit](story_title)?
+    - Name the key people in the [Kuti Nga Linti](story_title).
+    - Who is mentioned in the [Kuti Nga Linti](story_title)?
+    - Tell me about the figures in the [Kuti Nga Linti](story_title).
+    - Who are the heroes in the [Ang Eklipse](story_title)?
+    - Who are the characters involved?
+    - List the names of the people in the [Ang Istorya Sang Linti](story_title).
+    - Who are the personalities in the [Ang Eklipse](story_title)?
+    - Can you name the characters in the [Pagtaas Ko Langit](story_title)?
+    - Who are the cast members in the [Ang Daguob](story_title)?
+    - Who participates in the [Ang Eklipse](story_title)?
+    - Tell me the characters included in the [Kuti Nga Linti](story_title).
+    - Who are the key players in the [Ang Istorya Sang Linti](story_title)?
+    - What people are part of the [Ang Istorya Sang Linti](story_title)?
+
+
+
 
 
 - intent: ask_for_themes
@@ -46,10 +111,71 @@ nlu:
     - Do you know who first recorded [Ang Kataw](story_title)?  
     - Who is credited with researching [Si Binukot](story_title)?  
     - I'd like to know who compiled information about [Ang Eklipse](story_title).
-    - researcher of the story? 
+    - researcher of the [Ang Istorya Ka Mga Bitoon](story_title)?
     - researcher?
     - recorder?
     - who researcher?  
+    - Who researched the [Kuti Nga Linti](story_title)?
+    - Who recorded the [Ang Daguob](story_title)?
+    - Which researcher recorded that [Ang Eklipse](story_title)?
+    - Researcher?
+    - Recorder?
+    - Who can I ask about this?
+    - Enumerate the researchers responsible for gathering information about the [Pagtaas Ko Langit](story_title).
+    - Documented by?
+    - Identify the main researcher of the [Ang Istorya Sang Linti](story_title).
+    - Who conducted fieldwork on the [Ang Eklipse](story_title)?
+    - Who is the researcher behind the [Ang Bawa](story_title)?
+    - Tell me who documented this [Ang Tuko](story_title).
+    - Who collected the [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Who gathered this [Ang Daguob](story_title)?
+    - Can you name the recorder of the [Kuti Nga Linti](story_title)?
+    - Who is credited with recording the [Ang Istorya Sang Linti](story_title)?
+    - Who compiled the information for the [Pagtaas Ko Langit](story_title)?
+    - Who’s the person responsible for researching this?
+    - Who’s the author of the documentation?
+    - Who did the research for this [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Who’s behind the documentation of this [Ang Bawa](story_title)?
+    - Give me the name of the [Ang Daguob](story_title)'s researcher.
+    - Who interviewed people for this [Ang Eklipse](story_title)?
+    - Who noted this [Pagtaas Ko Langit](story_title) down?
+    - Who originally recorded this [Ang Istorya Sang Linti](story_title)?
+    - Who conducted the interviews for this [Ang Tuko](story_title)?
+    - Identify the person who researched the [Kuti Nga Linti](story_title).
+    - Who’s responsible for this ethnographic work?
+    - Who’s the fieldworker behind this [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Tell me who gathered the data.
+    - Which individual recorded the [Ang Daguob](story_title)?
+    - Can you list the [Ang Istorya Sang Linti](story_title)’s researchers?
+    - Who’s the folklorist behind this?
+    - Do you know who documented this [Ang Tuko](story_title)?
+    - Who is credited with the research?
+    - Who did the field study for this?
+    - Who went into the field to gather this [Ang Eklipse](story_title)?
+    - Who’s the ethnographer here?
+    - Name the recorder of this [Pagtaas Ko Langit](story_title) folk narrative.
+    - Who’s the scholar responsible for this [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Who sourced this [Ang Daguob](story_title)?
+    - Who took down this [Ang Istorya Sang Linti](story_title)?
+    - Which researcher was involved?
+    - Who’s listed as the field researcher?
+    - Who can I contact about this [Kuti Nga Linti](story_title)?
+    - Who compiled the account of this [Ang Tuko](story_title) folk tale?
+    - Tell me the name of the documenter.
+    - Who collected this [Ang Eklipse](story_title) oral tradition?
+    - Who is mentioned as the researcher?
+    - Who studied this [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Who archived this [Ang Daguob](story_title)?
+    - Who filed this documentation?
+    - Who chronicled this [Pagtaas Ko Langit](story_title) folk tale?
+    - Identify the folklorist for this [Ang Istorya Sang Linti](story_title).
+    - Who was in charge of the research?
+    - Whos known for collecting this [Ang Tuko](story_title) folk tale?
+    - Who created the field notes for this [Ang Eklipse](story_title)?
+    - Who’s behind the research efforts for the [Kuti Nga Linti](story_title)?
+    - Who conducted the study of this [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Can you point me to the researcher?
+
 
 - intent: ask_for_genres
   examples: |
@@ -59,7 +185,69 @@ nlu:
     - what genre?
     - What kind of story is [Si Dapaw-Dangaw](story_title)?
     - [Ngaa May Adlaw, Bulan Kag Mga Bitoon](story_title) belongs to what genre?
-    - genre of the story?
+    - genre of the [Ang Istorya Ka Mga Bitoon](story_title)?
+    - What is the genre of this [Pagtaas Ko Langit](story_title)?
+    - I want to know the category of this [Kuti Nga Linti](story_title).
+    - Tell me the category.
+    - Tell me about the genre in the [Ang Daguob](story_title).
+    - Genre?
+    - Show category
+    - State the category of the [Ang Tuko](story_title).
+    - What kind of story is this [Ang Bawa](story_title)?
+    - How was this [Ang Istorya Sang Linti](story_title) categorized?
+    - Type of [Ang Eklipse](story_title).
+    - Identify the genre of the [Ang Istorya Ka Mga Bitoon](story_title).
+    - Can you classify the [Pagtaas Ko Langit](story_title) type?
+    - Can you tell me the genre?
+    - Classify this [Kuti Nga Linti](story_title).
+    - Find the genre of this [Ang Daguob](story_title).
+    - Genre of the [Ang Bawa](story_title)?
+    - Genre of this [Ang Istorya Sang Linti](story_title)?
+    - Give me the genre of this [Ang Tuko](story_title).
+    - How do you categorize this [Ang Istorya Ka Mga Bitoon](story_title)?
+    - How do you define this genre?
+    - I want to know the genre.
+    - I’d like to know the [Ang Eklipse](story_title)’s genre.
+    - I’m asking for the genre.
+    - Identify the category of the [Kuti Nga Linti](story_title).
+    - Identify the literary genre.
+    - In which genre is this [Pagtaas Ko Langit](story_title) categorized?
+    - Mention the genre.
+    - Please categorize this [Ang Istorya Sang Linti](story_title).
+    - Please give the category label.
+    - Reveal the [Ang Daguob](story_title)’s genre.
+    - Show me the [Ang Istorya Ka Mga Bitoon](story_title)’s genre.
+    - Show the narrative genre.
+    - State the genre.
+    - Tell me the genre classification.
+    - Type of literature?
+    - Under what genre is this [Ang Bawa](story_title) listed?
+    - What category is this [Ang Tuko](story_title) in?
+    - What genre does the [Ang Istorya Sang Linti](story_title) fall under?
+    - What genre fits this [Pagtaas Ko Langit](story_title)?
+    - What genre label applies to this [Kuti Nga Linti](story_title)?
+    - What genre tag applies?
+    - What genre title is given?
+    - What is the category?
+    - What is the genre classification?
+    - What kind of genre is shown?
+    - What narrative category is this [Ang Daguob](story_title)?
+    - What [Ang Istorya Ka Mga Bitoon](story_title) genre does this belong to?
+    - What type of genre is this?
+    - What’s the artistic category here?
+    - What’s the classification of this [Ang Tuko](story_title)?
+    - What’s the format or category here?
+    - What's the genre assigned to this [Ang Eklipse](story_title)?
+    - What’s the genre type?
+    - What’s the genre?
+    - What’s the label for this [Ang Istorya Sang Linti](story_title)?
+    - What's the storytelling category?
+    - What’s the type of literature here?
+    - Where does this [Kuti Nga Linti](story_title) fall genre-wise?
+    - Which classification is used?
+    - Which genre does this [Pagtaas Ko Langit](story_title) belong to?
+    - Which type of genre applies?
+
 
 - intent: ask_for_random_stories
   examples: |
@@ -69,6 +257,68 @@ nlu:
     - Give me [3](story_count) random stories
     - What are [some](story_count) random stories you can give?
     - What are [some](story_count) stories you can give?
+    - Give me some stories.
+    - I want random stories.
+    - I want [4](story_count) random stories.
+    - Fetch me some stories.
+    - What stories do you have?
+    - Which stories do you know?
+    - Sample of random stories.
+    - Random stories.
+    - List some stories.
+    - Enumerate a few random stories.
+    - Show me a few of your stories.
+    - Any random stories?
+    - Any sample stories you have?
+    - Bring some stories for me.
+    - Bring up some stories.
+    - Can I get a few stories?
+    - Can I see some stories?
+    - Can you list some stories?
+    - Can you recommend some stories?
+    - Can you suggest stories?
+    - Could you provide some stories?
+    - Display a few stories.
+    - Display a list of stories.
+    - Do you have any stories?
+    - Do you have stories to show?
+    - Fetch some story samples.
+    - Get me a list of stories.
+    - Give me a list of stories.
+    - Give me different stories.
+    - Give me story samples.
+    - Give random story examples.
+    - I need some story samples.
+    - I want to see your stories.
+    - I’d like to read some stories.
+    - I’d love to see some stories.
+    - I’m interested in random stories.
+    - Introduce me to some stories.
+    - What are some stories to read.
+    - Let me see random stories.
+    - Let’s see some stories.
+    - List random story options.
+    - Offer a few stories.
+    - Please list a few stories.
+    - Provide a few stories.
+    - Provide me with stories.
+    - Provide samples of stories.
+    - Pull up some stories.
+    - Random story examples, please.
+    - Recommend some stories.
+    - Retrieve random stories.
+    - Share examples of stories.
+    - Share some random stories.
+    - Show me your story examples.
+    - Show random stories.
+    - Show your random story set.
+    - Suggest a few stories.
+    - Tell me a few stories.
+    - Tell me which stories you have.
+    - What are some stories you know?
+    - What stories can you give me?
+    - Which stories are available?
+
 
 - intent: nlu_fallback
   examples: |
@@ -88,3 +338,722 @@ nlu:
     - help
     - can I get help
     - please help me
+
+- intent: inv_ask_for_characters
+  examples: |
+    - In which stories does [Bayi](character) appear?
+    - Where can I read about [Lalaki](character)?
+    - Give me stories that mention [Bana](character).
+    - [Asawa](character) is mentioned where?
+    - I want to know the stories where [Juan](character) is present.
+    - Which stories include [Bayi](character) as a character?
+    - Are there folk narratives that include [Lalaki](character)?
+    - Is [Bana](character) found anywhere?
+    - I want to know about [Asawa](character).
+    - Where can I know about [Juan](character)?
+    - [Bayi](character) is a character in which folk narratives?
+    - In what folk tales is [Lalaki](character) involved?
+    - Which stories feature [Bana](character)?
+    - Can you list stories with [Asawa](character) in them?
+    - I want to see which narratives include [Juan](character).
+    - What tales have [Bayi](character) as part of the story?
+    - Find me stories that have [Lalaki](character).
+    - Where does [Bana](character) appear in the folk stories?
+    - Which narratives involve [Asawa](character)?
+    - Are there stories that include [Juan](character)?
+    - Does [Bayi](character) appear in any stories?
+    - What folk tales include [Lalaki](character)?
+    - What myths have [Bana](character) in them?
+    - Can I read stories with [Asawa](character)?
+    - In what legends can [Juan](character) be found?
+    - Is [Bayi](character) present in any Panay folk stories?
+    - What stories from Panay include [Lalaki](character)?
+    - Where can I learn about [Bana](character) in folk tales?
+    - Where does [Asawa](character) show up in the narratives?
+    - Tell me stories where [Juan](character) plays a role.
+    - Which stories talk about [Bayi](character)?
+    - I want to find folk narratives with [Lalaki](character).
+    - Was [Bana](character) involved in any story?
+    - What are some stories that include [Asawa](character)?
+    - What folk stories is [Juan](character) a part of?
+    - Can you show me stories that have [Bayi](character) in them?
+    - Which narratives contain [Lalaki](character)?
+    - What stories feature [Bana](character) as a main or side character?
+    - Which stories has [Asawa](character) appeared in?
+    - Has [Juan](character) appeared in any Panayanon myth or legend?
+    - Where does [Bayi](character) come up in the stories?
+    - What stories mention the name [Lalaki](character)?
+    - Are there any tales that include [Bana](character)?
+    - Which characters appear in the same stories as [Asawa](character)?
+    - What story includes [Juan](character) as a character?
+    - In which folk narratives can we find [Bayi](character)?
+    - Was [Lalaki](character) ever mentioned in any folk tale?
+    - What folk tale includes the presence of [Bana](character)?
+    - Is [Asawa](character) involved in any myth or legend?
+    - Can you identify stories that have [Juan](character) in them?
+    - Are there any Panayanon stories that involve [Bayi](character)?
+    - What is a story where [Lalaki](character) plays a part?
+    - Give examples of tales with [Bana](character) in them.
+    - Tell me the stories that mention [Asawa](character) in any way.
+    - What stories can I find [Juan](character) in?
+    - Point me to stories with [Bayi](character).
+    - Which stories in the database have [Lalaki](character)?
+    - What folk tales mention or involve [Bana](character)?
+    - Is there any story in which [Asawa](character) is involved?
+    - Does any Panay folk narrative mention [Juan](character)?
+
+- intent: inv_ask_for_researcher
+  examples: |
+    - Which stories were collected by [MaximoRamos](researcher)?
+    - List the folk tales documented by [Eliodora](researcher).
+    - What narratives did [Alicia](researcher) compile?
+    - Can you show the stories attributed to [MaximoRamos](researcher)?
+    - Which tales did [Eliodora](researcher) gather?
+    - What stories are associated with [Alicia](researcher)?
+    - Which folk tales did [MaximoRamos](researcher) record?
+    - What are the narratives transcribed by [Eliodora](researcher)?
+    - Show stories that [Alicia](researcher) worked on.
+    - Which tales were researched by [MaximoRamos](researcher)?
+    - Which stories did [Eliodora](researcher) investigate?
+    - Can you list the folk tales [Alicia](researcher) studied?
+    - What stories did [MaximoRamos](researcher) document?
+    - Which narratives were written down by [Eliodora](researcher)?
+    - Which stories are linked to [Alicia](researcher)'s research?
+    - What tales did [MaximoRamos](researcher) collect?
+    - Which stories did [Eliodora](researcher) analyze?
+    - Show me the folk tales [Alicia](researcher) compiled.
+    - Which narratives were explored by [MaximoRamos](researcher)?
+    - What stories did [Eliodora](researcher) contribute to?
+    - Which tales are credited to [Alicia](researcher)?
+    - Which stories did [MaximoRamos](researcher) investigate?
+    - What folk tales were written by [Eliodora](researcher)?
+    - Which stories did [Alicia](researcher) record?
+    - Which narratives did [MaximoRamos](researcher) work on?
+    - Show me the stories [Eliodora](researcher) researched.
+    - What tales are attributed to [Alicia](researcher)?
+    - Which folk tales did [MaximoRamos](researcher) study?
+    - What stories did [Eliodora](researcher) gather information on?
+    - Which stories did [Alicia](researcher) transcribe?
+    - Can you show the narratives [MaximoRamos](researcher) documented?
+    - Which folk tales were collected by [Eliodora](researcher)?
+    - What stories has [Alicia](researcher) investigated?
+    - Which stories did [MaximoRamos](researcher) research?
+    - Which tales did [Eliodora](researcher) work on?
+    - Show me the stories [Alicia](researcher) analyzed.
+    - What narratives did [MaximoRamos](researcher) record?
+    - Which stories did [Eliodora](researcher) compile?
+    - What folk tales are linked to [Alicia](researcher)?
+    - Which tales were investigated by [MaximoRamos](researcher)?
+    - Which stories did [Eliodora](researcher) write down?
+    - What stories did [Alicia](researcher) document?
+    - Which narratives did [MaximoRamos](researcher) transcribe?
+    - What folk tales did [Eliodora](researcher) study?
+    - Which stories were explored by [Alicia](researcher)?
+    - Which tales did [MaximoRamos](researcher) contribute to?
+    - What stories did [Eliodora](researcher) analyze?
+    - Show me the folk tales [Alicia](researcher) worked on.
+    - Which narratives did [MaximoRamos](researcher) investigate?
+    - Which stories did [Eliodora](researcher) research?
+    - What tales did [Alicia](researcher) collect?
+
+- intent: inv_ask_for_genres
+  examples: |
+    - Give me stories that are [Legends](genre).
+    - What stories are categorized under [Myths](genre)?
+    - [DeathMyths](genre) contains what stories?
+    - I want to know what stories are considered under [OriginOfAnimals](genre).
+    - Which stories are examples of [HeroicLegends](genre)?
+    - Tell me [Myths](genre) stories.
+    - Are there any folk narratives of [DeathMyths](genre)?
+    - [Legends](genre) has what stories?
+    - Fetch stories under [OriginOfAnimals](genre).
+    - Which stories should I read to explore [HeroicLegends](genre)?
+    - What stories fall under [Legends](genre)?
+    - Can you list stories that are part of the [DeathMyths](genre) category?
+    - What folk tales are classified as [Myths](genre)?
+    - Show me examples of stories in the [OriginOfAnimals](genre) group.
+    - Which stories are labeled as [HeroicLegends](genre)?
+    - What kind of stories belong to the [Legends](genre) classification?
+    - Are there stories that fit the [DeathMyths](genre) description?
+    - Give me a list of [Myths](genre) folk tales.
+    - I want to see what stories are in the [OriginOfAnimals](genre) category.
+    - Fetch me all stories marked under [HeroicLegends](genre).
+    - What stories are part of the [Legends](genre) genre?
+    - Tell me which folk narratives are considered [DeathMyths](genre).
+    - What are good examples of [Myths](genre) stories?
+    - Are there any well-known stories in the [HeroicLegends](genre) type?
+    - List down all stories associated with [OriginOfAnimals](genre).
+    - I'm looking for stories that are [Legends](genre).
+    - Do we have tales categorized as [DeathMyths](genre)?
+    - Can you provide me with [Myths](genre) examples?
+    - Give me all tales that belong to [HeroicLegends](genre).
+    - Which narratives fall under the label [OriginOfAnimals](genre)?
+    - What stories can be read under the [Legends](genre) genre?
+    - What does the [DeathMyths](genre) category include?
+    - I want to read stories in the [Myths](genre) classification.
+    - Are there any stories sorted into [HeroicLegends](genre)?
+    - Which stories are known to be [OriginOfAnimals](genre)?
+    - What stories are sorted under [Legends](genre)?
+    - What tales are tagged as [DeathMyths](genre)?
+    - Are there folk narratives grouped as [Myths](genre)?
+    - Do any stories belong to the [HeroicLegends](genre) theme?
+    - Which stories fit under [OriginOfAnimals](genre)?
+    - What does the [Legends](genre) group contain?
+    - What can I read that falls into [DeathMyths](genre)?
+    - Can you name stories that are considered [Myths](genre)?
+    - Show me folk tales under [HeroicLegends](genre).
+    - Give me traditional stories that are [OriginOfAnimals](genre).
+    - Which stories reflect the [Legends](genre) classification?
+    - What stories are grouped under [DeathMyths](genre) in the database?
+    - What folk narratives fall into the [Myths](genre) category?
+    - Are there examples of [HeroicLegends](genre) narratives?
+    - What kinds of stories are listed as [OriginOfAnimals](genre)?
+    - I want to learn more about [Legends](genre) stories.
+    - Fetch me narratives from the [DeathMyths](genre) section.
+    - Show all stories in the [Myths](genre) folder.
+    - I'd like to read stories of the [HeroicLegends](genre) type.
+    - What entries fall under [OriginOfAnimals](genre)?
+    - Which folk stories can be found in the [Legends](genre) classification?
+    - Give me the collection of stories that are [DeathMyths](genre).
+    - Are there entries that match the [Myths](genre) tag?
+    - What stories can I explore in the [HeroicLegends](genre) category?
+
+
+- intent: inv_ask_for_key_informant
+  examples: |
+    - What stories did [Lola Maria](key_informant) tell?
+    - Give me folk narratives retold by [Mang Pedro](key_informant).
+    - Which stories were submitted by [Aling Rosa](key_informant)?
+    - [Lola Maria](key_informant) gave what stories?
+    - Give me stories from [Mang Pedro](key_informant).
+    - I want to know more stories from [Aling Rosa](key_informant).
+    - What stories did [Lola Maria](key_informant) share?
+    - The [Mang Pedro](key_informant) told what stories?
+    - What folk narratives were shared by [Aling Rosa](key_informant)?
+    - What stories are from [Lola Maria](key_informant)?
+    - Which tales did [Mang Pedro](key_informant) tell?
+    - What narratives came from [Aling Rosa](key_informant)?
+    - Can you list the stories told by [Lola Maria](key_informant)?
+    - What folk stories were recorded by [Mang Pedro](key_informant)?
+    - Are there any narratives attributed to [Aling Rosa](key_informant)?
+    - What stories can be traced back to [Lola Maria](key_informant)?
+    - Show me stories contributed by [Mang Pedro](key_informant).
+    - Which stories did [Aling Rosa](key_informant) recount?
+    - Which folk tales are linked to [Lola Maria](key_informant)?
+    - Did [Mang Pedro](key_informant) tell any stories?
+    - I want stories collected from [Aling Rosa](key_informant).
+    - Were there any folk stories narrated by [Lola Maria](key_informant)?
+    - List all stories told by [Mang Pedro](key_informant).
+    - What stories were shared by [Aling Rosa](key_informant)?
+    - Give examples of narratives told by [Lola Maria](key_informant).
+    - Are there any myths retold by [Mang Pedro](key_informant)?
+    - Did [Aling Rosa](key_informant) contribute any tales?
+    - Any legends recounted by [Lola Maria](key_informant)?
+    - From which stories is [Mang Pedro](key_informant) the source?
+    - Who shared the stories? Did [Aling Rosa](key_informant) share any?
+    - Which folk tales were sourced from [Lola Maria](key_informant)?
+    - Find all stories submitted by [Mang Pedro](key_informant).
+    - Stories from [Aling Rosa](key_informant) — what are they?
+    - What is the list of stories told by [Lola Maria](key_informant)?
+    - Is there any documentation of stories told by [Mang Pedro](key_informant)?
+    - Give me tales narrated by [Aling Rosa](key_informant).
+    - What tales are known to be from [Lola Maria](key_informant)?
+    - What are some folk narratives contributed by [Mang Pedro](key_informant)?
+    - Do we have stories from [Aling Rosa](key_informant)?
+    - Name stories linked to [Lola Maria](key_informant).
+    - Which folk stories did [Mang Pedro](key_informant) help preserve?
+    - What tales did we gather from [Aling Rosa](key_informant)?
+    - What were the stories told by [Lola Maria](key_informant)?
+    - Identify stories narrated by [Mang Pedro](key_informant).
+    - Where can I find the stories of [Aling Rosa](key_informant)?
+    - I want to know the tales told by [Lola Maria](key_informant).
+    - What folk tales came from [Mang Pedro](key_informant)’s account?
+    - Did [Aling Rosa](key_informant) submit any stories?
+    - Is [Lola Maria](key_informant) the source of any stories?
+    - Can you point me to stories retold by [Mang Pedro](key_informant)?
+    - Which narratives were provided by [Aling Rosa](key_informant)?
+    - Are there any stories credited to [Lola Maria](key_informant)?
+    - What stories do we have from [Mang Pedro](key_informant)?
+    - What kind of stories did [Aling Rosa](key_informant) share?
+    - From whom did the stories come? Was it [Lola Maria](key_informant)?
+    - What stories did [Mang Pedro](key_informant) give us?
+    - Are there any traditional tales from [Aling Rosa](key_informant)?
+    - Which accounts were collected from [Lola Maria](key_informant)?
+    - Who is the source of these stories? Did [Mang Pedro](key_informant) tell them?
+    - Was [Aling Rosa](key_informant) involved in telling any folk narratives?
+
+
+- intent: inv_ask_for_geographic_features
+  examples: |
+    - Which stories talk about [rivers](geographic_feature)?
+    - Are there mentions of [mountains](geographic_feature) in the stories?
+    - Can you find titles that include a [forest](geographic_feature)?
+    - Return stories that mention a [hill](geographic_feature).
+    - Mentions of [lakes](geographic_feature)?
+    - Do any of the stories involve a [cave](geographic_feature)?
+    - Are there tales that are set in an [island](geographic_feature)?
+    - [Waterfall](geographic_feature)?
+    - Can you list stories that talk about [hills](geographic_feature)?
+    - Are there any stories that say anything about [volcanoes](geographic_feature)?
+    - Which myths involve a [mountain](geographic_feature)?
+    - Are there any stories that take place in the [forest](geographic_feature)?
+    - Are there narratives that have a [river](geographic_feature) as the setting?
+    - Give me stories that take place near a [waterfall](geographic_feature)
+    - List stories that have talk about [caves](geographic_feature)
+    - Do any of the narratives feature a [volcano](geographic_feature)?
+    - Which folk tale have a [hill](geographic_feature) as part of their setting?
+    - [Forest](geographic_feature) as setting?
+    - Are there any stories that were set near [lakes](geographic_feature)?
+    - Are there any legends that unfold beside a [river](geographic_feature)?
+    - Can you name a few stories that revolve around [mountains](geographic_feature)?
+    - I’m curious—do any myths include a [forest](geographic_feature) setting?
+    - Do you know any tales that take place on or around a [hill](geographic_feature)?
+    - Which narratives include a [lake](geographic_feature) as a major element?
+    - Any stories centered on the mystery of a [cave](geographic_feature)?
+    - Are there folk tales that play out on an [island](geographic_feature)?
+    - Can you find a story where a [waterfall](geographic_feature) is a key location?
+    - Share some traditional tales that reference [hills](geographic_feature).
+    - Have any stories ever used a [volcano](geographic_feature) as the central setting?
+    - What myths include [mountains](geographic_feature) as part of the landscape?
+    - Could you point me to a story where a [forest](geographic_feature) is the main backdrop?
+    - Do any narratives use a [river](geographic_feature) as the primary environment?
+    - Know of any myths that take place near a scenic [waterfall](geographic_feature)?
+    - Which folktales mention [caves](geographic_feature) in their plot?
+    - Are [volcanoes](geographic_feature) ever featured in classic stories?
+    - Tell me about a tale that takes place on a [hill](geographic_feature).
+    - I’m looking for stories set in dense [forests](geographic_feature)—got any?
+    - What are some stories where [lakes](geographic_feature) play a significant role?
+    - Any folktales that include a mighty [mountain](geographic_feature)?
+    - Do you have examples of stories that unfold in the [woods](geographic_feature)?
+    - Which stories unfold near a rushing [river](geographic_feature)?
+    - Are there legends set on isolated [islands](geographic_feature)?
+    - Point out a myth where a [cave](geographic_feature) becomes important to the plot.
+    - Do any tales take place near a [volcanic region](geographic_feature)?
+    - Name a story with a [hilltop](geographic_feature) scene.
+    - Which ancient stories describe [waterfalls](geographic_feature) vividly?
+    - Got any stories that are based in a [forest](geographic_feature)?
+    - I want to read something that features a [mountain](geographic_feature)—any suggestions?
+    - Are there any fables that happen by a [lake](geographic_feature)?
+    - What tales unfold in a setting with a hidden [cave](geographic_feature)?
+    - Do any stories explore the life around a [riverbank](geographic_feature)?
+    - Give me a narrative where the [forest](geographic_feature) is alive and central to the story.
+    - Are there traditional stories with [volcanic landscapes](geographic_feature)?
+    - Any children’s tales that take place on a small [hill](geographic_feature)?
+    - Have you read a story that begins in the [woods](geographic_feature)?
+    - What narratives are rooted in [island](geographic_feature) settings?
+    - Can you list any stories where [caves](geographic_feature) hold secrets?
+    - What folk stories are told near the base of a [mountain](geographic_feature)?
+    - Which tales have characters living near [lakes](geographic_feature)?
+    - Is there a myth that begins at a [waterfall](geographic_feature)?
+    - Are there ancient tales set within deep [forests](geographic_feature)?
+    - What legends begin along a winding [river](geographic_feature)?
+    - I’m searching for stories set in tropical [islands](geographic_feature)—know any?
+    - Where can I find a story that describes a [volcano](geographic_feature)?
+    - Which stories revolve around a journey up a [hill](geographic_feature)?
+    - Are [forests](geographic_feature) ever central to mythological tales?
+    - Any epic sagas that take place by a [waterfall](geographic_feature)?
+    - Name a story where a [cave](geographic_feature) leads to discovery or danger.
+    - What kind of stories are told around [lakeside villages](geographic_feature)?
+
+
+- intent: ask_for_geographic_features
+  examples: |
+    - List natural landmarks in [Ang Istorya Ka Mga Bitoon](story_title)
+    - Landforms/waterforms in [Ang Daguob](story_title)?
+    - Geographic features in [Kuti Nga Linti](story_title)?
+    - What are the different kinds of geographic features present in the [Pagtaas Ko Langit](story_title)?
+    - Are there any landforms mentioned in the [Ang Tuko](story_title)?
+    - What kind of terrain is found in [Ang Eklipse](story_title)?
+    - Were there bodies of water brought up in [Ang Istorya Sang Linti](story_title)?
+    - I wanna ask for geographic features within the [Ang Bawa](story_title)
+    - What geological features were included in [Ang Daguob](story_title)?
+    - Did the plot say anything about the local environment in [Kuti Nga Linti](story_title)?
+    - Any natural formations mentioned in [Ang Eklipse](story_title)?
+    - What natural features are described in the [Ang Istorya Sang Linti](story_title)?
+    - Can you list the landforms found in this [Pagtaas Ko Langit](story_title)?
+    - Does the narrative mention any rivers or lakes in [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Are there any mountains in the [Kuti Nga Linti](story_title)?
+    - What types of landscapes appear in the [Ang Daguob](story_title) plot?
+    - Are geographical elements present in the [Ang Tuko](story_title)?
+    - Does the [Ang Bawa](story_title) reference any forests or woods?
+    - What kind of environment surrounds the characters in [Ang Istorya Sang Linti](story_title)?
+    - Are there any valleys or hills in the [Ang Eklipse](story_title) tale?
+    - Which physical features are highlighted in the [Pagtaas Ko Langit](story_title) narrative?
+    - Does the [Ang Istorya Ka Mga Bitoon](story_title) include any deserts or plains?
+    - What water bodies are mentioned in the [Ang Daguob](story_title)?
+    - Are there cliffs or canyons in this [Kuti Nga Linti](story_title) folk tale?
+    - What terrain do the characters encounter in [Ang Tuko](story_title)?
+    - Does the setting include any islands or coastlines in [Ang Istorya Sang Linti](story_title)?
+    - Are there any references to natural scenery in [Ang Bawa](story_title)?
+    - What land features are described in the [Ang Eklipse](story_title)?
+    - Is there a mention of a swamp or marsh in [Pagtaas Ko Langit](story_title)?
+    - What kinds of natural surroundings are in the [Ang Daguob](story_title) plot?
+    - Are there any notable geological formations in [Kuti Nga Linti](story_title)?
+    - Does the narrative talk about hills or plateaus in [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Are there any environmental details included in [Ang Tuko](story_title)?
+    - What kind of physical geography is present in [Ang Istorya Sang Linti](story_title)?
+    - Is there a mention of a jungle or rainforest in [Ang Eklipse](story_title)?
+    - Does the [Ang Bawa](story_title) involve crossing a river?
+    - Are there any notable landscapes in the [Pagtaas Ko Langit](story_title)?
+    - What natural obstacles do the characters face in [Ang Daguob](story_title)?
+    - Does the tale mention any caves or underground spaces in [Kuti Nga Linti](story_title)?
+    - What features of the land are important in the [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Are there any references to the local geography in [Ang Tuko](story_title)?
+    - What kinds of terrain are traversed in the [Ang Istorya Sang Linti](story_title)?
+    - Is there a mention of a waterfall or spring in [Ang Eklipse](story_title)?
+    - What sorts of natural settings are described in [Pagtaas Ko Langit](story_title)?
+    - Are there any unique landforms in the [Ang Daguob](story_title) tale?
+    - Does the [Kuti Nga Linti](story_title) take place near a body of water?
+    - Are there any references to the weather or climate in [Ang Istorya Ka Mga Bitoon](story_title)?
+    - What are the prominent environmental features in [Ang Tuko](story_title)?
+    - Does the setting include any rocky outcrops in [Ang Istorya Sang Linti](story_title)?
+    - Are there any hills or ridges mentioned in [Ang Bawa](story_title)?
+    - What geographical obstacles appear in the [Ang Eklipse](story_title)?
+    - Are there any references to the earth or soil in [Pagtaas Ko Langit](story_title)?
+    - Does the narrative include any natural wonders in [Ang Daguob](story_title)?
+    - What physical characteristics define the setting in [Kuti Nga Linti](story_title)?
+    - Are there any mentions of the sea or ocean in [Ang Istorya Ka Mga Bitoon](story_title)?
+    - What sort of land shapes the [Ang Tuko](story_title) story’s backdrop?
+    - Are there any notable topographical features in [Ang Istorya Sang Linti](story_title)?
+    - Does the [Ang Eklipse](story_title) mention any meadows or fields?
+    - What’s the natural setting of the [Pagtaas Ko Langit](story_title)?
+    - Are there any references to the surrounding landscape in [Ang Daguob](story_title)?
+    - What environmental aspects are described in the [Kuti Nga Linti](story_title) tale?
+    - Does the [Ang Istorya Ka Mga Bitoon](story_title) highlight any geographic landmarks?
+
+
+  
+- intent: ask_for_language
+  examples: |
+    - What language was the [Ang Istorya Sang Linti](story_title) originally written in?
+    - Language?
+    - Can you tell me the language of this [Pagtaas Ko Langit](story_title) narrative?
+    - Which language does the given [Ang Daguob](story_title) tale use?
+    - What was the original language that the [Kuti Nga Linti](story_title) was written in?
+    - Was it recorded in local language?
+    - What is the native tongue of the [Ang Eklipse](story_title)?
+    - Can you give the source language of the [Ang Tuko](story_title)?
+    - What was the language used in the original [Ang Istorya Ka Mga Bitoon](story_title) manuscript?
+    - Native language of [Ang Bawa](story_title)?
+    - Language of origin for [Ang Daguob](story_title)?
+    - What's the indigenous language that the [Kuti Nga Linti](story_title) was written in?
+    - What language was this [Pagtaas Ko Langit](story_title) tale originally told in?
+    - Can you identify the original language of the [Ang Istorya Sang Linti](story_title) narrative?
+    - Do you know which language this [Ang Eklipse](story_title) story first appeared in?
+    - In what language was the [Ang Tuko](story_title) passed down?
+    - What’s the linguistic origin of this [Ang Istorya Ka Mga Bitoon](story_title) myth?
+    - Could you tell me what language the [Ang Bawa](story_title) tale was preserved in?
+    - Which tongue was the [Kuti Nga Linti](story_title) originally spoken in?
+    - What was the original language of the [Ang Daguob](story_title) tale's oral tradition?
+    - Was this [Ang Istorya Sang Linti](story_title) recorded in its native language?
+    - Can you specify the original language used in this [Pagtaas Ko Langit](story_title) legend?
+    - Do you know the indigenous language associated with this [Ang Eklipse](story_title)?
+    - Which language does the source material of [Ang Istorya Ka Mga Bitoon](story_title) use?
+    - What language was used when this [Ang Bawa](story_title) tale was first shared?
+    - Was the [Ang Tuko](story_title) passed down orally or written in a specific language?
+    - Can you find the language that the original version of [Kuti Nga Linti](story_title) was in?
+    - What language tradition does this [Ang Daguob](story_title) belong to?
+    - In which language was the first version of this [Pagtaas Ko Langit](story_title) myth created?
+    - What’s the original spoken language of the [Ang Istorya Sang Linti](story_title) tale?
+    - What was the mother tongue of the [Ang Eklipse](story_title) storytellers?
+    - Do we know the ancestral language of this [Ang Tuko](story_title) narrative?
+    - Can you give the cultural or linguistic origin of this [Ang Istorya Ka Mga Bitoon](story_title) tale?
+    - Was the [Ang Bawa](story_title) originally spoken or written, and in what language?
+    - What language community did this [Kuti Nga Linti](story_title) narrative come from?
+    - Can you share the original linguistic context of the [Ang Daguob](story_title)?
+    - In which native tongue was the [Pagtaas Ko Langit](story_title) initially told?
+    - Do you have details on the source language of this [Ang Istorya Sang Linti](story_title) folk tale?
+    - Was this [Ang Eklipse](story_title) tale first conveyed in a regional dialect or language?
+    - What is the heritage language of the original [Ang Tuko](story_title)?
+    - Which language family does the [Ang Istorya Ka Mga Bitoon](story_title) tale's origin belong to?
+    - What language was traditionally used to tell this [Ang Bawa](story_title)?
+    - Could you determine the original language [Kuti Nga Linti](story_title) was narrated in?
+    - Was this [Ang Daguob](story_title) myth first documented in the vernacular?
+    - Which spoken language was used when this [Pagtaas Ko Langit](story_title) tale originated?
+    - Tell me the native linguistic form of this [Ang Istorya Sang Linti](story_title).
+    - In what dialect or language did this [Ang Eklipse](story_title) story first circulate?
+    - What was the language of the earliest version of this [Ang Tuko](story_title) tale?
+    - Can you trace the [Ang Istorya Ka Mga Bitoon](story_title) back to its original language?
+    - What’s the language base for this [Ang Bawa](story_title) narrative?
+    - Do you know the original speech form of this [Kuti Nga Linti](story_title) myth?
+    - Was it part of an oral tradition in a specific language?
+    - What language would early storytellers have used for this [Ang Daguob](story_title)?
+    - From which linguistic root does the [Pagtaas Ko Langit](story_title) story derive?
+    - Was the original account of [Ang Istorya Sang Linti](story_title) in a local or classical language?
+    - Which native or tribal language was used for this [Ang Eklipse](story_title) tale?
+    - What tongue was spoken by the first storytellers of this [Ang Tuko](story_title) narrative?
+    - Can you identify the first linguistic version of this [Ang Istorya Ka Mga Bitoon](story_title) myth?
+    - What was the primary language when this [Ang Bawa](story_title) was first told?
+    - Is the [Kuti Nga Linti](story_title) tale preserved in a traditional language?
+    - Which language did the earliest narrators of [Ang Daguob](story_title) use?
+    - In what spoken language did this [Pagtaas Ko Langit](story_title) tale take shape?
+    - What is the foundational language of this [Ang Istorya Sang Linti](story_title) folklore?
+
+
+- intent: inv_ask_for_language
+  examples: |
+    - Stories that are written in [Cebuano](language) por favor
+    - Which of the narratives were written in [Hiligaynon](language)?
+    - Do you have any tales that are in [Kinaray-a](language)?
+    - [Akeanon](language) stories?
+    - Stories in [Cebuano](language) please
+    - Give me [Hiligaynon](language) folk tales
+    - Are there any myths in [Kinaray-a](language)?
+    - Are there stories available in [Cebuano](language)?
+    - Which stories are available in [Akeanon](language)?
+    - Can you list some stories in [Cebuano](language)?
+    - Do you have any narratives that were originally in [Hiligaynon](language)?
+    - Can you recommend any folk tales told in [Hiligaynon](language)?
+    - Are there traditional stories written in [Kinaray-a](language)?
+    - I’m looking for [Akeanon](language) myths—got any?
+    - Could you share some [Cebuano](language) legends with me?
+    - Which tales are originally narrated in [Hiligaynon](language)?
+    - Do you know any classic [Kinaray-a](language) stories?
+    - Give me a list of [Akeanon](language) folk narratives.
+    - Are there epics or stories recorded in [Cebuano](language)?
+    - What are some well-known stories in [Hiligaynon](language)?
+    - Can you name a few [Kinaray-a](language) myths or folktales?
+    - Do you have access to tales written in [Akeanon](language)?
+    - Which folk tales are told in the [Cebuano](language) language?
+    - Any ancient stories in [Hiligaynon](language) that you know?
+    - Have you come across narratives in [Kinaray-a](language)?
+    - Tell me a popular [Akeanon](language) legend.
+    - I’d love to read a tale in [Cebuano](language)—any suggestions?
+    - Are there folk traditions preserved in [Hiligaynon](language) storytelling?
+    - What are examples of [Kinaray-a](language) oral narratives?
+    - [Akeanon](language) folklore—do you have some examples?
+    - What [Cebuano](language) stories can you recommend?
+    - List folk tales originally spoken in [Hiligaynon](language).
+    - Do any myths exist in the [Kinaray-a](language) language?
+    - Can you show me some [Akeanon](language) stories from tradition?
+    - Which narratives are available in [Cebuano](language)?
+    - I'm interested in [Hiligaynon](language) mythology—what’s out there?
+    - Could you provide some [Kinaray-a](language) cultural stories?
+    - Know any fairy tales in [Akeanon](language)?
+    - Are there any [Cebuano](language) legends from the Visayas?
+    - Do you know folktales that use [Hiligaynon](language) as the main language?
+    - What kinds of stories are passed down in [Kinaray-a](language)?
+    - Point me to some traditional tales in [Akeanon](language).
+    - Are there [Cebuano](language)-language stories with historical roots?
+    - Have you read any stories composed in [Hiligaynon](language)?
+    - Can you recommend legends from the [Kinaray-a](language) tradition?
+    - Which [Akeanon](language) stories are still told today?
+    - Any old [Cebuano](language) narratives worth reading?
+    - What stories exist in [Hiligaynon](language) literature?
+    - Tell me a tale that uses the [Kinaray-a](language) language.
+    - Give me an [Akeanon](language) folk tale if you have one.
+    - Are [Cebuano](language) myths part of your collection?
+    - Which folk stories come from [Hiligaynon](language)-speaking communities?
+    - Do you preserve any oral traditions in [Kinaray-a](language)?
+    - Can you pull up a story originally told in [Akeanon](language)?
+    - What kinds of [Cebuano](language) folk tales are available?
+    - Share a legend told in [Hiligaynon](language).
+    - [Kinaray-a](language) storytelling—what do you have?
+    - Give me something mythic in the [Akeanon](language) language.
+    - Do you know of old [Cebuano](language) stories?
+    - Are there famous myths from the [Hiligaynon](language) tradition?
+    - What are key [Kinaray-a](language) tales from oral or written history?
+    - Any popular [Akeanon](language) stories you'd suggest?
+    - Could you show me [Cebuano](language) folktales that people still tell?
+
+
+- intent: ask_for_provenance
+  examples: |
+    - Where does the [Ang Daguob](story_title) originate?
+    - What is the geographical source of the [Ang Istorya Ka Mga Bitoon](story_title)?
+    - What is the place that the [Kuti Nga Linti](story_title) is associated with?
+    - Provenance?
+    - Place of origin?
+    - Original location of [Ang Istorya Sang Linti](story_title)?
+    - Origin of [Kuti Nga Linti](story_title)?
+    - Origin of [Ang Daguob](story_title)?
+    - Where was the [Ang Istorya Ka Mga Bitoon](story_title) first collected?
+    - Can you specify the provenance of the [Pagtaas Ko Langit](story_title)?
+    - What is the place that is closely tied to the [Ang Eklipse](story_title)?
+    - What area is the [Ang Istorya Sang Linti](story_title) originally from?
+    - Where was the [Kuti Nga Linti](story_title) first told? 
+    - Source location of [Ang Daguob](story_title)?
+    - What is the source location of the [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Where did the earliest documented version of the [Pagtaas Ko Langit](story_title) appear?
+    - Where does this [Ang Eklipse](story_title) trace its roots to?
+    - What region is this [Ang Istorya Sang Linti](story_title) originally from?
+    - Can you tell me where the [Kuti Nga Linti](story_title) comes from?
+    - Which place is known as the origin of this [Ang Daguob](story_title)?
+    - Where was the [Ang Istorya Ka Mga Bitoon](story_title) first told or recorded?
+    - What’s the geographical background of the [Pagtaas Ko Langit](story_title)?
+    - From which area does the [Ang Eklipse](story_title) originate?
+    - Could you share the cultural or geographic origin of this [Ang Istorya Sang Linti](story_title)?
+    - What land or territory is the [Kuti Nga Linti](story_title) connected to?
+    - Do we know where this [Ang Daguob](story_title) began?
+    - Which place is this [Ang Istorya Ka Mga Bitoon](story_title) most closely associated with?
+    - Where was the earliest version of this [Pagtaas Ko Langit](story_title) found?
+    - Tell me the original setting or location of this [Ang Eklipse](story_title).
+    - Where is this [Ang Istorya Sang Linti](story_title) said to have come from?
+    - Can you identify the [Kuti Nga Linti](story_title)’s place of origin?
+    - Where did the first version of this [Ang Daguob](story_title) appear?
+    - From what location was this [Ang Istorya Ka Mga Bitoon](story_title) first collected?
+    - Which part of the world is this [Pagtaas Ko Langit](story_title) rooted in?
+    - Where can we trace this [Ang Eklipse](story_title)’s beginnings?
+    - Is there a known region this [Ang Istorya Sang Linti](story_title) originated in?
+    - What’s the native region of the [Kuti Nga Linti](story_title)?
+    - What country or locality gave rise to this [Ang Daguob](story_title)?
+    - Do you know where this [Ang Istorya Ka Mga Bitoon](story_title) was born?
+    - Where might this [Pagtaas Ko Langit](story_title) have first taken shape?
+    - Tell me about the provenance of the [Ang Eklipse](story_title).
+    - Which cultural landscape gave us this [Ang Istorya Sang Linti](story_title)?
+    - Where did the [Kuti Nga Linti](story_title) originate geographically?
+    - Was this [Ang Daguob](story_title) first heard in a particular area?
+    - Where is this [Ang Istorya Ka Mga Bitoon](story_title) believed to have started?
+    - Do we have a record of the [Pagtaas Ko Langit](story_title)’s place of emergence?
+    - In what location was this [Ang Eklipse](story_title) originally passed down?
+    - What region or place can claim this [Ang Istorya Sang Linti](story_title)?
+    - Which community or region does this [Kuti Nga Linti](story_title) belong to?
+    - From what province or town is the [Ang Daguob](story_title) derived?
+    - Where does this [Ang Istorya Ka Mga Bitoon](story_title) folk tale stem from?
+    - Do you know the earliest place where this [Pagtaas Ko Langit](story_title) circulated?
+    - What’s the original context or locale for the [Ang Eklipse](story_title)?
+    - Was this [Ang Istorya Sang Linti](story_title) collected from a specific location?
+    - Tell me which area gave rise to this [Kuti Nga Linti](story_title) narrative.
+    - Which town, village, or region birthed this [Ang Daguob](story_title)?
+    - Do you have details on the geographic source of the [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Which local culture does this [Pagtaas Ko Langit](story_title) tale come from?
+    - Where did early storytellers first share this [Ang Eklipse](story_title)?
+    - What is the native setting of this [Ang Istorya Sang Linti](story_title)?
+    - From what traditional homeland does this [Kuti Nga Linti](story_title) emerge?
+    - Can you pinpoint the [Ang Daguob](story_title)’s geographical roots?
+    - What land or region is linked to the origin of the [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Is the [Pagtaas Ko Langit](story_title) tale associated with a specific location or community?
+    - Where was the [Ang Eklipse](story_title) first part of oral or written tradition?
+    - What geographic area is considered the [Ang Istorya Sang Linti](story_title)’s origin?
+
+
+- intent: ask_for_key_informant
+  examples: |
+    - Who shared the [Ang Istorya Ka Mga Bitoon](story_title) with the researcher?
+    - Can you tell me the name of the key informant of the [Ang Daguob](story_title)?
+    - Who was credited as the story teller of the [Pagtaas Ko Langit](story_title)?
+    - Is there a known informant for this [Kuti Nga Linti](story_title) narrative?
+    - Key informant of the [Ang Eklipse](story_title)?
+    - Key informant?
+    - Who was listed as the informant for the [Ang Istorya Sang Linti](story_title)?
+    - Give me the informant of the [Ang Daguob](story_title)?
+    - Primary informant for the [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Who was the original informant of the [Kuti Nga Linti](story_title)?
+    - Who first told this [Ang Eklipse](story_title) to the researchers?
+    - Can you provide me with the key informant of the [Ang Istorya Sang Linti](story_title)?
+    - Who passed down the [Pagtaas Ko Langit](story_title) to the researchers?
+    - Documented informant of [Ang Daguob](story_title)?
+    - Who was identified as the source of this [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Can you name the person who first told this [Kuti Nga Linti](story_title) to researchers?
+    - Do we know who shared this [Ang Eklipse](story_title) originally?
+    - Who is credited with telling this version of the [Ang Istorya Sang Linti](story_title)?
+    - Is there a documented informant associated with the [Pagtaas Ko Langit](story_title)?
+    - Who provided the [Ang Daguob](story_title) during its collection?
+    - Who acted as the main informant for this [Ang Istorya Ka Mga Bitoon](story_title) narrative?
+    - Was a specific individual acknowledged as the storyteller for the [Kuti Nga Linti](story_title)?
+    - Who is the named source for this [Ang Eklipse](story_title) folk tale?
+    - Could you tell me who the [Ang Istorya Sang Linti](story_title) was collected from?
+    - Who originally narrated this [Pagtaas Ko Langit](story_title) to the collector?
+    - Do we know the identity of the person who passed down the [Ang Daguob](story_title)?
+    - Who was interviewed for this [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Who told this [Kuti Nga Linti](story_title) in the version we have?
+    - Name of the person who provided this [Ang Eklipse](story_title)?
+    - Which storyteller is linked to this [Ang Istorya Sang Linti](story_title) narrative?
+    - Can you specify who shared the [Pagtaas Ko Langit](story_title) with the researcher?
+    - Who first recounted the [Ang Daguob](story_title) to the documenters?
+    - Which individual is associated with transmitting this [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Is the [Kuti Nga Linti](story_title) linked to a known oral informant?
+    - Who was the local source for this version of the [Ang Eklipse](story_title)?
+    - Who is mentioned as the oral source of the [Ang Istorya Sang Linti](story_title) narrative?
+    - Who passed on the [Pagtaas Ko Langit](story_title) to those recording it?
+    - Do we have the name of the key informant for this [Ang Daguob](story_title)?
+    - What is the identity of the person who relayed this [Ang Istorya Ka Mga Bitoon](story_title) myth?
+    - Can you share the storyteller’s name for the [Kuti Nga Linti](story_title)?
+    - Who was the original speaker of this [Ang Eklipse](story_title)?
+    - Which individual preserved and conveyed this [Ang Istorya Sang Linti](story_title) narrative?
+    - Do records mention who the [Pagtaas Ko Langit](story_title) was gathered from?
+    - Who is the recorded narrator of this [Ang Daguob](story_title)?
+    - From whom was this version of the [Ang Istorya Ka Mga Bitoon](story_title) obtained?
+    - Any information on who recounted the [Kuti Nga Linti](story_title)?
+    - Who contributed this version of the [Ang Eklipse](story_title) folk tale?
+    - Who was interviewed for the [Ang Istorya Sang Linti](story_title)’s documentation?
+    - Do we know who the main source was for this [Pagtaas Ko Langit](story_title) narrative?
+    - Is there an individual credited with telling this [Ang Daguob](story_title)?
+    - Tell me the name of the person who shared this [Ang Istorya Ka Mga Bitoon](story_title) myth.
+    - Who was cited as the informant in the [Kuti Nga Linti](story_title) documentation?
+    - Can you provide the name of the person who told this [Ang Eklipse](story_title)?
+    - Who offered this [Ang Istorya Sang Linti](story_title) to the researchers?
+    - Which person’s account is this [Pagtaas Ko Langit](story_title) based on?
+    - Was a local informant credited for this [Ang Daguob](story_title) tale?
+    - Who’s the original informant mentioned for this [Ang Istorya Ka Mga Bitoon](story_title)?
+    - Who shared this version of the [Kuti Nga Linti](story_title) with collectors?
+    - Was the [Ang Eklipse](story_title) passed down by a specific individual?
+    - Do we know who orally transmitted the [Ang Istorya Sang Linti](story_title)?
+    - Any details about who told this version of the [Pagtaas Ko Langit](story_title)?
+    - Is the storyteller’s name documented for the [Ang Daguob](story_title)?
+    - Can you find out who originally shared this [Ang Istorya Ka Mga Bitoon](story_title) folk tale?
+    - Was this [Kuti Nga Linti](story_title) tale attributed to a known informant?
+    - Whose voice preserved this version of the [Ang Eklipse](story_title)?
+
+
+- intent: inv_ask_for_themes
+  examples: |
+    - Which stories focus on friendship?
+    - Are there narratives about bravery?
+    - Stories that talk about love?
+    - Show me stories that have themes on love
+    - Which narratives talk about loss?
+    - Do you have any stories that have family as the main focus?
+    - Are there any stories that teach the importance of honesty?
+    - Stories about hope?
+    - Are there any tales that center around forgiveness?
+    - Can you give me stories that highlight kindness?
+    - Which narratives explore the theme of sacrifice?
+    - Do you know of any stories that are about redemption?
+    - Show me stories that focus on courage.
+    - Are there any folktales that deal with betrayal?
+    - Can you point me to stories that emphasize loyalty?
+    - Give me some narratives that talk about perseverance.
+    - Do you have stories with the theme of justice?
+    - Which stories revolve around the idea of freedom?
+    - Tell me stories that explore the concept of identity.
+    - Any myths that speak about transformation?
+    - Are there stories that teach resilience?
+    - Do you know of tales that celebrate generosity?
+    - Can you share stories about the power of truth?
+    - Are there stories that reflect on grief and healing?
+    - What stories are centered on overcoming fear?
+    - Any folktales that deal with jealousy?
+    - Can you show me narratives that touch on unity?
+    - Which stories revolve around self-discovery?
+    - Do you have tales that are themed around ambition?
+    - Looking for stories that convey messages of peace.
+    - What are some narratives that teach about humility?
+    - Stories focused on compassion—got any?
+    - Which tales are built around wisdom?
+    - Know of any stories that revolve around duty or responsibility?
+    - Show me stories that address personal growth.
+    - Are there any legends that highlight the importance of trust?
+    - Can you recommend tales that center on reconciliation?
+    - Do you have narratives that talk about longing or yearning?
+    - Tell me stories that capture the spirit of adventure.
+    - Any myths that involve endurance through hardship?
+    - Stories that explore the cost of greed?
+    - Give me narratives with themes of kindness and empathy.
+    - Are there tales that teach lessons on patience?
+    - Which stories focus on sibling relationships?
+    - Got any stories that talk about justice and fairness?
+    - What stories revolve around the search for belonging?
+    - Know any stories that deal with inner strength?
+    - Can you suggest tales that explore destiny or fate?
+    - Stories involving parental love—do you have any?
+    - Which narratives teach about selflessness?
+    - Do you have stories that tackle the struggle for equality?
+    - Any stories that speak of transformation and rebirth?
+    - Tell me tales that center around friendship and trust.
+    - What stories are about staying true to oneself?
+    - Do you have stories about navigating change or transition?
+    - Are there stories that focus on dreams and aspirations?
+    - Which narratives are about making difficult choices?
+    - Know of any tales that explore the weight of guilt?
+    - Can you list stories that reflect on legacy or ancestry?

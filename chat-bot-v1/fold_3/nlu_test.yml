@@ -1,22 +1,70 @@
 version: '3.1'
 nlu:
 - intent: ask_for_characters
-  examples: '- Enumerate characters from story.
+  examples: '- List the main characters in this story.
 
-    - Which characters appear in the narrative?'
+    - Give me the names of the characters.'
 - intent: ask_for_researcher
-  examples: '- Identify the main researcher of the narrative.
+  examples: '- Who conducted fieldwork on the folk tale?
 
-    - Who conducted fieldwork on the folk tale?'
+    - Which researcher recorded that?'
 - intent: ask_for_themes
-  examples: '- I want to know the theme of this story.
+  examples: '- What is the theme in this story?
 
-    - Tell me the theme.'
+    - Identify the theme found in the story.'
 - intent: 'ask_for_random_stories '
-  examples: '- Random stories.
+  examples: '- Which stories do you know?
 
-    - I want random stories.'
+    - Enumerate a few random stories.'
 - intent: ask_for_genres
-  examples: '- Type of story.
+  examples: '- Show category
 
-    - How was this story categorized?'
+    - I want to know the category of this story.'
+- intent: ask_for_geographic_features
+  examples: '- What kind of terrain is found in narrative?
+
+    - Any natural formations mentioned?'
+- intent: inv_ask_for_geographic_features
+  examples: '- Are there any stories that were set near lakes?
+
+    - Return stories that mention a hill.
+
+    - Forest as setting?'
+- intent: ask_for_language
+  examples: '- Language of origin?
+
+    - Language?'
+- intent: inv_ask_for_language
+  examples: '- Which of the narratives were written in Hiligaynon?
+
+    - Are there any myths in Kinaray-a?'
+- intent: ask_for_provenance
+  examples: '- Where did the earliest documented version of the story appear?
+
+    - Source location of story?
+
+    - Original location of story?'
+- intent: ask_for_key_informant
+  examples: '- Give me the informant of the story?
+
+    - Who first told this story to the researchers?'
+- intent: inv_ask_for_themes
+  examples: '- Stories that talk about love?
+
+    - Give me stories with themes on revenge.'
+- intent: inv_ask_for_researcher
+  examples: '- What stories are associated with the researcher?
+
+    - Which folk tales did the researcher record?'
+- intent: inv_ask_for_characters
+  examples: '- Character is a character in which folk narratives?
+
+    - Give me stories that mention character.'
+- intent: inv_ask_for_key_informant
+  examples: '- What stories did key_informant tell?
+
+    - What stories are from key_informant?'
+- intent: inv_ask_for_genres
+  examples: '- Give me stories that are genre.
+
+    - Genre has what stories?'

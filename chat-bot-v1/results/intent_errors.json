@@ -1,10 +1,26 @@
 [
   {
-    "text": "What kind of story is this story?",
-    "intent": "ask_for_genres",
+    "text": "Enumerate a few random stories.",
+    "intent": "ask_for_random_stories",
     "intent_prediction": {
-      "name": "ask_for_random_stories",
-      "confidence": 0.999504566192627
+      "name": "ask_for_characters",
+      "confidence": 0.9947410821914673
+    }
+  },
+  {
+    "text": "Who shared the story with the researcher?",
+    "intent": "ask_for_key_informant",
+    "intent_prediction": {
+      "name": "ask_for_researcher",
+      "confidence": 0.9092869162559509
+    }
+  },
+  {
+    "text": "Tell me genre stories.",
+    "intent": "inv_ask_for_genres",
+    "intent_prediction": {
+      "name": "ask_for_genres",
+      "confidence": 0.9456043839454651
     }
   }
 ]

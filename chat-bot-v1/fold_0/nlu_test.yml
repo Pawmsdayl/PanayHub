@@ -3,20 +3,68 @@ nlu:
 - intent: ask_for_characters
   examples: '- Whos in it?
 
-    - Enumerate characters from story.'
+    - Give characters.'
 - intent: ask_for_researcher
-  examples: '- Documented by?
+  examples: '- Who researched the story?
 
-    - Who can I ask about this?'
+    - Which researcher recorded that?'
 - intent: ask_for_themes
-  examples: '- State the theme of the hurubaton.
+  examples: '- What theme is in the formulary?
 
-    - I want to know the theme of this story.'
+    - Tell me about the theme in the formulary.'
 - intent: 'ask_for_random_stories '
-  examples: '- I want random stories.
+  examples: '- Random stories.
 
-    - Give me some stories.'
+    - Sample of random stories.'
 - intent: ask_for_genres
-  examples: '- Tell me about the genre in the story.
+  examples: '- Show category
 
     - State the category of the story.'
+- intent: ask_for_geographic_features
+  examples: '- Geographic features?
+
+    - Any natural formations mentioned?'
+- intent: inv_ask_for_geographic_features
+  examples: '- Are there any stories that take place in the forest?
+
+    - List stories that have talk about caves
+
+    - Can you list stories that talk about hills?'
+- intent: ask_for_language
+  examples: '- Language?
+
+    - Was it recorded in  local language?'
+- intent: inv_ask_for_language
+  examples: '- Which stories are available in Akeanon?
+
+    - Stories in Cebuano please'
+- intent: ask_for_provenance
+  examples: '- What is the source location of the story?
+
+    - Provenance?
+
+    - Can you specify the provenance of the story?'
+- intent: ask_for_key_informant
+  examples: '- Who shared the story with the researcher?
+
+    - Who was listed as the informant?'
+- intent: inv_ask_for_themes
+  examples: '- Do you have any stories that have family as the main focus?
+
+    - Are there narratives about bravery?'
+- intent: inv_ask_for_researcher
+  examples: '- Show stories that the researcher worked on.
+
+    - Which tales did the researcher gather?'
+- intent: inv_ask_for_characters
+  examples: '- I want to know the stories where character is present.
+
+    - Give me stories that mention character.'
+- intent: inv_ask_for_key_informant
+  examples: '- Which stories were submitted by key_informant?
+
+    - I want to know more stories from key_informant.'
+- intent: inv_ask_for_genres
+  examples: '- Genre contains what stories?
+
+    - I want to know what stories are considered under genre.'
