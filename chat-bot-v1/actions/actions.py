@@ -1,4 +1,5 @@
 from typing import Any, Text, Dict, List
+from matplotlib.style import available
 from neo4j import GraphDatabase
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -47,12 +48,14 @@ class ActionGetStoryCharacters(Action):
         with driver.session() as session:
             result = session.run(title_query)
             available_titles = [record["title"] for record in result if record["title"]]
+        
+        print(available_titles)
 
         if not available_titles:
             dispatcher.utter_message("I couldn't find any available story titles.")
             return []
 
-        title_match = min(available_titles, key=lambda t: Levenshtein.distance(story_title, t))
+        title_match = min(available_titles, key=lambda t: Levenshtein.distance(''.join(story_title.split()), t))
 
         print(title_match)  
 
@@ -111,7 +114,7 @@ class InvActionGetStoryCharacters(Action):
             dispatcher.utter_message("I couldn't find any matching character names.")
             return []
 
-        character_match = min(available_characters, key=lambda t: Levenshtein.distance(character, t))
+        character_match = min(available_characters, key=lambda t: Levenshtein.distance(''.join(character.split()), t))
 
         print(character_match)  
 
@@ -170,7 +173,7 @@ class ActionGetResearcher(Action):
             dispatcher.utter_message("I couldn't find any available story titles.")
             return []
 
-        title_match = min(available_titles, key=lambda t: Levenshtein.distance(story_title, t))
+        title_match = min(available_titles, key=lambda t: Levenshtein.distance(''.join(story_title.split()), t))
 
         print(title_match)  
 
@@ -231,7 +234,7 @@ class InvActionGetResearcher(Action):
             dispatcher.utter_message("I couldn't find any available researchers.")
             return []
 
-        researcher_match = min(available_researchers, key=lambda t: Levenshtein.distance(researcher, t))
+        researcher_match = min(available_researchers, key=lambda t: Levenshtein.distance(''.join(researcher.split()), t))
 
         print(researcher_match)  
 
@@ -290,7 +293,7 @@ class ActionGetStoryGenres(Action):
             dispatcher.utter_message("I couldn't find any available story titles.")
             return []
 
-        title_match = min(available_titles, key=lambda t: Levenshtein.distance(story_title, t))
+        title_match = min(available_titles, key=lambda t: Levenshtein.distance(''.join(story_title.split()), t))
 
         print(title_match)  
         
@@ -352,7 +355,7 @@ class InvActionGetStoryGenres(Action):
         
         stories = []
         if available_genres:
-            genre_match = min(available_genres, key=lambda t: Levenshtein.distance(genre, t))
+            genre_match = min(available_genres, key=lambda t: Levenshtein.distance(''.join(genre.split()), t))
             query = f"""
                 MATCH (story:ns0__{genre_match})
                 RETURN DISTINCT story.ns0__title as title
@@ -418,7 +421,7 @@ class ActionGetKeyInformant(Action):
             dispatcher.utter_message("I couldn't find any available story titles.")
             return []
 
-        title_match = min(available_titles, key=lambda t: Levenshtein.distance(story_title, t))
+        title_match = min(available_titles, key=lambda t: Levenshtein.distance(''.join(story_title.split()), t))
 
         print(title_match)  
 
@@ -481,7 +484,7 @@ class InvActionGetKeyInformant(Action):
             dispatcher.utter_message("I couldn't find any available key informants.")
             return []
 
-        key_informant_match = min(available_key_informants, key=lambda t: Levenshtein.distance(key_informant, t))
+        key_informant_match = min(available_key_informants, key=lambda t: Levenshtein.distance(''.join(key_informant.split()), t))
 
         print(key_informant_match)  
 
@@ -542,7 +545,7 @@ class ActionGetLanguage(Action):
             dispatcher.utter_message("I couldn't find any available story titles.")
             return []
 
-        title_match = min(available_titles, key=lambda t: Levenshtein.distance(story_title, t))
+        title_match = min(available_titles, key=lambda t: Levenshtein.distance(''.join(story_title.split()), t))
 
         query = """
         MATCH (lang:ns0__Language)-[:ns0__isLanguageIn]->(story)
@@ -590,7 +593,7 @@ class InvActionGetLanguage(Action):
             dispatcher.utter_message("I couldn't find any available languages.")
             return []
 
-        language_match = min(available_languages, key=lambda t: Levenshtein.distance(language, t))
+        language_match = min(available_languages, key=lambda t: Levenshtein.distance(''.join(language.split()), t))
 
         query = """
         MATCH (lang:ns0__Language)-[:ns0__isLanguageIn]->(story)
@@ -641,7 +644,7 @@ class ActionGetGeographicFeature(Action):
             dispatcher.utter_message("I couldn't find any available story titles.")
             return []
 
-        title_match = min(available_titles, key=lambda t: Levenshtein.distance(story_title, t))
+        title_match = min(available_titles, key=lambda t: Levenshtein.distance(''.join(story_title.split()), t))
 
         query = """
         MATCH (feature)-[:ns0__isGeographicFeatureIn]->(story)
@@ -698,7 +701,7 @@ class InvActionGetGeographicFeature(Action):
             dispatcher.utter_message("I couldn't find any available geographic features.")
             return []
 
-        feature_match = min(available_features, key=lambda t: Levenshtein.distance(feature, t))
+        feature_match = min(available_features, key=lambda t: Levenshtein.distance(''.join(feature.split()), t))
 
         query = """
         MATCH (feature)-[:ns0__isGeographicFeatureIn]->(story)
@@ -752,7 +755,7 @@ class ActionGetProvenance(Action):
             return []
 
         # Step 2: Find closest title match
-        title_match = min(available_titles, key=lambda t: Levenshtein.distance(story_title, t))
+        title_match = min(available_titles, key=lambda t: Levenshtein.distance(''.join(story_title.split()), t))
 
         # Step 3: Query for provenance using matched title
         query = """
@@ -808,7 +811,7 @@ class ActionGetRandomStories(Action):
         titles = []
         with driver.session() as session:
             result = session.run(query, story_count=story_count)
-            titles = [record["title_name"][0] for record in result]
+            titles = [record["title_name"] for record in result]
 
         driver.close()
 
