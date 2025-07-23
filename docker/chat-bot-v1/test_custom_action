@@ -1,0 +1,38 @@
+from actions.actions import ActionGetStoryCharacters
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk import Tracker
+from typing import Dict, Text, Any
+from unittest.mock import MagicMock
+
+def test_action_get_story_characters():
+    action = ActionGetStoryCharacters()
+
+    # Create a dispatcher
+    dispatcher = CollectingDispatcher()
+
+    # Create a mock tracker with a test slot value
+    tracker = Tracker(
+        sender_id="test_user",
+        slots={"story_title": "Ang Ido Nga Nagbata"},
+        latest_message={},
+        events=[],
+        paused=False,
+        followup_action=None,
+        active_loop={},
+        latest_action_name=None
+    )
+
+    # Empty domain
+    domain: Dict[Text, Any] = {}
+
+    # Run the action
+    result = action.run(dispatcher, tracker, domain)
+
+
+    # Print messages that would be sent to user
+    print("\nMessages:")
+    for message in dispatcher.messages:
+        print("-", message.get("text"))
+
+if __name__ == "__main__":
+    test_action_get_story_characters()

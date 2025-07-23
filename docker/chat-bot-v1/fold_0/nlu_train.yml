@@ -1,0 +1,589 @@
+version: '3.1'
+nlu:
+- intent: ask_for_characters
+  examples: '- Give characters.
+
+    - Story involves what characters?
+
+    - Give me the names of the characters.
+
+    - Name key figures in the story
+
+    - List the main characters in this story.
+
+    - Characters?
+
+    - Who are the characters in the story?
+
+    - Which characters appear in the narrative?
+
+    - Whos featured there?
+
+    - List all characters.
+
+    - Can you tell me the characters from the story?
+
+    - Who are the people in that story?
+
+    - Tell me the names of the characters.
+
+    - Who is featured in the story?
+
+    - What characters does the story have?
+
+    - Show me the characters from the tale.
+
+    - Can you list the people in the story?
+
+    - Who takes part in the story?
+
+    - Give me a list of the story’s characters.
+
+    - Who are the main figures in the story?
+
+    - Which characters appear in the story?
+
+    - Name the characters involved in the story.
+
+    - Tell me who the key characters are.
+
+    - Who is in the tale?
+
+    - List all characters in the story.
+
+    - Who are the protagonists of the story?
+
+    - What are the names of the story’s characters?
+
+    - Can you name the people in the story?
+
+    - Who are the main characters in the tale?
+
+    - Give me the characters featured in the story.
+
+    - Tell me who the story is about.
+
+    - Who plays a role in the story?
+
+    - Who are the players in the story?
+
+    - List the important people in the story.
+
+    - Who shows up in the tale?
+
+    - What figures are in the story?
+
+    - Can you tell me the people involved?
+
+    - Who does the story include?
+
+    - Tell me about the cast of the story.
+
+    - Who are the characters that appear in the story?
+
+    - Identify the main characters of the story.
+
+    - Who are the people featured in the story?
+
+    - Can you provide a list of the story’s characters?
+
+    - Who are the individuals in the story?
+
+    - Tell me who’s in the folk tale.
+
+    - Who plays parts in the story?
+
+    - Who are the characters mentioned in the story?
+
+    - Name the key people in the story.
+
+    - Who is mentioned in the story?
+
+    - Tell me about the figures in the story.
+
+    - Who are the heroes in the story?
+
+    - Who are the characters involved?
+
+    - List the names of the people in the story.
+
+    - Who are the personalities in the tale?
+
+    - Can you name the characters in the story?
+
+    - Who are the cast members in the story?
+
+    - Who participates in the story?
+
+    - Tell me the characters included in the story.
+
+    - Who are the key players in the story?
+
+    - What people are part of the story?'
+- intent: ask_for_researcher
+  examples: '- Enumerate the researchers responsible for gathering information about
+    the story.
+
+    - Who conducted fieldwork on the folk tale?
+
+    - Identify the main researcher of the narrative.
+
+    - Recorder?
+
+    - Who recorded the story?
+
+    - Researcher?
+
+    - Which researcher recorded that?
+
+    - Who researched the story?
+
+    - Who is the researcher behind the story?
+
+    - Tell me who documented this tale.
+
+    - Who collected the story?
+
+    - Who gathered this folk tale?
+
+    - Can you name the recorder of the story?
+
+    - Who is credited with recording the story?
+
+    - Who compiled the information for the story?
+
+    - Who’s the person responsible for researching this?
+
+    - Who’s the author of the documentation?
+
+    - Who did the research for this folk tale?
+
+    - Who’s behind the documentation of this tale?
+
+    - Give me the name of the storys researcher.
+
+    - Who interviewed people for this story?
+
+    - Who noted this folk tale down?
+
+    - Who originally recorded this narrative?
+
+    - Who conducted the interviews for this story?
+
+    - Identify the person who researched the tale.
+
+    - Who’s responsible for this ethnographic work?
+
+    - Who’s the fieldworker behind this story?
+
+    - Tell me who gathered the data.
+
+    - Which individual recorded the tale?
+
+    - Can you list the story’s researchers?
+
+    - Who’s the folklorist behind this?
+
+    - Do you know who documented this story?
+
+    - Who is credited with the research?
+
+    - Who did the field study for this?
+
+    - Who went into the field to gather this tale?
+
+    - Who’s the ethnographer here?
+
+    - Name the recorder of this folk narrative.
+
+    - Who’s the scholar responsible for this story?
+
+    - Who sourced this story?
+
+    - Who took down this story?
+
+    - Which researcher was involved?
+
+    - Who’s listed as the field researcher?
+
+    - Who can I contact about this tale?
+
+    - Who compiled the account of this folk tale?
+
+    - Tell me the name of the documenter.
+
+    - Who collected this oral tradition?
+
+    - Who is mentioned as the researcher?
+
+    - Who studied this tale?
+
+    - Who archived this story?
+
+    - Who filed this documentation?
+
+    - Who chronicled this folk tale?
+
+    - Identify the folklorist for this story.
+
+    - Who was in charge of the research?
+
+    - Whos known for collecting this folk tale?
+
+    - Who created the field notes for this?
+
+    - Who’s behind the research efforts for the story?
+
+    - Who conducted the study of this tale?
+
+    - Can you point me to the researcher?'
+- intent: ask_for_themes
+  examples: '- Show theme
+
+    - Identify the theme found in the story.
+
+    - What thematic topic is in the hurubaton?
+
+    - What theme is in the formulary?
+
+    - Theme?
+
+    - Tell me about the theme in the formulary.
+
+    - What is the theme in this story?
+
+    - Tell me the theme.
+
+    - Analyze the theme in the excerpt.
+
+    - Can you extract the theme for me?
+
+    - Can you find the theme in this?
+
+    - Can you identify the theme?
+
+    - Can you show the theme expressed?
+
+    - Clarify the theme in this tale.
+
+    - Could you reveal the theme?
+
+    - Determine the theme of this selection.
+
+    - Discover the theme in the hurubaton.
+
+    - Discuss the theme shown here.
+
+    - Do you know the theme?
+
+    - Get the thematic idea.
+
+    - Get the theme in this piece.
+
+    - Extract the theme from the passage.
+
+    - Focus on the theme of this work.
+
+    - Give a theme analysis of this piece.
+
+    - Give me the theme of the narrative.
+
+    - Help me understand the theme.
+
+    - Highlight the theme in this story.
+
+    - I’d like to know the theme.
+
+    - I’m searching for the theme.
+
+    - Identify any themes here.
+
+    - Identify the core theme.
+
+    - Is there a theme in this text?
+
+    - Look for the theme in this story.
+
+    - Please tell me the theme of this hurubaton.
+
+    - Point out the theme.
+
+    - Provide the theme shown in the story.
+
+    - Pull out the theme.
+
+    - Share the theme of the story.
+
+    - Tell me what the theme is.
+
+    - Thematic idea?
+
+    - Uncover the theme in this document.
+
+    - What is the central theme here?
+
+    - What kind of theme is present?
+
+    - What message or theme is in this?
+
+    - What recurring theme do you notice?
+
+    - What theme does this reflect?
+
+    - What theme is being conveyed?
+
+    - What theme is presented?
+
+    - What theme runs through the formulary?
+
+    - What’s the conceptual theme?
+
+    - What’s the dominant theme in this?
+
+    - What’s the implied theme?
+
+    - What''s the main idea or theme?
+
+    - What’s the story’s theme?
+
+    - What''s the underlying theme?
+
+    - Which theme can be found here?
+
+    - Which theme is explored?
+
+    - Which theme is relevant here?'
+- intent: 'ask_for_random_stories '
+  examples: '- List some stories.
+
+    - Random stories.
+
+    - Sample of random stories.
+
+    - Show me a few of your stories.
+
+    - What stories do you have?
+
+    - Enumerate a few random stories.
+
+    - Fetch me some stories.
+
+    - Which stories do you know?
+
+    - Any random stories?
+
+    - Any sample stories you have?
+
+    - Bring some stories for me.
+
+    - Bring up some stories.
+
+    - Can I get a few stories?
+
+    - Can I see some stories?
+
+    - Can you list some stories?
+
+    - Can you recommend some stories?
+
+    - Can you suggest stories?
+
+    - Could you provide some stories?
+
+    - Display a few stories.
+
+    - Display a list of stories.
+
+    - Do you have any stories?
+
+    - Do you have stories to show?
+
+    - Fetch some story samples.
+
+    - Get me a list of stories.
+
+    - Give me a list of stories.
+
+    - Give me different stories.
+
+    - Give me story samples.
+
+    - Give random story examples.
+
+    - I need some story samples.
+
+    - I want to see your stories.
+
+    - I’d like to read some stories.
+
+    - I’d love to see some stories.
+
+    - I’m interested in random stories.
+
+    - Introduce me to some stories.
+
+    - What are some stories to read.
+
+    - Let me see random stories.
+
+    - Let’s see some stories.
+
+    - List random story options.
+
+    - Offer a few stories.
+
+    - Please list a few stories.
+
+    - Provide a few stories.
+
+    - Provide me with stories.
+
+    - Provide samples of stories.
+
+    - Pull up some stories.
+
+    - Random story examples, please.
+
+    - Recommend some stories.
+
+    - Retrieve random stories.
+
+    - Share examples of stories.
+
+    - Share some random stories.
+
+    - Show me your story examples.
+
+    - Show random stories.
+
+    - Show your random story set.
+
+    - Suggest a few stories.
+
+    - Tell me a few stories.
+
+    - Tell me which stories you have.
+
+    - What are some stories you know?
+
+    - What stories can you give me?
+
+    - Which stories are available?'
+- intent: ask_for_genres
+  examples: '- Genre?
+
+    - Type of story.
+
+    - I want to know the category of this story.
+
+    - How was this story categorized?
+
+    - Tell me the category.
+
+    - What kind of story is this story?
+
+    - Identify the genre of the story.
+
+    - What is the genre of this story?
+
+    - Show category
+
+    - Can you classify the story type?
+
+    - Can you tell me the genre?
+
+    - Classify this story.
+
+    - Find the genre of this passage.
+
+    - Genre of the text?
+
+    - Genre of this story?
+
+    - Give me the genre of this.
+
+    - How do you categorize this story?
+
+    - How do you define this genre?
+
+    - I want to know the genre.
+
+    - I’d like to know the story’s genre.
+
+    - I’m asking for the genre.
+
+    - Identify the category of the story.
+
+    - Identify the literary genre.
+
+    - In which genre is this categorized?
+
+    - Mention the genre.
+
+    - Please categorize this story.
+
+    - Please give the category label.
+
+    - Reveal the story’s genre.
+
+    - Show me the story’s genre.
+
+    - Show the narrative genre.
+
+    - State the genre.
+
+    - Tell me the genre classification.
+
+    - Type of literature?
+
+    - Under what genre is this listed?
+
+    - What category is this story in?
+
+    - What genre does the story fall under?
+
+    - What genre fits this story?
+
+    - What genre label applies to this?
+
+    - What genre tag applies?
+
+    - What genre title is given?
+
+    - What is the category?
+
+    - What is the genre classification?
+
+    - What kind of genre is shown?
+
+    - What narrative category is this?
+
+    - What story genre does this belong to?
+
+    - What type of genre is this?
+
+    - What’s the artistic category here?
+
+    - What’s the classification of this story?
+
+    - What’s the format or category here?
+
+    - What''s the genre assigned to this?
+
+    - What’s the genre type?
+
+    - What’s the genre?
+
+    - What’s the label for this story?
+
+    - What''s the storytelling category?
+
+    - What’s the type of literature here?
+
+    - Where does this story fall genre-wise?
+
+    - Which classification is used?
+
+    - Which genre does this story belong to?
+
+    - Which type of genre applies?'

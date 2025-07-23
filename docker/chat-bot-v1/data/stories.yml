@@ -1,0 +1,38 @@
+version: "3.1"
+
+stories:
+
+- story: ask for characters then theme of the story
+  steps: 
+  - intent: ask_for_characters
+  - action: action_get_story_characters
+  - intent: ask_for_themes
+  - action: action_get_story_themes
+
+- story: ask for characters then researcher or recorder of story
+  steps:
+  - intent: ask_for_characters
+  - action: action_get_story_characters
+  - intent: ask_for_researcher
+  - action: action_get_researcher
+
+- story: ask for characters then genre of the story
+  steps:
+  - intent: ask_for_characters
+  - action: action_get_story_characters
+  - intent: ask_for_genres
+  - action: action_get_story_genres
+
+- story: ask for random stories then characters 
+  steps:
+  - intent: ask_for_random_stories
+  - action: action_get_random_stories
+  - intent: ask_for_characters
+  - action: action_get_story_characters
+
+- story: ask for random stories then researcher
+  steps:
+  - intent: ask_for_random_stories
+  - action: action_get_random_stories
+  - intent: ask_for_researcher
+  - action: action_get_researcher

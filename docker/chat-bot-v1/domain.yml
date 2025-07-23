@@ -1,0 +1,53 @@
+version: "3.1"
+
+intents:
+  - ask_for_themes
+  - ask_for_characters
+  - ask_for_researcher
+  - ask_for_genres
+  - ask_for_random_stories
+
+actions:
+  - action_get_story_themes
+  - action_get_story_characters
+  - action_get_researcher
+  - action_get_story_genres
+  - action_get_random_stories
+
+entities:
+  - story_title
+  - researcher
+  - story_count
+
+
+slots:
+  story_title:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: story_title
+  researcher:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: researcher
+  story_count:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: story_count
+
+
+responses:
+  utter_fallback:
+  - text: "I'm sorry, I didn't quite understand that. Could you please rephrase? You may type 'help' for more information"
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

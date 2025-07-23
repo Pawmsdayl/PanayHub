@@ -1,0 +1,10 @@
+.gitignore
+.git
+documentation
+frontend
+models
+sample_bot
+venv
+venvjob
+.idea
+README.md

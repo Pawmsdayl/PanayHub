@@ -1,0 +1,90 @@
+version: "3.1"
+
+nlu:
+
+- synonym: "1"
+  examples: |
+    - a
+    - A
+    - one
+    - an
+
+
+- intent: ask_for_characters
+  examples: |
+    - Who are the characters of the [Ang Ido Nga Nagbata](story_title)? 
+    - Enumerate the characers of the [Pagtaas Ko Langit](story_title)?
+    - List the characters of the [Ang Tuko](story_title)?
+    - Who are the characters in the [Ang Bawa](story_title)?
+    - give characters
+    - characters who
+    - characters of the story?
+
+
+- intent: ask_for_themes
+  examples: |
+    - What are the general themes of [Ang Mameleu](story_title)? 
+    - Can you tell me the themes of the [story](story_title) ? 
+    - What is the main theme of the [Si Manong Roman](story_title)?
+    - What are the main themes of the [Si Dapaw-Dangaw](story_title)?
+    - I'm trying to understand the central themes of [Si Juan Kag Si Maria](story_title).
+    - Break down the themes of the [Si Juan Bahag](story_title) for me. 
+    - What's the deeper meaning of [Ngaa May Adlaw, Bulan Kag Mga Bitoon](story_title)? 
+    - what themes?
+    - themes
+    - themes of story?
+
+- intent: ask_for_researcher
+  examples: |
+    - Who recorded the story of [Ang Agta](story_title)?  
+    - Can you tell me who researched the [Si Juan Kag Ang Hari](story_title)?  
+    - Who is the main researcher behind [Si Kalungsod Kag Kaburak](story_title)?  
+    - Who documented the details of [Si Dapaw-Dangaw](story_title)?  
+    - I'm trying to find out who studied [Si Juan Kag Si Maria](story_title).  
+    - Who conducted extensive research on [story](story_title)?  
+    - Who is the researcher associated with [Si Lungisan](story_title)?  
+    - Do you know who first recorded [Ang Kataw](story_title)?  
+    - Who is credited with researching [Si Binukot](story_title)?  
+    - I'd like to know who compiled information about [Ang Eklipse](story_title).
+    - researcher of the story? 
+    - researcher?
+    - recorder?
+    - who researcher?  
+
+- intent: ask_for_genres
+  examples: |
+    - What are the genres of [Ang Mameleu](story_title)?
+    - What type of story is [Si Juan Kag Si Maria](story_title)?
+    - genre?
+    - what genre?
+    - What kind of story is [Si Dapaw-Dangaw](story_title)?
+    - [Ngaa May Adlaw, Bulan Kag Mga Bitoon](story_title) belongs to what genre?
+    - genre of the story?
+
+- intent: ask_for_random_stories
+  examples: |
+    - give me [a](story_count) random story
+    - give me [a](story_count) story
+    - Give me [2](story_count) stories
+    - Give me [3](story_count) random stories
+    - What are [some](story_count) random stories you can give?
+    - What are [some](story_count) stories you can give?
+
+- intent: nlu_fallback
+  examples: |
+    - asdasdasdasd
+    - qweqwe
+    - ????
+    - lkajsdflkasjdf
+    - help meeeeeee
+    - whatever this means
+    - !@#$%^&*()
+    - what is love baby don't hurt me
+    - potato banana monkey cat
+    - gibberish nonsense
+
+- intent: ask_for_help
+  examples: |
+    - help
+    - can I get help
+    - please help me

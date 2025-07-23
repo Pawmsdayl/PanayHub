@@ -1,0 +1,10 @@
+[
+  {
+    "text": "What kind of story is this story?",
+    "intent": "ask_for_genres",
+    "intent_prediction": {
+      "name": "ask_for_random_stories",
+      "confidence": 0.999504566192627
+    }
+  }
+]
